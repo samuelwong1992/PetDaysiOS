@@ -19,6 +19,14 @@
 		460E551A28483ECE00B09607 /* PetDaysTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460E551928483ECE00B09607 /* PetDaysTests.swift */; };
 		460E552428483ECE00B09607 /* PetDaysUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460E552328483ECE00B09607 /* PetDaysUITests.swift */; };
 		460E552628483ECE00B09607 /* PetDaysUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460E552528483ECE00B09607 /* PetDaysUITestsLaunchTests.swift */; };
+		460E55352848560600B09607 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460E55342848560600B09607 /* APIManager.swift */; };
+		460E5537284859A400B09607 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460E5536284859A400B09607 /* APIRequest.swift */; };
+		4613E47C284DB44400311889 /* String + Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4613E47B284DB44400311889 /* String + Utilities.swift */; };
+		4613E47E284DB4A900311889 /* NSError + Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4613E47D284DB4A900311889 /* NSError + Utilities.swift */; };
+		4613E481284DB5EE00311889 /* APIObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4613E480284DB5EE00311889 /* APIObject.swift */; };
+		4613E483284DB60900311889 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4613E482284DB60900311889 /* User.swift */; };
+		4613E486284DB8C200311889 /* APIResponses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4613E485284DB8C200311889 /* APIResponses.swift */; };
+		4613E489284DBBDD00311889 /* LoginAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4613E488284DBBDD00311889 /* LoginAPI.swift */; };
 		8CC923488F297AAA2253DD9E /* Pods_PetDays_PetDaysUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6D6C3E4E8C5A93E9B263F9D /* Pods_PetDays_PetDaysUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +66,14 @@
 		460E551F28483ECE00B09607 /* PetDaysUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PetDaysUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		460E552328483ECE00B09607 /* PetDaysUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetDaysUITests.swift; sourceTree = "<group>"; };
 		460E552528483ECE00B09607 /* PetDaysUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetDaysUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		460E55342848560600B09607 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		460E5536284859A400B09607 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		4613E47B284DB44400311889 /* String + Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Utilities.swift"; sourceTree = "<group>"; };
+		4613E47D284DB4A900311889 /* NSError + Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSError + Utilities.swift"; sourceTree = "<group>"; };
+		4613E480284DB5EE00311889 /* APIObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIObject.swift; sourceTree = "<group>"; };
+		4613E482284DB60900311889 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		4613E485284DB8C200311889 /* APIResponses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponses.swift; sourceTree = "<group>"; };
+		4613E488284DBBDD00311889 /* LoginAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAPI.swift; sourceTree = "<group>"; };
 		5C08DB9F9CBB4A0D058978B3 /* Pods-PetDays-PetDaysUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetDays-PetDaysUITests.release.xcconfig"; path = "Target Support Files/Pods-PetDays-PetDaysUITests/Pods-PetDays-PetDaysUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7C3D6D98A7DAB4528B9AB1A5 /* Pods_PetDays.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PetDays.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEDF37611A2A75097C623F1F /* Pods-PetDays.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetDays.debug.xcconfig"; path = "Target Support Files/Pods-PetDays/Pods-PetDays.debug.xcconfig"; sourceTree = "<group>"; };
@@ -119,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				460E553228483F7200B09607 /* Network */,
+				4613E479284DB42C00311889 /* Helpers */,
 				460E54FF28483EC800B09607 /* AppDelegate.swift */,
 				460E550128483EC800B09607 /* SceneDelegate.swift */,
 				460E550328483EC800B09607 /* ViewController.swift */,
@@ -151,8 +168,63 @@
 		460E553228483F7200B09607 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				4613E47F284DB5DF00311889 /* Models */,
+				4613E487284DBBBC00311889 /* Requests */,
+				4613E484284DB8A900311889 /* Responses */,
+				460E553328484FBE00B09607 /* Managers */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		460E553328484FBE00B09607 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				460E55342848560600B09607 /* APIManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		4613E479284DB42C00311889 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				4613E47A284DB43600311889 /* Utilities */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		4613E47A284DB43600311889 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				4613E47B284DB44400311889 /* String + Utilities.swift */,
+				4613E47D284DB4A900311889 /* NSError + Utilities.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		4613E47F284DB5DF00311889 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4613E480284DB5EE00311889 /* APIObject.swift */,
+				4613E482284DB60900311889 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4613E484284DB8A900311889 /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				4613E485284DB8C200311889 /* APIResponses.swift */,
+			);
+			path = Responses;
+			sourceTree = "<group>";
+		};
+		4613E487284DBBBC00311889 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				460E5536284859A400B09607 /* APIRequest.swift */,
+				4613E488284DBBDD00311889 /* LoginAPI.swift */,
+			);
+			path = Requests;
 			sourceTree = "<group>";
 		};
 		BBAE92441F67231D0BDD4883 /* Pods */ = {
@@ -165,7 +237,6 @@
 				E7C84589C0AA9D793CF5C0AF /* Pods-PetDaysTests.debug.xcconfig */,
 				182B1027C3926A74B1BF956B /* Pods-PetDaysTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -419,8 +490,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				460E550428483EC800B09607 /* ViewController.swift in Sources */,
+				4613E47C284DB44400311889 /* String + Utilities.swift in Sources */,
+				460E5537284859A400B09607 /* APIRequest.swift in Sources */,
+				4613E486284DB8C200311889 /* APIResponses.swift in Sources */,
+				4613E489284DBBDD00311889 /* LoginAPI.swift in Sources */,
 				460E550028483EC800B09607 /* AppDelegate.swift in Sources */,
+				4613E481284DB5EE00311889 /* APIObject.swift in Sources */,
+				460E55352848560600B09607 /* APIManager.swift in Sources */,
 				460E550A28483EC800B09607 /* PetDays.xcdatamodeld in Sources */,
+				4613E47E284DB4A900311889 /* NSError + Utilities.swift in Sources */,
+				4613E483284DB60900311889 /* User.swift in Sources */,
 				460E550228483EC800B09607 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

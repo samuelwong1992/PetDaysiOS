@@ -7,6 +7,7 @@ target 'PetDays' do
 
   # Pods for PetDays
   pod 'Alamofire'
+  pod 'SwiftyJSON'
 
   target 'PetDaysTests' do
     inherit! :search_paths
