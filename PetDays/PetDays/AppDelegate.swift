@@ -15,6 +15,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let request = LoginAPI.login(username: "sam9", password: "password")
+        APIManager.current.performRequest(request: request) { (model: LoginResponse?, error) in
+            print(model!.token)
+            print(model!.profile.firstName)
+            print(model!.profile.lastName)
+            print(model!.profile.id)
+        }
+        
         return true
     }
 

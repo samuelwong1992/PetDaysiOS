@@ -7,6 +7,6 @@
 
 import Foundation
 
-class APIObject {
-    var id: Int!
+class APIObject: Decodable {
+    var id: Int
 }

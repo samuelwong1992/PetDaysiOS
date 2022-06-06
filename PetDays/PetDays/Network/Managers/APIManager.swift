@@ -23,13 +23,13 @@ class APIManager {
             return apiManager
         }
         
-        let path = "http://127.0.0.1:8000"
+        let path = "http://127.0.0.1:8000/"
         
         _apiManager = APIManager(baseURL: path)
         return _apiManager
     }
     
-    func performRequest(request: APIRequest, shouldShowLoading: Bool = true, completion: @escaping (_ json: JSON?, _ error: Error?) -> Void) {
+    func performRequest<T: Decodable>(request: APIRequest, shouldShowLoading: Bool = true, completion: @escaping (_ model: T?, _ error: Error?) -> Void) {
         if shouldShowLoading {
 //            LoadingHUD.show()
         }
@@ -51,12 +51,12 @@ class APIManager {
                 .responseJSON { jsonResponse in
                     switch jsonResponse.result {
                     case .success:
-                        var json:JSON!
-                        
                         if jsonResponse.response == nil {
                             return completion(nil, NSError.standardErrorWithString(errorString: APIResponse.StatusCode._204_NO_CONTENT.description))
                         }
                         
+                        let data = jsonResponse.data
+                        var json:JSON!
                         if let data = jsonResponse.value {
                             json = JSON(data)
                         }
@@ -66,7 +66,14 @@ class APIManager {
                         if let statusCode = APIResponse.StatusCode(rawValue: code) {
                             switch statusCode {
                             case ._200_SUCCESS, ._201_CREATED, ._202_ACCEPTED, ._204_NO_CONTENT :
-                                return completion(json ?? JSON(["success" : statusCode.code]), nil)
+                                do {
+                                    let response = try JSONDecoder().decode(T.self, from: data!)
+                                    return completion(response, nil)
+                                } catch {
+                                    print(error)
+                                    return completion(nil, nil)
+                                }
+                                
                                 
                             case ._401_UNAUTHORIZED :
                                 return completion(nil, NSError.standardErrorWithString(errorString: APIResponse.StatusCode._401_UNAUTHORIZED.description))
@@ -84,7 +91,7 @@ class APIManager {
                                     errorString = statusCode.description
                                 }
                                 
-                                return completion(nil, NSError(domain: Bundle.main.bundleIdentifier!, code: statusCode.code, userInfo: [NSLocalizedDescriptionKey : errorString]))
+                                return completion(nil, NSError.standardErrorWithString(errorString: errorString))
                             }
                         } else {
                             //Unhandled Return Code
@@ -100,7 +107,13 @@ class APIManager {
                             }
                         }
                         
-                        return completion(json!,nil)
+                        do {
+                            let response = try JSONDecoder().decode(T.self, from: data!)
+                            return completion(response, nil)
+                        } catch {
+                            print(error)
+                            return completion(nil, nil)
+                        }
                         
                     case let .failure(error):
                         print(error)
@@ -108,10 +121,10 @@ class APIManager {
                             if let statusCode = APIResponse.StatusCode(rawValue: response.statusCode) {
                                 switch statusCode {
                                 case ._401_UNAUTHORIZED :
-                                    return completion(nil, NSError(domain: Bundle.main.bundleIdentifier!, code: APIResponse.StatusCode._401_UNAUTHORIZED.code, userInfo: [NSLocalizedDescriptionKey : APIResponse.StatusCode._401_UNAUTHORIZED.description]))
+                                    return completion(nil, NSError.standardErrorWithString(errorString: APIResponse.StatusCode._401_UNAUTHORIZED.description))
 
                                 case ._404_NOT_FOUND :
-                                    return completion(nil, NSError(domain: Bundle.main.bundleIdentifier!, code: statusCode.code, userInfo: [NSLocalizedDescriptionKey : APIResponse.StatusCode._404_NOT_FOUND.description]))
+                                    return completion(nil, NSError.standardErrorWithString(errorString: APIResponse.StatusCode._404_NOT_FOUND.description))
                                     
                                 default :
                                     if let data = jsonResponse.value {
@@ -123,7 +136,7 @@ class APIManager {
                                         }
                                     }
                                     
-                                    return completion(nil, NSError(domain: Bundle.main.bundleIdentifier!, code: 0, userInfo: [NSLocalizedDescriptionKey : error.localizedDescription]))
+                                    return completion(nil, NSError.standardErrorWithString(errorString: error.localizedDescription))
                                     }
                                 }
                         } else {
