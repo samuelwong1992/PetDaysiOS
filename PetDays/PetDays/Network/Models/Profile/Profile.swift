@@ -7,7 +7,18 @@
 
 import Foundation
 
+fileprivate var _currentProfile: Profile?
+
 class Profile: APIObject {
+    static var currentProfile: Profile? {
+        get {
+            return _currentProfile
+        }
+        set {
+            _currentProfile = newValue
+        }
+    }
+    
     var firstName: String
     var lastName: String
     

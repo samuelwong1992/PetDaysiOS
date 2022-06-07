@@ -36,7 +36,7 @@ struct APIRequestBuilder {
 
         var urlRequest = URLRequest(url: URL(string: endpoint)!)
         urlRequest.httpMethod = request.method.rawValue
-        if let accessToken = User.currentUser?._apiToken {
+        if let accessToken = User.currentUser?.apiToken {
             urlRequest.addValue("Token \(accessToken)", forHTTPHeaderField: "Authorization")
         }
 

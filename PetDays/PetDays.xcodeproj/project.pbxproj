@@ -29,6 +29,19 @@
 		4613E489284DBBDD00311889 /* LoginAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4613E488284DBBDD00311889 /* LoginAPI.swift */; };
 		4613E48B284DBE2B00311889 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4613E48A284DBE2B00311889 /* Profile.swift */; };
 		4613E48F284DC13A00311889 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4613E48E284DC13A00311889 /* LoginResponse.swift */; };
+		4613E493284ED93600311889 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4613E492284ED93600311889 /* UserService.swift */; };
+		4613E496284EDCB700311889 /* ProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4613E495284EDCB700311889 /* ProfileService.swift */; };
+		4613E49C284EDF5900311889 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4613E49B284EDF5900311889 /* MainNavigationController.swift */; };
+		4613E4A2284EE64900311889 /* Landing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4613E4A1284EE64900311889 /* Landing.storyboard */; };
+		4613E4A4284EE69500311889 /* StoryboardConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4613E4A3284EE69500311889 /* StoryboardConstants.swift */; };
+		4613E4A6284EE6D300311889 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4613E4A5284EE6D300311889 /* LandingViewController.swift */; };
+		4613E4A8284EEAB800311889 /* LandingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4613E4A7284EEAB800311889 /* LandingScreen.swift */; };
+		4613E4AA284EEAC500311889 /* LandingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4613E4A9284EEAC500311889 /* LandingInteractor.swift */; };
+		4613E4AD284EFD4900311889 /* ScreenComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4613E4AC284EFD4900311889 /* ScreenComponent.swift */; };
+		4613E4B0284F07B400311889 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4613E4AF284F07B400311889 /* Login.storyboard */; };
+		4613E4B2284F081B00311889 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4613E4B1284F081B00311889 /* LoginViewController.swift */; };
+		4613E4B4284F0A0900311889 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4613E4B3284F0A0900311889 /* LoginScreen.swift */; };
+		4613E4B6284F0A1900311889 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4613E4B5284F0A1900311889 /* LoginInteractor.swift */; };
 		8CC923488F297AAA2253DD9E /* Pods_PetDays_PetDaysUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6D6C3E4E8C5A93E9B263F9D /* Pods_PetDays_PetDaysUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +91,19 @@
 		4613E488284DBBDD00311889 /* LoginAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAPI.swift; sourceTree = "<group>"; };
 		4613E48A284DBE2B00311889 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		4613E48E284DC13A00311889 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		4613E492284ED93600311889 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		4613E495284EDCB700311889 /* ProfileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileService.swift; sourceTree = "<group>"; };
+		4613E49B284EDF5900311889 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
+		4613E4A1284EE64900311889 /* Landing.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Landing.storyboard; sourceTree = "<group>"; };
+		4613E4A3284EE69500311889 /* StoryboardConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardConstants.swift; sourceTree = "<group>"; };
+		4613E4A5284EE6D300311889 /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
+		4613E4A7284EEAB800311889 /* LandingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingScreen.swift; sourceTree = "<group>"; };
+		4613E4A9284EEAC500311889 /* LandingInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingInteractor.swift; sourceTree = "<group>"; };
+		4613E4AC284EFD4900311889 /* ScreenComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenComponent.swift; sourceTree = "<group>"; };
+		4613E4AF284F07B400311889 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		4613E4B1284F081B00311889 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		4613E4B3284F0A0900311889 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
+		4613E4B5284F0A1900311889 /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
 		5C08DB9F9CBB4A0D058978B3 /* Pods-PetDays-PetDaysUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetDays-PetDaysUITests.release.xcconfig"; path = "Target Support Files/Pods-PetDays-PetDaysUITests/Pods-PetDays-PetDaysUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7C3D6D98A7DAB4528B9AB1A5 /* Pods_PetDays.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PetDays.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEDF37611A2A75097C623F1F /* Pods-PetDays.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetDays.debug.xcconfig"; path = "Target Support Files/Pods-PetDays/Pods-PetDays.debug.xcconfig"; sourceTree = "<group>"; };
@@ -139,11 +165,13 @@
 			isa = PBXGroup;
 			children = (
 				460E553228483F7200B09607 /* Network */,
+				4613E49A284EDF2900311889 /* Router */,
+				4613E498284EDEAF00311889 /* Screens */,
+				4613E4A0284EE61600311889 /* Storyboards */,
 				4613E479284DB42C00311889 /* Helpers */,
 				460E54FF28483EC800B09607 /* AppDelegate.swift */,
 				460E550128483EC800B09607 /* SceneDelegate.swift */,
 				460E550328483EC800B09607 /* ViewController.swift */,
-				460E550528483EC800B09607 /* Main.storyboard */,
 				460E550B28483ECE00B09607 /* Assets.xcassets */,
 				460E550D28483ECE00B09607 /* LaunchScreen.storyboard */,
 				460E551028483ECE00B09607 /* Info.plist */,
@@ -208,9 +236,9 @@
 		4613E47F284DB5DF00311889 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				4613E480284DB5EE00311889 /* APIObject.swift */,
-				4613E482284DB60900311889 /* User.swift */,
-				4613E48A284DBE2B00311889 /* Profile.swift */,
+				4613E490284ED90E00311889 /* Shared */,
+				4613E491284ED92100311889 /* User */,
+				4613E494284EDCA900311889 /* Profile */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -226,7 +254,7 @@
 		4613E487284DBBBC00311889 /* Requests */ = {
 			isa = PBXGroup;
 			children = (
-				460E5536284859A400B09607 /* APIRequest.swift */,
+				4613E497284EDD2E00311889 /* Shared */,
 				4613E48D284DC12A00311889 /* Requests */,
 				4613E48C284DC11800311889 /* Responses */,
 			);
@@ -247,6 +275,105 @@
 				4613E488284DBBDD00311889 /* LoginAPI.swift */,
 			);
 			path = Requests;
+			sourceTree = "<group>";
+		};
+		4613E490284ED90E00311889 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				4613E480284DB5EE00311889 /* APIObject.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		4613E491284ED92100311889 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				4613E482284DB60900311889 /* User.swift */,
+				4613E492284ED93600311889 /* UserService.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		4613E494284EDCA900311889 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				4613E48A284DBE2B00311889 /* Profile.swift */,
+				4613E495284EDCB700311889 /* ProfileService.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		4613E497284EDD2E00311889 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				460E5536284859A400B09607 /* APIRequest.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		4613E498284EDEAF00311889 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				4613E4AB284EFD3D00311889 /* Shared */,
+				4613E49E284EE08500311889 /* Landing */,
+				4613E499284EDECA00311889 /* Login */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		4613E499284EDECA00311889 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				4613E4B3284F0A0900311889 /* LoginScreen.swift */,
+				4613E4B1284F081B00311889 /* LoginViewController.swift */,
+				4613E4B5284F0A1900311889 /* LoginInteractor.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		4613E49A284EDF2900311889 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				4613E49B284EDF5900311889 /* MainNavigationController.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		4613E49E284EE08500311889 /* Landing */ = {
+			isa = PBXGroup;
+			children = (
+				4613E4A7284EEAB800311889 /* LandingScreen.swift */,
+				4613E4A5284EE6D300311889 /* LandingViewController.swift */,
+				4613E4A9284EEAC500311889 /* LandingInteractor.swift */,
+			);
+			path = Landing;
+			sourceTree = "<group>";
+		};
+		4613E4A0284EE61600311889 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				4613E4AE284F07A300311889 /* Shared */,
+				4613E4A1284EE64900311889 /* Landing.storyboard */,
+				4613E4AF284F07B400311889 /* Login.storyboard */,
+				460E550528483EC800B09607 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		4613E4AB284EFD3D00311889 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				4613E4AC284EFD4900311889 /* ScreenComponent.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		4613E4AE284F07A300311889 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				4613E4A3284EE69500311889 /* StoryboardConstants.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 		BBAE92441F67231D0BDD4883 /* Pods */ = {
@@ -383,6 +510,8 @@
 			files = (
 				460E550F28483ECE00B09607 /* LaunchScreen.storyboard in Resources */,
 				460E550C28483ECE00B09607 /* Assets.xcassets in Resources */,
+				4613E4A2284EE64900311889 /* Landing.storyboard in Resources */,
+				4613E4B0284F07B400311889 /* Login.storyboard in Resources */,
 				460E550728483EC800B09607 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -512,16 +641,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				460E550428483EC800B09607 /* ViewController.swift in Sources */,
+				4613E496284EDCB700311889 /* ProfileService.swift in Sources */,
 				4613E47C284DB44400311889 /* String + Utilities.swift in Sources */,
+				4613E4B6284F0A1900311889 /* LoginInteractor.swift in Sources */,
+				4613E4B2284F081B00311889 /* LoginViewController.swift in Sources */,
 				460E5537284859A400B09607 /* APIRequest.swift in Sources */,
+				4613E4B4284F0A0900311889 /* LoginScreen.swift in Sources */,
 				4613E48B284DBE2B00311889 /* Profile.swift in Sources */,
+				4613E4AA284EEAC500311889 /* LandingInteractor.swift in Sources */,
 				4613E486284DB8C200311889 /* APIResponses.swift in Sources */,
 				4613E489284DBBDD00311889 /* LoginAPI.swift in Sources */,
 				4613E48F284DC13A00311889 /* LoginResponse.swift in Sources */,
+				4613E49C284EDF5900311889 /* MainNavigationController.swift in Sources */,
 				460E550028483EC800B09607 /* AppDelegate.swift in Sources */,
 				4613E481284DB5EE00311889 /* APIObject.swift in Sources */,
 				460E55352848560600B09607 /* APIManager.swift in Sources */,
+				4613E4A6284EE6D300311889 /* LandingViewController.swift in Sources */,
+				4613E4A4284EE69500311889 /* StoryboardConstants.swift in Sources */,
+				4613E4AD284EFD4900311889 /* ScreenComponent.swift in Sources */,
 				460E550A28483EC800B09607 /* PetDays.xcdatamodeld in Sources */,
+				4613E4A8284EEAB800311889 /* LandingScreen.swift in Sources */,
+				4613E493284ED93600311889 /* UserService.swift in Sources */,
 				4613E47E284DB4A900311889 /* NSError + Utilities.swift in Sources */,
 				4613E483284DB60900311889 /* User.swift in Sources */,
 				460E550228483EC800B09607 /* SceneDelegate.swift in Sources */,
@@ -707,7 +847,6 @@
 				INFOPLIST_FILE = PetDays/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -736,7 +875,6 @@
 				INFOPLIST_FILE = PetDays/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -9,12 +9,19 @@ import Foundation
 
 fileprivate var _currentUser: User?
 
-class User: APIObject {
+class User {
     static var currentUser: User? {
         get {
             return _currentUser
         }
+        set {
+            _currentUser = newValue
+        }
     }
     
-    var _apiToken: String?
+    var apiToken: String
+    
+    init(apiToken: String) {
+        self.apiToken = apiToken
+    }
 }
