@@ -32,6 +32,19 @@ class LoginView: UIView {
 //MARK: Initialization
 extension LoginView {
     func initialize() {
+        usernameField.autocorrectionType = .no
+        usernameField.autocapitalizationType = .none
         passwordField.isSecureTextEntry = true
+    }
+}
+
+//MARK: Validation {
+extension LoginView {
+    func validate() -> Bool {
+        var success = true
+        success = usernameField.validate(criteria: [.NotEmpty]) && success
+        success = passwordField.validate(criteria: [.NotEmpty]) && success
+        
+        return success
     }
 }

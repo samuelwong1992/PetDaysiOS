@@ -28,6 +28,32 @@ class SignUpView: UIView {
     func loadViewFromNib() {
         super.loadViewFromNib(StoryboardConstants.Nib.SignUpView.identifier, forClass: SignUpView.self)
         
+        initialize()
     }
 
+}
+
+//MARK: Initialization
+extension SignUpView {
+    func initialize() {
+        usernameField.autocorrectionType = .no
+        usernameField.autocapitalizationType = .none
+        passwordField.isSecureTextEntry = true
+        password2Field.isSecureTextEntry = true
+    }
+}
+
+//MARK: Validation
+extension SignUpView {
+    func validate() -> Bool {
+        var success = true
+        
+        success = usernameField.validate(criteria: [.NotEmpty]) && success
+        success = passwordField.validate(criteria: [.NotEmpty]) && success
+        success = password2Field.validate(criteria: [.NotEmpty, .MatchText(match: "password", comparator: passwordField.text)]) && success
+        success = firstNameField.validate(criteria: [.NotEmpty]) && success
+        success = lastNameField.validate(criteria: [.NotEmpty]) && success
+        
+        return success
+    }
 }

@@ -86,6 +86,13 @@ extension LoginViewController {
     }
 }
 
+//MARK: Interactor Methods
+extension LoginViewController {
+    func showError(error: Error) {
+        UIAlertController.showAlertWithError(viewController: self, error: error)
+    }
+}
+
 //MARK: Button Handlers
 @objc extension LoginViewController {
     func closeButton_didPress() {
@@ -93,11 +100,20 @@ extension LoginViewController {
     }
     
     func loginButton_didPress() {
-        currentViewMode = .login
+        guard currentViewMode == .login else { currentViewMode = .login; return }
+        guard loginView.validate() else { return }
+        screen.interactor.login(username: loginView.usernameField.text,
+                                password: loginView.passwordField.text)
     }
     
     func signUpButton_didPress() {
-        currentViewMode = .signUp
+        guard currentViewMode == .signUp else { currentViewMode = .signUp; return }
+        guard signUpView.validate() else { return }
+        screen.interactor.register(username: signUpView.usernameField.text,
+                                   password: signUpView.passwordField.text,
+                                   password2: signUpView.password2Field.text,
+                                   firstName: signUpView.firstNameField.text,
+                                   lastName: signUpView.lastNameField.text)
     }
 }
 
@@ -105,7 +121,6 @@ extension LoginViewController {
 @objc extension LoginViewController {
     func keyboardWillShow(notification: Notification) {
         if let keyboardHeight = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue.height {
-            print("Notification: Keyboard will show")
             DispatchQueue.main.async {
                 self.formContainerViewBottomConstraint.animateToConstant(newConstant: keyboardHeight + 40 + 24, onView: self.view)
                 switch self.currentViewMode {
@@ -118,6 +133,5 @@ extension LoginViewController {
                 }
             }
         }
-
     }
 }

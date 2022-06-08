@@ -12,6 +12,8 @@ struct Theme {
     enum Colours {
         case primary
         
+        case error
+        
         case gray
         case white
         case black
@@ -19,6 +21,8 @@ struct Theme {
         private var hexValue: String {
             switch self {
             case .primary : return "013220"
+                
+            case .error : return "FF0000"
                 
             case .gray : return "D3D3D3"
             case .white : return "ffffff"

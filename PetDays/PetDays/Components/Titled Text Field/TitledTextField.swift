@@ -19,6 +19,7 @@ protocol TitledTextFieldAutoCompleteDelegate {
 @IBDesignable class TitledTextField: UIView {
     private var titleLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 60, height: 14))
     private var textField = UITextField(frame: CGRect(x: 0, y: 0, width: 120, height: 24))
+    private var errorLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 60, height: 14))
     
     private var titleLabelTopConstraint: NSLayoutConstraint!
     private var titleLabelBottomConstraint: NSLayoutConstraint!
@@ -26,6 +27,8 @@ protocol TitledTextFieldAutoCompleteDelegate {
     
     var _delegate: TitledTextFieldDelegate?
     var _autocompleteDelegate: TitledTextFieldAutoCompleteDelegate?
+    
+    var errorTimer: Timer?
     
     @IBInspectable var titleText: String! {
         didSet {
@@ -117,6 +120,7 @@ extension TitledTextField {
     private func initialize() {
         self.addSubView(subview: textField, toTop: true, marginTop: 7, toBottom: true, toRightEdge: true, toLeftEdge: true)
         self.addSubView(subview: titleLabel, toLeftEdge: true, marginLeft: 8)
+        self.addSubView(subview: errorLabel, toRightEdge: true, marginRight: 8)
         
         textField.borderStyle = .roundedRect
         textField.addTarget(self, action: #selector(textField_editingChanged(sender:)), for: .editingChanged)
@@ -127,6 +131,11 @@ extension TitledTextField {
         titleLabel.font = Theme.Fonts.regular.font
         titleLabel.contentMode = .center
         textField.backgroundColor = UIColor.white
+        
+        errorLabel.isHidden = true
+        errorLabel.textColor = Theme.Colours.error.color
+        errorLabel.font = Theme.Fonts.detail.font
+        errorLabel.backgroundColor = Theme.Colours.white.color
 
         titleLabelTopConstraint = titleLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 8)
         titleLabelBottomConstraint = titleLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -1)
@@ -140,6 +149,43 @@ extension TitledTextField {
             titleLabelBottomConstraint,
             heightConstraint
         ])
+    }
+}
+
+//MARK: Validation
+extension TitledTextField {
+    enum ValidationCriteria {
+        case NotEmpty
+        case MatchText(match: String, comparator: String?)
+    }
+    
+    func validate(criteria: [ValidationCriteria]) -> Bool {
+        for criterion in criteria {
+            switch criterion {
+            case .NotEmpty:
+                if(String.isNilOrEmpty(self.textField.text)) {
+                    showError(withText: "Compulsary")
+                    return false
+                }
+            case .MatchText(let match, let comparator) :
+                if(self.textField.text != comparator) {
+                    showError(withText: "Should match \(match)")
+                    return false
+                }
+            }
+        }
+        return true
+    }
+    
+    func showError(withText text: String) {
+        errorLabel.text = text
+        errorLabel.animateHidden(hidden: false)
+        if let errorTimer = errorTimer {
+            errorTimer.invalidate()
+        }
+        errorTimer = Timer.scheduledTimer(withTimeInterval: 4, repeats: false, block: { timer in
+            self.errorLabel.animateHidden(hidden: true)
+        })
     }
 }
 

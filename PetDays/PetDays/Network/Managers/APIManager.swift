@@ -70,8 +70,13 @@ class APIManager {
                                     let response = try JSONDecoder().decode(T.self, from: data!)
                                     return completion(response, nil)
                                 } catch {
-                                    print(error)
-                                    return completion(nil, nil)
+                                    if let errorJSON = json[APIResponse.API_JSON_DEFINED_ERROR].string {
+                                        if errorJSON != "" {
+                                            return completion(nil, NSError.standardErrorWithString(errorString: errorJSON))
+                                        }
+                                    } else {
+                                        return completion(nil, nil)
+                                    }
                                 }
                                 
                                 
@@ -127,12 +132,23 @@ class APIManager {
                                     return completion(nil, NSError.standardErrorWithString(errorString: APIResponse.StatusCode._404_NOT_FOUND.description))
                                     
                                 default :
-                                    if let data = jsonResponse.value {
+                                    if let data = jsonResponse.data {
                                         let json = JSON(data)
+                                        
                                         if let errorJSON = json[APIResponse.API_JSON_DEFINED_ERROR].string {
                                             if errorJSON != "" {
                                                 return completion(nil, NSError.standardErrorWithString(errorString: errorJSON))
                                             }
+                                        } else {
+                                            var errorString = ""
+                                            for jsonPart in json {
+                                                for errorPart in jsonPart.1 {
+                                                    errorString += errorPart.1.stringValue + "\n"
+                                                }
+                                                
+                                            }
+                                            
+                                            return completion(nil, NSError.standardErrorWithString(errorString: errorString))
                                         }
                                     }
                                     
