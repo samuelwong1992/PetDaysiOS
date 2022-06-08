@@ -42,6 +42,22 @@
 		4613E4B2284F081B00311889 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4613E4B1284F081B00311889 /* LoginViewController.swift */; };
 		4613E4B4284F0A0900311889 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4613E4B3284F0A0900311889 /* LoginScreen.swift */; };
 		4613E4B6284F0A1900311889 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4613E4B5284F0A1900311889 /* LoginInteractor.swift */; };
+		4613E4B9284F134900311889 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4613E4B8284F134900311889 /* PrimaryButton.swift */; };
+		4613E4BC284F139400311889 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4613E4BB284F139400311889 /* Theme.swift */; };
+		4613E4BE284F147F00311889 /* UIColor + Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4613E4BD284F147F00311889 /* UIColor + Utilities.swift */; };
+		4613E4C0284F1B9B00311889 /* SecondaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4613E4BF284F1B9B00311889 /* SecondaryButton.swift */; };
+		4613E4C8284F1E0800311889 /* CGRect + Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4613E4C7284F1E0800311889 /* CGRect + Utilities.swift */; };
+		4613E4CC284F1E9200311889 /* Separator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4613E4CB284F1E9200311889 /* Separator.swift */; };
+		4613E4CE284F1F1A00311889 /* InputLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4613E4CD284F1F1A00311889 /* InputLabel.swift */; };
+		4613E4D0284F209A00311889 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4613E4CF284F209A00311889 /* LoginView.xib */; };
+		4613E4D2284F260E00311889 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4613E4D1284F260E00311889 /* LoginView.swift */; };
+		4613E4D5284F262000311889 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4613E4D4284F262000311889 /* SignUpView.swift */; };
+		4613E4D7284F262900311889 /* SignUpView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4613E4D6284F262900311889 /* SignUpView.xib */; };
+		4613E4D9284F26AB00311889 /* UIView + Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4613E4D8284F26AB00311889 /* UIView + Utilities.swift */; };
+		4613E4E2284F31AA00311889 /* TitledTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4613E4DE284F31AA00311889 /* TitledTextView.swift */; };
+		4613E4E3284F31AA00311889 /* TitledTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4613E4DF284F31AA00311889 /* TitledTextField.swift */; };
+		4613E4E5284F324300311889 /* NSLayoutConstraint + Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4613E4E4284F324300311889 /* NSLayoutConstraint + Utilities.swift */; };
+		4613E4E7284F32AA00311889 /* UILabel + Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4613E4E6284F32AA00311889 /* UILabel + Utilities.swift */; };
 		8CC923488F297AAA2253DD9E /* Pods_PetDays_PetDaysUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6D6C3E4E8C5A93E9B263F9D /* Pods_PetDays_PetDaysUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -104,6 +120,22 @@
 		4613E4B1284F081B00311889 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4613E4B3284F0A0900311889 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		4613E4B5284F0A1900311889 /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
+		4613E4B8284F134900311889 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		4613E4BB284F139400311889 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		4613E4BD284F147F00311889 /* UIColor + Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Utilities.swift"; sourceTree = "<group>"; };
+		4613E4BF284F1B9B00311889 /* SecondaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryButton.swift; sourceTree = "<group>"; };
+		4613E4C7284F1E0800311889 /* CGRect + Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect + Utilities.swift"; sourceTree = "<group>"; };
+		4613E4CB284F1E9200311889 /* Separator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Separator.swift; sourceTree = "<group>"; };
+		4613E4CD284F1F1A00311889 /* InputLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputLabel.swift; sourceTree = "<group>"; };
+		4613E4CF284F209A00311889 /* LoginView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
+		4613E4D1284F260E00311889 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		4613E4D4284F262000311889 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		4613E4D6284F262900311889 /* SignUpView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpView.xib; sourceTree = "<group>"; };
+		4613E4D8284F26AB00311889 /* UIView + Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView + Utilities.swift"; sourceTree = "<group>"; };
+		4613E4DE284F31AA00311889 /* TitledTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitledTextView.swift; sourceTree = "<group>"; };
+		4613E4DF284F31AA00311889 /* TitledTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitledTextField.swift; sourceTree = "<group>"; };
+		4613E4E4284F324300311889 /* NSLayoutConstraint + Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint + Utilities.swift"; sourceTree = "<group>"; };
+		4613E4E6284F32AA00311889 /* UILabel + Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel + Utilities.swift"; sourceTree = "<group>"; };
 		5C08DB9F9CBB4A0D058978B3 /* Pods-PetDays-PetDaysUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetDays-PetDaysUITests.release.xcconfig"; path = "Target Support Files/Pods-PetDays-PetDaysUITests/Pods-PetDays-PetDaysUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7C3D6D98A7DAB4528B9AB1A5 /* Pods_PetDays.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PetDays.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEDF37611A2A75097C623F1F /* Pods-PetDays.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetDays.debug.xcconfig"; path = "Target Support Files/Pods-PetDays/Pods-PetDays.debug.xcconfig"; sourceTree = "<group>"; };
@@ -168,6 +200,8 @@
 				4613E49A284EDF2900311889 /* Router */,
 				4613E498284EDEAF00311889 /* Screens */,
 				4613E4A0284EE61600311889 /* Storyboards */,
+				4613E4B7284F132000311889 /* Components */,
+				4613E4BA284F138900311889 /* Constants */,
 				4613E479284DB42C00311889 /* Helpers */,
 				460E54FF28483EC800B09607 /* AppDelegate.swift */,
 				460E550128483EC800B09607 /* SceneDelegate.swift */,
@@ -227,8 +261,13 @@
 		4613E47A284DB43600311889 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				4613E4D8284F26AB00311889 /* UIView + Utilities.swift */,
 				4613E47B284DB44400311889 /* String + Utilities.swift */,
 				4613E47D284DB4A900311889 /* NSError + Utilities.swift */,
+				4613E4BD284F147F00311889 /* UIColor + Utilities.swift */,
+				4613E4E4284F324300311889 /* NSLayoutConstraint + Utilities.swift */,
+				4613E4E6284F32AA00311889 /* UILabel + Utilities.swift */,
+				4613E4C7284F1E0800311889 /* CGRect + Utilities.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -324,6 +363,7 @@
 		4613E499284EDECA00311889 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				4613E4C1284F1CCE00311889 /* Components */,
 				4613E4B3284F0A0900311889 /* LoginScreen.swift */,
 				4613E4B1284F081B00311889 /* LoginViewController.swift */,
 				4613E4B5284F0A1900311889 /* LoginInteractor.swift */,
@@ -374,6 +414,86 @@
 				4613E4A3284EE69500311889 /* StoryboardConstants.swift */,
 			);
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		4613E4B7284F132000311889 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				4613E4DA284F31AA00311889 /* Titled Text Field */,
+				4613E4CA284F1E7E00311889 /* Views */,
+				4613E4C9284F1E7900311889 /* Labels */,
+				4613E4C6284F1DC400311889 /* Buttons */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		4613E4BA284F138900311889 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				4613E4BB284F139400311889 /* Theme.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		4613E4C1284F1CCE00311889 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				4613E4D3284F261400311889 /* SignUpView */,
+				4613E4C2284F1CEB00311889 /* LoginView */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		4613E4C2284F1CEB00311889 /* LoginView */ = {
+			isa = PBXGroup;
+			children = (
+				4613E4CF284F209A00311889 /* LoginView.xib */,
+				4613E4D1284F260E00311889 /* LoginView.swift */,
+			);
+			path = LoginView;
+			sourceTree = "<group>";
+		};
+		4613E4C6284F1DC400311889 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				4613E4B8284F134900311889 /* PrimaryButton.swift */,
+				4613E4BF284F1B9B00311889 /* SecondaryButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		4613E4C9284F1E7900311889 /* Labels */ = {
+			isa = PBXGroup;
+			children = (
+				4613E4CD284F1F1A00311889 /* InputLabel.swift */,
+			);
+			path = Labels;
+			sourceTree = "<group>";
+		};
+		4613E4CA284F1E7E00311889 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4613E4CB284F1E9200311889 /* Separator.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4613E4D3284F261400311889 /* SignUpView */ = {
+			isa = PBXGroup;
+			children = (
+				4613E4D6284F262900311889 /* SignUpView.xib */,
+				4613E4D4284F262000311889 /* SignUpView.swift */,
+			);
+			path = SignUpView;
+			sourceTree = "<group>";
+		};
+		4613E4DA284F31AA00311889 /* Titled Text Field */ = {
+			isa = PBXGroup;
+			children = (
+				4613E4DE284F31AA00311889 /* TitledTextView.swift */,
+				4613E4DF284F31AA00311889 /* TitledTextField.swift */,
+			);
+			path = "Titled Text Field";
 			sourceTree = "<group>";
 		};
 		BBAE92441F67231D0BDD4883 /* Pods */ = {
@@ -510,6 +630,8 @@
 			files = (
 				460E550F28483ECE00B09607 /* LaunchScreen.storyboard in Resources */,
 				460E550C28483ECE00B09607 /* Assets.xcassets in Resources */,
+				4613E4D7284F262900311889 /* SignUpView.xib in Resources */,
+				4613E4D0284F209A00311889 /* LoginView.xib in Resources */,
 				4613E4A2284EE64900311889 /* Landing.storyboard in Resources */,
 				4613E4B0284F07B400311889 /* Login.storyboard in Resources */,
 				460E550728483EC800B09607 /* Main.storyboard in Resources */,
@@ -640,6 +762,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4613E4BC284F139400311889 /* Theme.swift in Sources */,
+				4613E4CE284F1F1A00311889 /* InputLabel.swift in Sources */,
 				460E550428483EC800B09607 /* ViewController.swift in Sources */,
 				4613E496284EDCB700311889 /* ProfileService.swift in Sources */,
 				4613E47C284DB44400311889 /* String + Utilities.swift in Sources */,
@@ -648,21 +772,33 @@
 				460E5537284859A400B09607 /* APIRequest.swift in Sources */,
 				4613E4B4284F0A0900311889 /* LoginScreen.swift in Sources */,
 				4613E48B284DBE2B00311889 /* Profile.swift in Sources */,
+				4613E4D2284F260E00311889 /* LoginView.swift in Sources */,
 				4613E4AA284EEAC500311889 /* LandingInteractor.swift in Sources */,
 				4613E486284DB8C200311889 /* APIResponses.swift in Sources */,
+				4613E4C0284F1B9B00311889 /* SecondaryButton.swift in Sources */,
 				4613E489284DBBDD00311889 /* LoginAPI.swift in Sources */,
 				4613E48F284DC13A00311889 /* LoginResponse.swift in Sources */,
 				4613E49C284EDF5900311889 /* MainNavigationController.swift in Sources */,
 				460E550028483EC800B09607 /* AppDelegate.swift in Sources */,
 				4613E481284DB5EE00311889 /* APIObject.swift in Sources */,
+				4613E4C8284F1E0800311889 /* CGRect + Utilities.swift in Sources */,
+				4613E4BE284F147F00311889 /* UIColor + Utilities.swift in Sources */,
 				460E55352848560600B09607 /* APIManager.swift in Sources */,
+				4613E4D9284F26AB00311889 /* UIView + Utilities.swift in Sources */,
 				4613E4A6284EE6D300311889 /* LandingViewController.swift in Sources */,
 				4613E4A4284EE69500311889 /* StoryboardConstants.swift in Sources */,
+				4613E4B9284F134900311889 /* PrimaryButton.swift in Sources */,
+				4613E4E2284F31AA00311889 /* TitledTextView.swift in Sources */,
 				4613E4AD284EFD4900311889 /* ScreenComponent.swift in Sources */,
 				460E550A28483EC800B09607 /* PetDays.xcdatamodeld in Sources */,
 				4613E4A8284EEAB800311889 /* LandingScreen.swift in Sources */,
+				4613E4CC284F1E9200311889 /* Separator.swift in Sources */,
 				4613E493284ED93600311889 /* UserService.swift in Sources */,
+				4613E4E7284F32AA00311889 /* UILabel + Utilities.swift in Sources */,
+				4613E4D5284F262000311889 /* SignUpView.swift in Sources */,
 				4613E47E284DB4A900311889 /* NSError + Utilities.swift in Sources */,
+				4613E4E5284F324300311889 /* NSLayoutConstraint + Utilities.swift in Sources */,
+				4613E4E3284F31AA00311889 /* TitledTextField.swift in Sources */,
 				4613E483284DB60900311889 /* User.swift in Sources */,
 				460E550228483EC800B09607 /* SceneDelegate.swift in Sources */,
 			);

@@ -16,23 +16,74 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7HB-dl-1da">
-                                <rect key="frame" x="72" y="115" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oO9-2d-IL2" customClass="SecondaryButton" customModule="PetDays" customModuleProvider="target">
+                                <rect key="frame" x="72" y="798" width="270" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="F4g-hF-GQe"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Sign Up"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="unn-O1-URl" customClass="PrimaryButton" customModule="PetDays" customModuleProvider="target">
+                                <rect key="frame" x="72" y="734" width="270" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Tod-cn-utx"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Login"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="close" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yd0-rh-q5C">
+                                <rect key="frame" x="362" y="56" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="yd0-rh-q5C" secondAttribute="height" multiplier="1:1" id="9Al-fK-zTb"/>
+                                    <constraint firstAttribute="width" constant="40" id="dta-SD-2V1"/>
+                                </constraints>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ohO-j3-jYB">
+                                <rect key="frame" x="0.0" y="108" width="414" height="588"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="yd0-rh-q5C" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="12" id="8dd-nf-msB"/>
+                            <constraint firstItem="oO9-2d-IL2" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="72" id="Km1-i9-Rpe"/>
+                            <constraint firstItem="ohO-j3-jYB" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="R0l-64-OwO"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ohO-j3-jYB" secondAttribute="trailing" id="VhI-0U-HVv"/>
+                            <constraint firstItem="unn-O1-URl" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="72" id="jsr-Bg-zoA"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="unn-O1-URl" secondAttribute="bottom" constant="88" id="kgr-Cn-55s"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="oO9-2d-IL2" secondAttribute="bottom" constant="24" id="lDA-YT-aVe"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="yd0-rh-q5C" secondAttribute="trailing" constant="12" id="pdw-QY-RB1"/>
+                            <constraint firstItem="ohO-j3-jYB" firstAttribute="top" secondItem="yd0-rh-q5C" secondAttribute="bottom" constant="12" id="u7l-lc-T1M"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="unn-O1-URl" secondAttribute="trailing" constant="72" id="wMD-pR-jdg"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="oO9-2d-IL2" secondAttribute="trailing" constant="72" id="wyH-0W-K9T"/>
+                            <constraint firstAttribute="bottom" secondItem="ohO-j3-jYB" secondAttribute="bottom" constant="200" id="zti-Zc-X0O"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="closeButton" destination="yd0-rh-q5C" id="kUE-Cv-L43"/>
+                        <outlet property="formContainerView" destination="ohO-j3-jYB" id="iOM-dy-OVW"/>
+                        <outlet property="formContainerViewBottomConstraint" destination="zti-Zc-X0O" id="qSp-Je-V1q"/>
+                        <outlet property="loginButton" destination="unn-O1-URl" id="6MV-ya-6iZ"/>
+                        <outlet property="loginButtonBottomConstraint" destination="kgr-Cn-55s" id="7ga-kF-jDk"/>
+                        <outlet property="signUpButton" destination="oO9-2d-IL2" id="eyH-IN-cdp"/>
+                        <outlet property="signUpButtonBottomConstraint" destination="lDA-YT-aVe" id="Ks8-8n-zxk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="138"/>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="oO9-2d-IL2">
+            <size key="intrinsicContentSize" width="75" height="31"/>
+        </designable>
+        <designable name="unn-O1-URl">
+            <size key="intrinsicContentSize" width="59.5" height="31"/>
+        </designable>
+    </designables>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

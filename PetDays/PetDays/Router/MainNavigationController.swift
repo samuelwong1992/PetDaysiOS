@@ -21,6 +21,7 @@ class MainNavigationController: UINavigationController {
     
     func goToLoginScreen() {
         let loginScreen = LoginScreen(presenter: self)
+        loginScreen.viewController.modalPresentationStyle = .overFullScreen
         self.present(loginScreen.viewController, animated: true)
     }
 }

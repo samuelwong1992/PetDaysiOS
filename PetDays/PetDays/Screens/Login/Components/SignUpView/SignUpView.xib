@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignUpView" customModule="PetDays" customModuleProvider="target">
+            <connections>
+                <outlet property="firstNameField" destination="iOg-ks-7Da" id="ENJ-Y3-sIr"/>
+                <outlet property="lastNameField" destination="DL7-sy-Nbw" id="2bZ-zd-3wG"/>
+                <outlet property="password2Field" destination="mWj-zX-6CG" id="vEz-6f-8R8"/>
+                <outlet property="passwordField" destination="nid-5s-Rma" id="b40-br-pqV"/>
+                <outlet property="usernameField" destination="gX1-jO-FeX" id="fnl-Hu-ajY"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PX3-B0-AhV">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ofS-AF-Rph">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="336"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lm8-PI-7VS">
+                                    <rect key="frame" x="72" y="0.0" width="270" height="336"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gX1-jO-FeX" customClass="TitledTextField" customModule="PetDays" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="270" height="48"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="48" id="s8r-z3-XyP"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="titleText" value="Username"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nid-5s-Rma" customClass="TitledTextField" customModule="PetDays" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="72" width="270" height="48"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="48" id="F1x-o8-Kzv"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="titleText" value="Password"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mWj-zX-6CG" customClass="TitledTextField" customModule="PetDays" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="144" width="270" height="48"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="48" id="V9Y-5p-YRj"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="titleText" value="Re-Enter Password"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iOg-ks-7Da" customClass="TitledTextField" customModule="PetDays" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="216" width="270" height="48"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="48" id="Gp7-MP-i7Q"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="titleText" value="First Name"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DL7-sy-Nbw" customClass="TitledTextField" customModule="PetDays" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="288" width="270" height="48"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="48" id="v9A-78-Dhh"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="titleText" value="Last Name"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="iOg-ks-7Da" firstAttribute="leading" secondItem="lm8-PI-7VS" secondAttribute="leading" id="4PQ-K5-fR4"/>
+                                        <constraint firstAttribute="trailing" secondItem="gX1-jO-FeX" secondAttribute="trailing" id="4rr-xc-aH0"/>
+                                        <constraint firstAttribute="trailing" secondItem="mWj-zX-6CG" secondAttribute="trailing" id="5fN-XV-RPc"/>
+                                        <constraint firstItem="gX1-jO-FeX" firstAttribute="leading" secondItem="lm8-PI-7VS" secondAttribute="leading" id="6iu-rA-dhw"/>
+                                        <constraint firstItem="mWj-zX-6CG" firstAttribute="leading" secondItem="lm8-PI-7VS" secondAttribute="leading" id="7oR-ns-fRe"/>
+                                        <constraint firstAttribute="trailing" secondItem="nid-5s-Rma" secondAttribute="trailing" id="ASq-XV-DgN"/>
+                                        <constraint firstItem="mWj-zX-6CG" firstAttribute="top" secondItem="nid-5s-Rma" secondAttribute="bottom" constant="24" id="B8n-Xi-GdN"/>
+                                        <constraint firstItem="DL7-sy-Nbw" firstAttribute="leading" secondItem="lm8-PI-7VS" secondAttribute="leading" id="CcA-Ty-HnI"/>
+                                        <constraint firstAttribute="trailing" secondItem="iOg-ks-7Da" secondAttribute="trailing" id="OhU-XF-74b"/>
+                                        <constraint firstAttribute="trailing" secondItem="DL7-sy-Nbw" secondAttribute="trailing" id="Xgn-7u-VTn"/>
+                                        <constraint firstAttribute="bottom" secondItem="DL7-sy-Nbw" secondAttribute="bottom" id="YBL-nG-M2q"/>
+                                        <constraint firstItem="DL7-sy-Nbw" firstAttribute="top" secondItem="iOg-ks-7Da" secondAttribute="bottom" constant="24" id="h9m-Hk-ZNz"/>
+                                        <constraint firstItem="nid-5s-Rma" firstAttribute="top" secondItem="gX1-jO-FeX" secondAttribute="bottom" constant="24" id="kZQ-7p-MoB"/>
+                                        <constraint firstItem="nid-5s-Rma" firstAttribute="leading" secondItem="lm8-PI-7VS" secondAttribute="leading" id="mVI-F8-QSU"/>
+                                        <constraint firstItem="iOg-ks-7Da" firstAttribute="top" secondItem="mWj-zX-6CG" secondAttribute="bottom" constant="24" id="meH-0D-Z2C"/>
+                                        <constraint firstItem="gX1-jO-FeX" firstAttribute="top" secondItem="lm8-PI-7VS" secondAttribute="top" id="xDE-nq-lpq"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="lm8-PI-7VS" firstAttribute="top" secondItem="ofS-AF-Rph" secondAttribute="top" id="4uN-wp-weq"/>
+                                <constraint firstItem="lm8-PI-7VS" firstAttribute="leading" secondItem="ofS-AF-Rph" secondAttribute="leading" constant="72" id="8sN-AO-8Oh"/>
+                                <constraint firstAttribute="bottom" secondItem="lm8-PI-7VS" secondAttribute="bottom" id="AwB-it-5L4"/>
+                                <constraint firstAttribute="trailing" secondItem="lm8-PI-7VS" secondAttribute="trailing" constant="72" id="qWf-pP-Xan"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="ofS-AF-Rph" secondAttribute="bottom" id="6k6-xP-gNX"/>
+                        <constraint firstItem="ofS-AF-Rph" firstAttribute="top" secondItem="PX3-B0-AhV" secondAttribute="top" id="KvJ-p6-Os7"/>
+                        <constraint firstItem="ofS-AF-Rph" firstAttribute="width" secondItem="PX3-B0-AhV" secondAttribute="width" id="ORg-oD-hcF"/>
+                        <constraint firstAttribute="trailing" secondItem="ofS-AF-Rph" secondAttribute="trailing" id="jrV-Xn-6Xf"/>
+                        <constraint firstItem="ofS-AF-Rph" firstAttribute="leading" secondItem="PX3-B0-AhV" secondAttribute="leading" id="n8c-Fi-V5F"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="PX3-B0-AhV" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="HpI-l9-744"/>
+                <constraint firstItem="PX3-B0-AhV" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="PiL-QE-3cP"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="PX3-B0-AhV" secondAttribute="bottom" id="cBe-6w-WVR"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="PX3-B0-AhV" secondAttribute="trailing" id="gE5-5h-7Ub"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="152.67857142857142"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -28,4 +28,13 @@ struct StoryboardConstants {
             return self.rawValue
         }
     }
+    
+    enum Nib: String {
+        case LoginView = "LoginView"
+        case SignUpView = "SignUpView"
+        
+        var identifier: String {
+            return self.rawValue
+        }
+    }
 }
