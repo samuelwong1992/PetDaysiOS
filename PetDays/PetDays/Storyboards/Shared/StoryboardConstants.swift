@@ -13,6 +13,7 @@ struct StoryboardConstants {
         case Landing = "Landing"
         case Login = "Login"
         case Main = "Main"
+        case Internal = "Internal"
         
         var storyboard: UIStoryboard {
             return UIStoryboard(name: self.rawValue, bundle: nil)
@@ -23,6 +24,7 @@ struct StoryboardConstants {
         case LandingViewController = "LandingViewController"
         case LoginViewController = "LoginViewController"
         case MainViewController = "MainViewController"
+        case HomeViewController = "HomeViewController"
         
         var identifier: String {
             return self.rawValue

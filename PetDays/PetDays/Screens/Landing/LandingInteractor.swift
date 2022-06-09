@@ -13,8 +13,7 @@ class LandingInteractor: ScreenComponent {
 
 extension LandingInteractor {
     func viewDidLoad() {
-        Timer.scheduledTimer(withTimeInterval: 2, repeats: false) { timer in
-            self.screen.presenter.goToLoginScreen()
-        }
+//        self.screen.presenter.goToLoginScreen()
+        self.screen.presenter.goToHomeScreen()
     }
 }
