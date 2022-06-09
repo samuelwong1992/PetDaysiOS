@@ -70,6 +70,7 @@ class APIManager {
                                     let response = try JSONDecoder().decode(T.self, from: data!)
                                     return completion(response, nil)
                                 } catch {
+                                    print(error)
                                     if let errorJSON = json[APIResponse.API_JSON_DEFINED_ERROR].string {
                                         if errorJSON != "" {
                                             return completion(nil, NSError.standardErrorWithString(errorString: errorJSON))

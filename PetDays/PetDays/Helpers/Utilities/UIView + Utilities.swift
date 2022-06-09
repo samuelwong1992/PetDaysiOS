@@ -146,6 +146,16 @@ extension UIView {
         self.layer.shadowPath = UIBezierPath(roundedRect: shadowRect, cornerRadius: 2 * self.layer.cornerRadius).cgPath
     }
     
+    func addBottomShadow() {
+        self.layer.shadowOpacity = 0.23
+        self.layer.shadowRadius = 4.0
+
+        let shadowRect: CGRect = CGRect(origin: CGPoint(x: 0, y: self.bounds.size.height), size: CGSize(width: self.bounds.size.width, height: 2))
+
+        self.layer.masksToBounds = false
+        self.layer.shadowPath = UIBezierPath(roundedRect: shadowRect, cornerRadius: 2 * self.layer.cornerRadius).cgPath
+    }
+    
     func addBorder(thick: Bool = false, colour: UIColor) {
         self.layer.borderWidth = thick ? 4 : 1
         self.layer.borderColor = colour.cgColor

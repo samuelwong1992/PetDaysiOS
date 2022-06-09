@@ -18,5 +18,8 @@ class InternalUserNavigationController: UINavigationController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let navBar = InternalNavBar(frame: self.navigationBar.frame)
+        self.navigationBar.addSubViewWithSameSize(subview: navBar)
     }
 }
