@@ -14,8 +14,8 @@ extension User {
             guard error == nil else { return completion(error) }
             guard let response = response else { return completion(NSError.standardNoDataError()) }
             
-            User.currentUser = User(apiToken: response.token)
-            Profile.currentProfile = response.profile
+            SessionManager.currentUser = User(apiToken: response.token)
+            SessionManager.currentProfile = response.profile
             
             return completion(nil)
         }
@@ -27,8 +27,8 @@ extension User {
             guard error == nil else { return completion(error) }
             guard let response = response else { return completion(NSError.standardNoDataError()) }
             
-            User.currentUser = User(apiToken: response.token)
-            Profile.currentProfile = response.profile
+            SessionManager.currentUser = User(apiToken: response.token)
+            SessionManager.currentProfile = response.profile
             
             return completion(nil)
         }
