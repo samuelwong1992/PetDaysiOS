@@ -20,6 +20,14 @@ class InternalUserNavigationController: UINavigationController {
         super.viewDidLoad()
         
         let navBar = InternalNavBar(frame: self.navigationBar.frame)
+        navBar._delegate = self
         self.navigationBar.addSubViewWithSameSize(subview: navBar)
+    }
+}
+
+//MARK: Nav Bar Delegate
+extension InternalUserNavigationController: InternalNavBarDelegate {
+    func internalNavBar(internalNavBar: InternalNavBar, shouldShowAlertController alertController: UIAlertController) {
+        self.present(alertController, animated: true)
     }
 }

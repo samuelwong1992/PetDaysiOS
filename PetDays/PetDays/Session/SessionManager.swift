@@ -7,29 +7,59 @@
 
 import Foundation
 
-fileprivate var _currentUser: User?
-fileprivate var _currentProfile: Profile?
+fileprivate let _sessionManager: SessionManager = SessionManager()
 
-class SessionManager {}
+typealias ObservableTrigger = (observable: SessionManager.Observable, trigger: () -> Void)
 
-extension SessionManager {
-    static var currentProfile: Profile? {
+class SessionManager {
+    static var current: SessionManager {
         get {
-            return _currentProfile
-        }
-        set {
-            _currentProfile = newValue
+            return _sessionManager
         }
     }
+    
+    enum Observable {
+        case user
+        case profile
+        case pet
+        case daycare
+    }
+    
+    var user: User? {
+        didSet {
+            for ot in subscriptions.filter({ $0.observable == .user }) {
+                ot.trigger()
+            }
+        }
+    }
+    var profile: Profile? {
+        didSet {
+            for ot in subscriptions.filter({ $0.observable == .profile }) {
+                ot.trigger()
+            }
+        }
+    }
+    var pet: Pet? {
+        didSet {
+            for ot in subscriptions.filter({ $0.observable == .pet }) {
+                ot.trigger()
+            }
+        }
+    }
+    var daycare: Daycare? {
+        didSet {
+            for ot in subscriptions.filter({ $0.observable == .daycare }) {
+                ot.trigger()
+            }
+        }
+    }
+    
+    //TODO: Check for memory leaks
+    private var subscriptions: [ObservableTrigger] = []
 }
 
 extension SessionManager {
-    static var currentUser: User? {
-        get {
-            return _currentUser
-        }
-        set {
-            _currentUser = newValue
-        }
+    func subscribe(toObserserve observable: Observable, completion: @escaping (() -> Void)) {
+        subscriptions.append((observable, completion))
     }
 }

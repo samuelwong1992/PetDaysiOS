@@ -13,7 +13,7 @@ class LandingInteractor: ScreenComponent {
 
 extension LandingInteractor {
     func viewDidLoad() {
-//        self.screen.presenter.goToLoginScreen()
-        self.screen.presenter.goToHomeScreen()
+        self.screen.presenter.goToLoginScreen()
+//        self.screen.presenter.goToHomeScreen()
     }
 }
