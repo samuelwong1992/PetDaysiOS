@@ -65,6 +65,7 @@
 		4613E4F52851855D00311889 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4613E4F42851855D00311889 /* HomeInteractor.swift */; };
 		4613E4F72851858A00311889 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4613E4F62851858A00311889 /* HomeViewController.swift */; };
 		4613E4F9285186A600311889 /* Internal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4613E4F8285186A600311889 /* Internal.storyboard */; };
+		46CFBC05285F419000DAB3D6 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CFBC04285F419000DAB3D6 /* KeychainManager.swift */; };
 		46DBE26D2851C0E00015D8F1 /* Pet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46DBE26C2851C0E00015D8F1 /* Pet.swift */; };
 		46DBE2702851C19D0015D8F1 /* Daycare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46DBE26F2851C19D0015D8F1 /* Daycare.swift */; };
 		46DBE2732851C6010015D8F1 /* InternalNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46DBE2722851C6010015D8F1 /* InternalNavBar.swift */; };
@@ -155,6 +156,7 @@
 		4613E4F42851855D00311889 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		4613E4F62851858A00311889 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		4613E4F8285186A600311889 /* Internal.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Internal.storyboard; sourceTree = "<group>"; };
+		46CFBC04285F419000DAB3D6 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
 		46DBE26C2851C0E00015D8F1 /* Pet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pet.swift; sourceTree = "<group>"; };
 		46DBE26F2851C19D0015D8F1 /* Daycare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Daycare.swift; sourceTree = "<group>"; };
 		46DBE2722851C6010015D8F1 /* InternalNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternalNavBar.swift; sourceTree = "<group>"; };
@@ -576,6 +578,7 @@
 			isa = PBXGroup;
 			children = (
 				46DBE2752859AD790015D8F1 /* SessionManager.swift */,
+				46CFBC04285F419000DAB3D6 /* KeychainManager.swift */,
 			);
 			path = Session;
 			sourceTree = "<group>";
@@ -887,6 +890,7 @@
 				4613E4A8284EEAB800311889 /* LandingScreen.swift in Sources */,
 				4613E4F32851850100311889 /* HomeScreen.swift in Sources */,
 				4613E4CC284F1E9200311889 /* Separator.swift in Sources */,
+				46CFBC05285F419000DAB3D6 /* KeychainManager.swift in Sources */,
 				46DBE2732851C6010015D8F1 /* InternalNavBar.swift in Sources */,
 				4613E493284ED93600311889 /* UserService.swift in Sources */,
 				4613E4E7284F32AA00311889 /* UILabel + Utilities.swift in Sources */,

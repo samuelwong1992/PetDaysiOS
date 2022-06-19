@@ -13,7 +13,17 @@ class LandingInteractor: ScreenComponent {
 
 extension LandingInteractor {
     func viewDidLoad() {
-        self.screen.presenter.goToLoginScreen()
-//        self.screen.presenter.goToHomeScreen()
+        if let token = KeychainManager.current.read(service: .APIAccessToken) {
+            SessionManager.current.user = User(apiToken: token)
+            User.login(username: "", password: "") { error in
+                guard error == nil else {
+                    KeychainManager.current.delete(service: .APIAccessToken)
+                    return
+                }
+                self.screen.presenter.goToHomeScreen()
+            }
+        } else {
+            self.screen.presenter.goToLoginScreen()
+        }
     }
 }

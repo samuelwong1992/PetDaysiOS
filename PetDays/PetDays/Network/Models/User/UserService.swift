@@ -14,6 +14,8 @@ extension User {
             guard error == nil else { return completion(error) }
             guard let response = response else { return completion(NSError.standardNoDataError()) }
             
+            KeychainManager.current.save(response.token, service: .APIAccessToken)
+            
             SessionManager.current.user = User(apiToken: response.token)
             SessionManager.current.profile = response.profile
             
@@ -26,6 +28,8 @@ extension User {
         APIManager.current.performRequest(request: request) { (response: LoginResponse?, error) in
             guard error == nil else { return completion(error) }
             guard let response = response else { return completion(NSError.standardNoDataError()) }
+            
+            KeychainManager.current.save(response.token, service: .APIAccessToken)
             
             SessionManager.current.user = User(apiToken: response.token)
             SessionManager.current.profile = response.profile
