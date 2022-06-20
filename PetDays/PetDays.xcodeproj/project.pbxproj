@@ -16,7 +16,6 @@
 		460E550A28483EC800B09607 /* PetDays.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 460E550828483EC800B09607 /* PetDays.xcdatamodeld */; };
 		460E550C28483ECE00B09607 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 460E550B28483ECE00B09607 /* Assets.xcassets */; };
 		460E550F28483ECE00B09607 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 460E550D28483ECE00B09607 /* LaunchScreen.storyboard */; };
-		460E551A28483ECE00B09607 /* PetDaysTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460E551928483ECE00B09607 /* PetDaysTests.swift */; };
 		460E552428483ECE00B09607 /* PetDaysUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460E552328483ECE00B09607 /* PetDaysUITests.swift */; };
 		460E552628483ECE00B09607 /* PetDaysUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460E552528483ECE00B09607 /* PetDaysUITestsLaunchTests.swift */; };
 		460E55352848560600B09607 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460E55342848560600B09607 /* APIManager.swift */; };
@@ -66,6 +65,8 @@
 		4613E4F72851858A00311889 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4613E4F62851858A00311889 /* HomeViewController.swift */; };
 		4613E4F9285186A600311889 /* Internal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4613E4F8285186A600311889 /* Internal.storyboard */; };
 		46CFBC05285F419000DAB3D6 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CFBC04285F419000DAB3D6 /* KeychainManager.swift */; };
+		46CFBC072860508A00DAB3D6 /* LandingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CFBC062860508A00DAB3D6 /* LandingTests.swift */; };
+		46CFBC0B286065BC00DAB3D6 /* UserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CFBC0A286065BC00DAB3D6 /* UserTests.swift */; };
 		46DBE26D2851C0E00015D8F1 /* Pet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46DBE26C2851C0E00015D8F1 /* Pet.swift */; };
 		46DBE2702851C19D0015D8F1 /* Daycare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46DBE26F2851C19D0015D8F1 /* Daycare.swift */; };
 		46DBE2732851C6010015D8F1 /* InternalNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46DBE2722851C6010015D8F1 /* InternalNavBar.swift */; };
@@ -106,7 +107,6 @@
 		460E550E28483ECE00B09607 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		460E551028483ECE00B09607 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		460E551528483ECE00B09607 /* PetDaysTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PetDaysTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		460E551928483ECE00B09607 /* PetDaysTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetDaysTests.swift; sourceTree = "<group>"; };
 		460E551F28483ECE00B09607 /* PetDaysUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PetDaysUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		460E552328483ECE00B09607 /* PetDaysUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetDaysUITests.swift; sourceTree = "<group>"; };
 		460E552528483ECE00B09607 /* PetDaysUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetDaysUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -157,6 +157,8 @@
 		4613E4F62851858A00311889 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		4613E4F8285186A600311889 /* Internal.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Internal.storyboard; sourceTree = "<group>"; };
 		46CFBC04285F419000DAB3D6 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
+		46CFBC062860508A00DAB3D6 /* LandingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingTests.swift; sourceTree = "<group>"; };
+		46CFBC0A286065BC00DAB3D6 /* UserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTests.swift; sourceTree = "<group>"; };
 		46DBE26C2851C0E00015D8F1 /* Pet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pet.swift; sourceTree = "<group>"; };
 		46DBE26F2851C19D0015D8F1 /* Daycare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Daycare.swift; sourceTree = "<group>"; };
 		46DBE2722851C6010015D8F1 /* InternalNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternalNavBar.swift; sourceTree = "<group>"; };
@@ -244,7 +246,8 @@
 		460E551828483ECE00B09607 /* PetDaysTests */ = {
 			isa = PBXGroup;
 			children = (
-				460E551928483ECE00B09607 /* PetDaysTests.swift */,
+				46CFBC092860658700DAB3D6 /* ScreenTests */,
+				46CFBC082860657500DAB3D6 /* APITests */,
 			);
 			path = PetDaysTests;
 			sourceTree = "<group>";
@@ -548,6 +551,22 @@
 				4613E4F62851858A00311889 /* HomeViewController.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		46CFBC082860657500DAB3D6 /* APITests */ = {
+			isa = PBXGroup;
+			children = (
+				46CFBC0A286065BC00DAB3D6 /* UserTests.swift */,
+			);
+			path = APITests;
+			sourceTree = "<group>";
+		};
+		46CFBC092860658700DAB3D6 /* ScreenTests */ = {
+			isa = PBXGroup;
+			children = (
+				46CFBC062860508A00DAB3D6 /* LandingTests.swift */,
+			);
+			path = ScreenTests;
 			sourceTree = "<group>";
 		};
 		46DBE26B2851C0D30015D8F1 /* Pet */ = {
@@ -908,7 +927,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				460E551A28483ECE00B09607 /* PetDaysTests.swift in Sources */,
+				46CFBC0B286065BC00DAB3D6 /* UserTests.swift in Sources */,
+				46CFBC072860508A00DAB3D6 /* LandingTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,7 +7,7 @@
 
 import Foundation
 
-fileprivate let _sessionManager: SessionManager = SessionManager()
+fileprivate var _sessionManager: SessionManager = SessionManager()
 
 typealias ObservableTrigger = (observable: SessionManager.Observable, trigger: () -> Void)
 
@@ -16,6 +16,10 @@ class SessionManager {
         get {
             return _sessionManager
         }
+    }
+    
+    static func resetSessionManager() {
+        _sessionManager = SessionManager()
     }
     
     enum Observable {
