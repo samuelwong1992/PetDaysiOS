@@ -31,3 +31,11 @@ extension InternalUserNavigationController: InternalNavBarDelegate {
         self.present(alertController, animated: true)
     }
 }
+
+//MARK: Navigation
+extension InternalUserNavigationController {
+    func goToOnboarding() {
+        let onboardingScreen = OnboardingScreen(presenter: self)
+        self.present(onboardingScreen.viewController, animated: true)
+    }
+}

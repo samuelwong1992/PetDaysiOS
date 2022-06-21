@@ -9,4 +9,8 @@ import Foundation
 
 class APIObject: Decodable {
     var id: Int
+    
+    init(id: Int) {
+        self.id = id
+    }
 }

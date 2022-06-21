@@ -62,7 +62,7 @@ extension UIView {
             ])
     }
     
-    func addSubView(subview: UIView, under underView: UIView? = nil, toTop: Bool = false, marginTop: CGFloat = 0, above aboveView: UIView? = nil, toBottom: Bool = false, marginBottom: CGFloat = 0, leftOfView leftView: UIView? = nil, toRightEdge: Bool = false, marginRight: CGFloat = 0, rightOfView rightView: UIView? = nil, toLeftEdge: Bool = false, marginLeft: CGFloat = 0, withHeight height: CGFloat? = nil, withWidth width: CGFloat? = nil, toCenterX: Bool = false, toCenterY: Bool = false) {
+    func addSubView(subview: UIView, under underView: UIView? = nil, toTop: Bool = false, marginTop: CGFloat = 0, above aboveView: UIView? = nil, toBottom: Bool = false, marginBottom: CGFloat = 0, leftOfView leftView: UIView? = nil, toRightEdge: Bool = false, marginRight: CGFloat = 0, rightOfView rightView: UIView? = nil, toLeftEdge: Bool = false, marginLeft: CGFloat = 0, withHeight height: CGFloat? = nil, withWidth width: CGFloat? = nil, equalWidth widthView: UIView? = nil, toCenterX: Bool = false, toCenterY: Bool = false) {
         subview.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(subview)
         
@@ -119,6 +119,12 @@ extension UIView {
         if let width = width {
             NSLayoutConstraint.activate([
             subview.widthAnchor.constraint(equalToConstant: width),
+            ])
+        }
+        
+        if let widthView = widthView {
+            NSLayoutConstraint.activate([
+                subview.widthAnchor.constraint(equalTo: widthView.widthAnchor),
             ])
         }
         
@@ -206,5 +212,11 @@ extension UIView {
         
         gl.frame = self.bounds
         self.layer.insertSublayer(gl, at: 0)
+    }
+}
+
+extension UIView {
+    func setRoundedCorners(large: Bool = false) {
+        self.layer.cornerRadius = large ? Theme.CornerRadius.large.cgFloat : Theme.CornerRadius.regular.cgFloat
     }
 }

@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-typealias Parameters = [String:String]
+typealias Parameters = [String:Any]
 
 protocol APIRequest {
     var endpoint: String { get }

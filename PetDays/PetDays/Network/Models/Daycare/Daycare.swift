@@ -10,6 +10,11 @@ import Foundation
 class Daycare: APIObject {
     var name: String
     
+    init(id: Int, name: String) {
+        self.name = name
+        super.init(id: id)
+    }
+    
     required init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         

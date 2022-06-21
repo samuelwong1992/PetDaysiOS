@@ -25,6 +25,7 @@ struct StoryboardConstants {
         case LoginViewController = "LoginViewController"
         case MainViewController = "MainViewController"
         case HomeViewController = "HomeViewController"
+        case OnboardingViewController = "OnboardingViewController"
         
         var identifier: String {
             return self.rawValue
@@ -34,6 +35,9 @@ struct StoryboardConstants {
     enum Nib: String {
         case LoginView = "LoginView"
         case SignUpView = "SignUpView"
+        case WelcomeView = "WelcomeView"
+        case AddPetView = "AddPetView"
+        case JoinDaycareView = "JoinDaycareView"
         
         var identifier: String {
             return self.rawValue
