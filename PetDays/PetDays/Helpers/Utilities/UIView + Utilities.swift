@@ -213,6 +213,19 @@ extension UIView {
         gl.frame = self.bounds
         self.layer.insertSublayer(gl, at: 0)
     }
+    
+    func addDismissKeyboardRecognizer(delegate: UIGestureRecognizerDelegate? = nil) {
+            let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+            gestureRecognizer.cancelsTouchesInView = false
+            if let delegate = delegate {
+                gestureRecognizer.delegate = delegate
+            }
+            self.addGestureRecognizer(gestureRecognizer)
+        }
+        
+    @objc func dismissKeyboard() {
+        self.endEditing(true)
+    }
 }
 
 extension UIView {

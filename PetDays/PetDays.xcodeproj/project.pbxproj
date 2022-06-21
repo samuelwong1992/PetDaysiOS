@@ -69,6 +69,8 @@
 		46CFBC0B286065BC00DAB3D6 /* UserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CFBC0A286065BC00DAB3D6 /* UserTests.swift */; };
 		46CFBC0F28609C7400DAB3D6 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CFBC0E28609C7400DAB3D6 /* WelcomeView.swift */; };
 		46CFBC1128609D3000DAB3D6 /* WelcomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46CFBC1028609D3000DAB3D6 /* WelcomeView.xib */; };
+		46CFBC132861F24200DAB3D6 /* DaycareAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CFBC122861F24200DAB3D6 /* DaycareAPI.swift */; };
+		46CFBC152861F2EF00DAB3D6 /* DaycareService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CFBC142861F2EF00DAB3D6 /* DaycareService.swift */; };
 		46DBE26D2851C0E00015D8F1 /* Pet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46DBE26C2851C0E00015D8F1 /* Pet.swift */; };
 		46DBE2702851C19D0015D8F1 /* Daycare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46DBE26F2851C19D0015D8F1 /* Daycare.swift */; };
 		46DBE2732851C6010015D8F1 /* InternalNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46DBE2722851C6010015D8F1 /* InternalNavBar.swift */; };
@@ -174,6 +176,8 @@
 		46CFBC0A286065BC00DAB3D6 /* UserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTests.swift; sourceTree = "<group>"; };
 		46CFBC0E28609C7400DAB3D6 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		46CFBC1028609D3000DAB3D6 /* WelcomeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeView.xib; sourceTree = "<group>"; };
+		46CFBC122861F24200DAB3D6 /* DaycareAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaycareAPI.swift; sourceTree = "<group>"; };
+		46CFBC142861F2EF00DAB3D6 /* DaycareService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaycareService.swift; sourceTree = "<group>"; };
 		46DBE26C2851C0E00015D8F1 /* Pet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pet.swift; sourceTree = "<group>"; };
 		46DBE26F2851C19D0015D8F1 /* Daycare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Daycare.swift; sourceTree = "<group>"; };
 		46DBE2722851C6010015D8F1 /* InternalNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternalNavBar.swift; sourceTree = "<group>"; };
@@ -372,6 +376,7 @@
 			children = (
 				4613E488284DBBDD00311889 /* LoginAPI.swift */,
 				46FB8DC228618D3200A36A5C /* PetAPI.swift */,
+				46CFBC122861F24200DAB3D6 /* DaycareAPI.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -633,6 +638,7 @@
 			isa = PBXGroup;
 			children = (
 				46DBE26F2851C19D0015D8F1 /* Daycare.swift */,
+				46CFBC142861F2EF00DAB3D6 /* DaycareService.swift */,
 			);
 			path = Daycare;
 			sourceTree = "<group>";
@@ -998,11 +1004,13 @@
 				460E550A28483EC800B09607 /* PetDays.xcdatamodeld in Sources */,
 				4613E4A8284EEAB800311889 /* LandingScreen.swift in Sources */,
 				4613E4F32851850100311889 /* HomeScreen.swift in Sources */,
+				46CFBC152861F2EF00DAB3D6 /* DaycareService.swift in Sources */,
 				4613E4CC284F1E9200311889 /* Separator.swift in Sources */,
 				46CFBC05285F419000DAB3D6 /* KeychainManager.swift in Sources */,
 				46DBE2732851C6010015D8F1 /* InternalNavBar.swift in Sources */,
 				4613E493284ED93600311889 /* UserService.swift in Sources */,
 				4613E4E7284F32AA00311889 /* UILabel + Utilities.swift in Sources */,
+				46CFBC132861F24200DAB3D6 /* DaycareAPI.swift in Sources */,
 				4613E4D5284F262000311889 /* SignUpView.swift in Sources */,
 				4613E47E284DB4A900311889 /* NSError + Utilities.swift in Sources */,
 				4613E4ED2850780B00311889 /* APIConstants.swift in Sources */,

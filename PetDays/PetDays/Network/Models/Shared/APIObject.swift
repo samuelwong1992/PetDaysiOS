@@ -14,3 +14,10 @@ class APIObject: Decodable {
         self.id = id
     }
 }
+
+extension APIObject: Equatable {
+    static func ==(lhs: APIObject, rhs: APIObject) -> Bool {
+        return lhs.id == rhs.id
+    }
+}
+

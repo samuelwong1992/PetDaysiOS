@@ -9,16 +9,18 @@ import Foundation
 
 class Daycare: APIObject {
     var name: String
-    
-    init(id: Int, name: String) {
-        self.name = name
-        super.init(id: id)
-    }
+    var address: String
     
     required init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         
         name = try values.decode(String.self, forKey: .name)
+        
+        do {
+            address = try values.decode(String.self, forKey: .address)
+        } catch {
+            address = ""
+        }
         
         try super.init(from: decoder)
     }
@@ -26,5 +28,6 @@ class Daycare: APIObject {
     private enum CodingKeys: String, CodingKey {
         case id
         case name
+        case address
       }
 }

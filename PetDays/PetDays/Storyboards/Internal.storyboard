@@ -71,6 +71,7 @@
                     <connections>
                         <outlet property="containerView" destination="WPG-jT-xZh" id="om2-ob-pGM"/>
                         <outlet property="nextButton" destination="cx0-01-jh3" id="xpS-AS-7vT"/>
+                        <outlet property="nextButtonBottomConstraint" destination="wT2-8U-YLc" id="Ctp-kZ-ZwF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xJL-1t-RUA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -78,6 +79,11 @@
             <point key="canvasLocation" x="13" y="805"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="cx0-01-jh3">
+            <size key="intrinsicContentSize" width="82.5" height="31"/>
+        </designable>
+    </designables>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

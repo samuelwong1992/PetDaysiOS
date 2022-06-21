@@ -45,6 +45,7 @@ class OnboardingViewController: UIViewController, ScreenComponent {
     
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var nextButton: SecondaryButton!
+    @IBOutlet weak var nextButtonBottomConstraint: NSLayoutConstraint!
     
     var currentStateIndex: Int = 0 {
         willSet {
@@ -106,12 +107,19 @@ extension OnboardingViewController {
     func initialize() {
         containerView.addSubView(subview: currentState.view(forVC: self), toTop: true, toBottom: true, toLeftEdge: true, equalWidth: containerView)
         nextButton.addTarget(self, action: #selector(nextButton_didPress), for: .touchUpInside)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+        
+        self.view.addDismissKeyboardRecognizer()
     }
 }
 
 //MARK: Button Handlers
 @objc extension OnboardingViewController {
     func nextButton_didPress() {
+        self.view.dismissKeyboard()
+        
         if currentState.view(forVC: self).onboardingComponentIsValid() {
             currentState.performRequest(forVC: self) { [weak self] success in
                 guard success else { return }
@@ -124,5 +132,20 @@ extension OnboardingViewController {
                 }
             }
         }
+    }
+}
+
+//MARK: Keyboard Handler
+@objc extension OnboardingViewController {
+    func keyboardWillShow(notification: Notification) {
+        if let keyboardHeight = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue.height {
+            DispatchQueue.main.async {
+                self.nextButtonBottomConstraint.animateToConstant(newConstant: keyboardHeight + 8, onView: self.view)
+            }
+        }
+    }
+    
+    func keyboardWillHide(notification: Notification) {
+        self.nextButtonBottomConstraint.animateToConstant(newConstant: 40, onView: self.view)
     }
 }
