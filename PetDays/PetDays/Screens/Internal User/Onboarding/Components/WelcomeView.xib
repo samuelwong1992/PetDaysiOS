@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0ct-1p-cos">
+                    <rect key="frame" x="0.0" y="44" width="414" height="409"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g7D-AP-EzX">
+                    <rect key="frame" x="0.0" y="453" width="414" height="409"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2NT-sS-8Pg">
+                            <rect key="frame" x="24" y="194.5" width="366" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="2NT-sS-8Pg" secondAttribute="trailing" constant="24" id="K4M-nU-NDY"/>
+                        <constraint firstItem="2NT-sS-8Pg" firstAttribute="centerY" secondItem="g7D-AP-EzX" secondAttribute="centerY" id="YbV-3d-NKs"/>
+                        <constraint firstItem="2NT-sS-8Pg" firstAttribute="leading" secondItem="g7D-AP-EzX" secondAttribute="leading" constant="24" id="ukt-hZ-p8H"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="0ct-1p-cos" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="5eE-5H-UfR"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="g7D-AP-EzX" secondAttribute="bottom" id="CVD-zw-yw4"/>
+                <constraint firstItem="0ct-1p-cos" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="GlB-7Y-aNg"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="0ct-1p-cos" secondAttribute="trailing" id="VPc-Mu-ImP"/>
+                <constraint firstItem="g7D-AP-EzX" firstAttribute="height" secondItem="0ct-1p-cos" secondAttribute="height" id="ahi-Ll-YxO"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="g7D-AP-EzX" secondAttribute="trailing" id="deI-K0-cKB"/>
+                <constraint firstItem="g7D-AP-EzX" firstAttribute="top" secondItem="0ct-1p-cos" secondAttribute="bottom" id="neR-eG-5Ob"/>
+                <constraint firstItem="g7D-AP-EzX" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="zOv-vU-W5c"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="94"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

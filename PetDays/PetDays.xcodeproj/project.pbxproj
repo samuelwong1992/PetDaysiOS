@@ -67,6 +67,8 @@
 		46CFBC05285F419000DAB3D6 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CFBC04285F419000DAB3D6 /* KeychainManager.swift */; };
 		46CFBC072860508A00DAB3D6 /* LandingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CFBC062860508A00DAB3D6 /* LandingTests.swift */; };
 		46CFBC0B286065BC00DAB3D6 /* UserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CFBC0A286065BC00DAB3D6 /* UserTests.swift */; };
+		46CFBC0F28609C7400DAB3D6 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CFBC0E28609C7400DAB3D6 /* WelcomeView.swift */; };
+		46CFBC1128609D3000DAB3D6 /* WelcomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46CFBC1028609D3000DAB3D6 /* WelcomeView.xib */; };
 		46DBE26D2851C0E00015D8F1 /* Pet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46DBE26C2851C0E00015D8F1 /* Pet.swift */; };
 		46DBE2702851C19D0015D8F1 /* Daycare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46DBE26F2851C19D0015D8F1 /* Daycare.swift */; };
 		46DBE2732851C6010015D8F1 /* InternalNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46DBE2722851C6010015D8F1 /* InternalNavBar.swift */; };
@@ -159,6 +161,8 @@
 		46CFBC04285F419000DAB3D6 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
 		46CFBC062860508A00DAB3D6 /* LandingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingTests.swift; sourceTree = "<group>"; };
 		46CFBC0A286065BC00DAB3D6 /* UserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTests.swift; sourceTree = "<group>"; };
+		46CFBC0E28609C7400DAB3D6 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		46CFBC1028609D3000DAB3D6 /* WelcomeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeView.xib; sourceTree = "<group>"; };
 		46DBE26C2851C0E00015D8F1 /* Pet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pet.swift; sourceTree = "<group>"; };
 		46DBE26F2851C19D0015D8F1 /* Daycare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Daycare.swift; sourceTree = "<group>"; };
 		46DBE2722851C6010015D8F1 /* InternalNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternalNavBar.swift; sourceTree = "<group>"; };
@@ -538,6 +542,7 @@
 		4613E4F02851845E00311889 /* Internal User */ = {
 			isa = PBXGroup;
 			children = (
+				46CFBC0C28609BAD00DAB3D6 /* Onboarding */,
 				4613E4F12851847000311889 /* Home */,
 			);
 			path = "Internal User";
@@ -567,6 +572,23 @@
 				46CFBC062860508A00DAB3D6 /* LandingTests.swift */,
 			);
 			path = ScreenTests;
+			sourceTree = "<group>";
+		};
+		46CFBC0C28609BAD00DAB3D6 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				46CFBC0D28609BC600DAB3D6 /* Components */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		46CFBC0D28609BC600DAB3D6 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				46CFBC0E28609C7400DAB3D6 /* WelcomeView.swift */,
+				46CFBC1028609D3000DAB3D6 /* WelcomeView.xib */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		46DBE26B2851C0D30015D8F1 /* Pet */ = {
@@ -735,6 +757,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				460E550F28483ECE00B09607 /* LaunchScreen.storyboard in Resources */,
+				46CFBC1128609D3000DAB3D6 /* WelcomeView.xib in Resources */,
 				460E550C28483ECE00B09607 /* Assets.xcassets in Resources */,
 				4613E4D7284F262900311889 /* SignUpView.xib in Resources */,
 				4613E4D0284F209A00311889 /* LoginView.xib in Resources */,
@@ -876,6 +899,7 @@
 				4613E496284EDCB700311889 /* ProfileService.swift in Sources */,
 				4613E47C284DB44400311889 /* String + Utilities.swift in Sources */,
 				46DBE2782859B81B0015D8F1 /* Localization.swift in Sources */,
+				46CFBC0F28609C7400DAB3D6 /* WelcomeView.swift in Sources */,
 				4613E4F72851858A00311889 /* HomeViewController.swift in Sources */,
 				4613E4B6284F0A1900311889 /* LoginInteractor.swift in Sources */,
 				4613E4B2284F081B00311889 /* LoginViewController.swift in Sources */,
