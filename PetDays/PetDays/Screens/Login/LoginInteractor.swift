@@ -14,7 +14,7 @@ class LoginInteractor: ScreenComponent {
         User.login(username: username, password: password) { error in
             guard error == nil else { self.screen.viewController.showError(error: error!); return }
             
-            self.screen.presenter.goToHomeScreen()
+            self.screen.router.goToHomeScreen()
         }
     }
     
@@ -22,7 +22,7 @@ class LoginInteractor: ScreenComponent {
         User.register(username: username, password: password, password2: password2, firstName: firstName, lastName: lastName) { error in
             guard error == nil else { self.screen.viewController.showError(error: error!); return }
             
-            self.screen.presenter.goToHomeScreen()
+            self.screen.router.goToHomeScreen()
         }
     }
 }

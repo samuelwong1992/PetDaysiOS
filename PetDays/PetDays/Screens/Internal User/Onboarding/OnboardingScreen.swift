@@ -10,12 +10,12 @@ import Foundation
 class OnboardingScreen {
     var viewController: OnboardingViewController
     var interactor: OnboardingInteractor
-    var presenter: InternalUserNavigationController
+    var router: InternalUserNavigationController
     
-    init(presenter: InternalUserNavigationController) {
+    init(router: InternalUserNavigationController) {
         self.viewController = OnboardingViewController.viewController!
         self.interactor = OnboardingInteractor()
-        self.presenter = presenter
+        self.router = router
         
         viewController.setScreen(screen: self)
         interactor.setScreen(screen: self)

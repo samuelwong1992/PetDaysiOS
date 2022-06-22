@@ -20,10 +20,10 @@ extension LandingInteractor {
                     KeychainManager.current.delete(service: .APIAccessToken)
                     return
                 }
-                self.screen.presenter.goToHomeScreen()
+                self.screen.router.goToHomeScreen()
             }
         } else {
-            self.screen.presenter.goToLoginScreen()
+            self.screen.router.goToLoginScreen()
         }
     }
 }

@@ -10,12 +10,12 @@ import Foundation
 class LoginScreen {
     var viewController: LoginViewController
     var interactor: LoginInteractor
-    var presenter: MainNavigationController
+    var router: MainNavigationController
     
-    init(presenter: MainNavigationController) {
+    init(router: MainNavigationController) {
         self.viewController = LoginViewController.viewController!
         self.interactor = LoginInteractor()
-        self.presenter = presenter
+        self.router = router
         
         viewController.setScreen(screen: self)
         interactor.setScreen(screen: self)

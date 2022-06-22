@@ -11,7 +11,7 @@ class InternalUserNavigationController: UINavigationController {
 
     static func createInternalUserNavigationController() -> InternalUserNavigationController {
         let iunc = InternalUserNavigationController()
-        let landingScreen = HomeScreen(presenter: iunc)
+        let landingScreen = HomeScreen(router: iunc)
         iunc.setViewControllers([landingScreen.viewController], animated: false)
         return iunc
     }
@@ -35,7 +35,7 @@ extension InternalUserNavigationController: InternalNavBarDelegate {
 //MARK: Navigation
 extension InternalUserNavigationController {
     func goToOnboarding() {
-        let onboardingScreen = OnboardingScreen(presenter: self)
+        let onboardingScreen = OnboardingScreen(router: self)
         self.present(onboardingScreen.viewController, animated: true)
     }
 }

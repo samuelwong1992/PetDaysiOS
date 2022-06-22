@@ -10,10 +10,10 @@ import Foundation
 class HomeScreen {
     var viewController: HomeViewController
     var interactor: HomeInteractor
-    var presenter: InternalUserNavigationController
+    var router: InternalUserNavigationController
     
-    init(presenter: InternalUserNavigationController) {
-        self.presenter = presenter
+    init(router: InternalUserNavigationController) {
+        self.router = router
         self.viewController = HomeViewController.viewController!
         self.interactor = HomeInteractor()
         
