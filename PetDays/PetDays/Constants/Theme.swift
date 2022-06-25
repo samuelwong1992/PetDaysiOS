@@ -55,7 +55,7 @@ struct Theme {
             switch self {
             case .focus : return UIFont.systemFont(ofSize: 20)
             case .focusTitle : return UIFont.boldSystemFont(ofSize: 20)
-            case .semiTitle : return UIFont.systemFont(ofSize: 16)
+            case .semiTitle : return UIFont.boldSystemFont(ofSize: 14)
             case .regular : return UIFont.systemFont(ofSize: 14)
             case .detail : return UIFont.systemFont(ofSize: 12)
             }

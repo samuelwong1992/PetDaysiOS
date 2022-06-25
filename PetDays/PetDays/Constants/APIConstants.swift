@@ -17,6 +17,8 @@ struct APIConstants {
         
         case Daycare
         
+        case Post
+        
         var endpoint: String {
             switch self {
             case .Login : return "rest-api/login/"
@@ -26,6 +28,8 @@ struct APIConstants {
             case .RequestDaycare(let petId) : return Endpoint.Pet.endpoint + "\(petId)/request-daycare/"
                 
             case .Daycare : return "rest-api/daycare/"
+                
+            case .Post : return "rest-api/post/"
             }
         }
     }
@@ -73,10 +77,12 @@ struct APIConstants {
         
         enum Misc {
             case Daycare
+            case DateTimeCreated
             
             var key: String {
                 switch self {
                 case .Daycare : return "daycare"
+                case .DateTimeCreated : return "date_time_created"
                 }
             }
         }

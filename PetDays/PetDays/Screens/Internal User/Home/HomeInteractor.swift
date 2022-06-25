@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 class HomeInteractor: ScreenComponent {
     var screen: HomeScreen!
@@ -14,8 +15,16 @@ class HomeInteractor: ScreenComponent {
 //MARK: Initialization {
 extension HomeInteractor {
     func viewDidLoad() {
+        SessionManager.current.subscribe(toObserserve: .posts) {
+            self.screen.viewController.reloadData()
+        }
+        
         if SessionManager.current.profile?.pets.count == 0 || SessionManager.current.profile?.daycares.count == 0 {
             screen.router.goToOnboarding()
+        } else {
+            Post.getFeed { error in
+                guard error == nil else { UIAlertController.showAlertWithError(viewController: self.screen.viewController, error: error!); return }
+            }
         }
     }
 }

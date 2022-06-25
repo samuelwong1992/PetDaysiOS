@@ -36,5 +36,5 @@ class Pet: APIObject {
         case name
         case profilePictureUrl = "profile_picture"
         case daycares
-      }
+    }
 }

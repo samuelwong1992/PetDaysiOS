@@ -27,39 +27,45 @@ class SessionManager {
         case profile
         case pet
         case daycare
+        case posts
     }
     
     var user: User? {
         didSet {
-            for ot in subscriptions.filter({ $0.observable == .user }) {
-                ot.trigger()
-            }
+            hitSubsscription(forOservableType: .user)
         }
     }
     var profile: Profile? {
         didSet {
-            for ot in subscriptions.filter({ $0.observable == .profile }) {
-                ot.trigger()
-            }
+            hitSubsscription(forOservableType: .profile)
         }
     }
     var pet: Pet? {
         didSet {
-            for ot in subscriptions.filter({ $0.observable == .pet }) {
-                ot.trigger()
-            }
+            hitSubsscription(forOservableType: .pet)
         }
     }
     var daycare: Daycare? {
         didSet {
-            for ot in subscriptions.filter({ $0.observable == .daycare }) {
-                ot.trigger()
-            }
+            hitSubsscription(forOservableType: .daycare)
+        }
+    }
+    
+    var posts: [Post] = [] {
+        didSet {
+            hitSubsscription(forOservableType: .posts)
         }
     }
     
     //TODO: Check for memory leaks
     private var subscriptions: [ObservableTrigger] = []
+    private func hitSubsscription(forOservableType ot: Observable) {
+        DispatchQueue.main.async {
+            for ot in self.subscriptions.filter({ $0.observable == ot }) {
+                ot.trigger()
+            }
+        }
+    }
 }
 
 extension SessionManager {

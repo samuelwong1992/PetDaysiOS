@@ -39,6 +39,8 @@ struct StoryboardConstants {
         case AddPetView = "AddPetView"
         case JoinDaycareView = "JoinDaycareView"
         
+        case PostTableViewCell = "PostTableViewCell"
+        
         var identifier: String {
             return self.rawValue
         }

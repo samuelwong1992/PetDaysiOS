@@ -28,7 +28,10 @@ class APIManager {
         _apiManager = APIManager(baseURL: path)
         return _apiManager
     }
-    
+}
+
+//MARK: Request Handler
+extension APIManager {
     func performRequest<T: Decodable>(request: APIRequest, shouldShowLoading: Bool = true, completion: @escaping (_ model: T?, _ error: Error?) -> Void) {
         if shouldShowLoading {
 //            LoadingHUD.show()
@@ -163,6 +166,28 @@ class APIManager {
             }
         } catch {
             return completion(nil, NSError.standardErrorWithString(errorString: "URL couldn't be encoded for these objects."))
+        }
+    }
+}
+
+//MARK: Image Handling
+extension APIManager {
+    func fetchImageAtUrl(url: String?, completion: @escaping (_ image: UIImage?) -> Void) {
+        guard !String.isNilOrEmpty(url) else { return completion(nil) }
+
+        print(url!)
+        AF.request(url!).responseData { response in
+            switch response.result {
+            case .success :
+                if let data = response.data {
+                    if let image = UIImage(data: data) {
+                        return completion(image)
+                    }
+                }
+                
+            case .failure :
+                return completion(nil)
+            }
         }
     }
 }
