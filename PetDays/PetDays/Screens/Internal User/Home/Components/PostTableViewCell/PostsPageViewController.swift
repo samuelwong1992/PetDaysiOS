@@ -39,6 +39,10 @@ extension PostsPageViewController {
         self.delegate = self
         self.dataSource = self
         self.setViewControllers([_viewControllers.first!], direction: .forward, animated: false, completion: nil)
+        
+        let appearance = UIPageControl.appearance(whenContainedInInstancesOf: [PostsPageViewController.self])
+        appearance.pageIndicatorTintColor = Theme.Colours.primary.color.withAlphaComponent(0.4)
+        appearance.currentPageIndicatorTintColor = Theme.Colours.primary.color
     }
 }
 
