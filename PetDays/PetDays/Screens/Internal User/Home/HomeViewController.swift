@@ -46,19 +46,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: PostTableViewCell.kReuseIdentifier) as! PostTableViewCell
         
-        cell.viewModel = PostTableViewCellModelView(post: SessionManager.current.posts[indexPath.row])
-        
-        cell.containerView.isHidden = false
-        if cell.viewModel.postPhotos.count > 0 {
-            let vc = PostsPageViewController()
-            vc.postPhotos = cell.viewModel.postPhotos
-            self.addChild(vc)
-            cell.containerView.addSubViewWithSameSize(subview: vc.view)
-        } else {
-            cell.containerView.isHidden = true
-        }
-        
-        
+        cell.viewModel = PostTableViewCellModelView(post: SessionManager.current.posts[indexPath.row], pagerParent: self)
         
         return cell
     }

@@ -45,6 +45,8 @@ class PostTableViewCell: UITableViewCell {
 
 extension PostTableViewCell {
     func setupView() {
+        self.selectionStyle = .none
+        
         daycareImageView.contentMode = .scaleAspectFit
         daycareImageView.setRoundedCorners()
         daycareImageView.addBorder(colour: Theme.Colours.primary.color)
@@ -52,8 +54,6 @@ extension PostTableViewCell {
         employeeImageView.contentMode = .scaleAspectFit
         employeeImageView.setRoundedCorners()
         employeeImageView.addBorder(colour: Theme.Colours.primary.color)
-        
-        
     }
     
     func initialize() {
@@ -72,6 +72,16 @@ extension PostTableViewCell {
                 DispatchQueue.main.async {
                     self?.employeeImageView.image = image
                 }
+            }
+            
+            containerView.isHidden = false
+            if vm.postPhotos.count > 0 {
+                let vc = PostsPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal)
+                vc.postPhotos = vm.postPhotos
+                vm.pagerParent.addChild(vc)
+                containerView.addSubViewWithSameSize(subview: vc.view)
+            } else {
+                containerView.isHidden = true
             }
         }
     }

@@ -10,9 +10,11 @@ import UIKit
 
 class PostTableViewCellModelView {
     private var post: Post
+    var pagerParent: UIViewController
     
-    init(post: Post) {
+    init(post: Post, pagerParent: UIViewController) {
         self.post = post
+        self.pagerParent = pagerParent
     }
     
     var titleText: String {

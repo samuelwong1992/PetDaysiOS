@@ -76,7 +76,11 @@ extension PostsPageViewController: UIPageViewControllerDelegate, UIPageViewContr
 
 class ImageViewController: UIViewController {
     lazy var imageView: UIImageView = {
-        return UIImageView(frame: self.view.frame)
+        let toReturn = UIImageView(frame: self.view.frame)
+        
+        toReturn.contentMode = .scaleAspectFit
+        
+        return toReturn
     }()
     
     var postPhoto: PostPhoto
@@ -93,10 +97,7 @@ class ImageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.addSubViewWithSameSize(subview: imageView)
-        
-        self.view.backgroundColor = .red
-        self.imageView.backgroundColor = .blue
-        
+                
         APIManager.current.fetchImageAtUrl(url: postPhoto.photoUrl) { image in
             DispatchQueue.main.async {
                 self.imageView.image = image
