@@ -35,16 +35,19 @@ class SessionManager {
             hitSubsscription(forOservableType: .user)
         }
     }
+    
     var profile: Profile? {
         didSet {
             hitSubsscription(forOservableType: .profile)
         }
     }
+    
     var pet: Pet? {
         didSet {
             hitSubsscription(forOservableType: .pet)
         }
     }
+    
     var daycare: Daycare? {
         didSet {
             hitSubsscription(forOservableType: .daycare)

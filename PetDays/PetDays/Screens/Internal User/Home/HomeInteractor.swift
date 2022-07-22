@@ -15,16 +15,35 @@ class HomeInteractor: ScreenComponent {
 //MARK: Initialization {
 extension HomeInteractor {
     func viewDidLoad() {
-        SessionManager.current.subscribe(toObserserve: .posts) {
-            self.screen.viewController.reloadData()
-        }
+        setupBindings()
         
         if SessionManager.current.profile?.pets.count == 0 || SessionManager.current.profile?.daycares.count == 0 {
             screen.router.goToOnboarding()
         } else {
-            Post.getFeed { error in
-                guard error == nil else { UIAlertController.showAlertWithError(viewController: self.screen.viewController, error: error!); return }
-            }
+            getFeed()
+        }
+    }
+    
+    func setupBindings() {
+        SessionManager.current.subscribe(toObserserve: .posts) {
+            self.screen.viewController.reloadData()
+        }
+        
+        SessionManager.current.subscribe(toObserserve: .daycare) { [weak self] in
+            self?.getFeed()
+        }
+        
+        SessionManager.current.subscribe(toObserserve: .pet) { [weak self] in
+            self?.getFeed()
+        }
+    }
+}
+
+//MARK: Utilities
+extension HomeInteractor {
+    func getFeed() {
+        Post.getFeed { error in
+            guard error == nil else { UIAlertController.showAlertWithError(viewController: self.screen.viewController, error: error!); return }
         }
     }
 }

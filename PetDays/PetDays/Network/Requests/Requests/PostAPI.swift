@@ -26,8 +26,15 @@ enum PostAPI: APIRequest {
     
     var parameters: Parameters? {
         switch self {
-        case .getFeed(_, _) :
-            return nil
+        case .getFeed(let daycare, let pet) :
+            var params: [String:Any] = [:]
+            if let daycare = daycare {
+                params[APIConstants.APIKeys.Misc.Daycare.key] = daycare.id
+            }
+            if let pet = pet {
+                params[APIConstants.APIKeys.Misc.Pet.key] = pet.id
+            }
+            return params
         }
     }
 }

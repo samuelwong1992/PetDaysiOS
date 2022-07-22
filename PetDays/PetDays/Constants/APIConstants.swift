@@ -77,11 +77,13 @@ struct APIConstants {
         
         enum Misc {
             case Daycare
+            case Pet
             case DateTimeCreated
             
             var key: String {
                 switch self {
                 case .Daycare : return "daycare"
+                case .Pet : return "pet"
                 case .DateTimeCreated : return "date_time_created"
                 }
             }
