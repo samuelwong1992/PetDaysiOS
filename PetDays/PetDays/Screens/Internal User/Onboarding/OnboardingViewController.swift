@@ -38,7 +38,7 @@ class OnboardingViewController: UIViewController, ScreenComponent {
             case .AddPet :
                 vc.screen.interactor.createPet(name: vc.addPetView.nameInputField.text, image: nil, completion: completion)
             case .JoinDaycare :
-                vc.screen.interactor.requestDaycare(pet: vc.joinDaycareView.selectedPet!, daycareId: vc.joinDaycareView.selectedDaycare!.id, completion: completion)
+                vc.screen.interactor.requestDaycare(pet: vc.joinDaycareView.selectedPet!, daycare: vc.joinDaycareView.selectedDaycare!, completion: completion)
             }
         }
     }

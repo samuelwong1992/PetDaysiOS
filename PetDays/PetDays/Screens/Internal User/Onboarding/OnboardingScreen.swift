@@ -14,7 +14,7 @@ class OnboardingScreen {
     
     init(router: InternalUserNavigationController) {
         self.viewController = OnboardingViewController.viewController!
-        self.interactor = OnboardingInteractor()
+        self.interactor = OnboardingInteractor(petService: PetAPIService())
         self.router = router
         
         viewController.setScreen(screen: self)

@@ -10,20 +10,26 @@ import UIKit
 
 class OnboardingInteractor: ScreenComponent {
     var screen: OnboardingScreen!
+    
+    var petService: PetService
+    
+    internal init(petService: PetService) {
+        self.petService = petService
+    }
 }
 
 //MARK: API Handling
 extension OnboardingInteractor {
     func createPet(name: String, image: UIImage?, completion: @escaping((Bool) -> Void)) {
-        Pet.create(withName: name, profilePicture: image) { error in
+        petService.create(withName: name, profilePicture: image) { error in
             guard error == nil else { UIAlertController.showAlertWithError(viewController: self.screen.viewController, error: error!); return completion(false) }
             
             return completion(true)
         }
     }
     
-    func requestDaycare(pet: Pet, daycareId: Int, completion: @escaping((Bool) -> Void)) {
-        pet.requestDaycare(daycareId: daycareId) { error in
+    func requestDaycare(pet: Pet, daycare: Daycare, completion: @escaping((Bool) -> Void)) {
+        petService.requestDaycare(forPet: pet, daycare: daycare) { error in
             guard error == nil else { UIAlertController.showAlertWithError(viewController: self.screen.viewController, error: error!); return completion(false) }
             
             return completion(true)
