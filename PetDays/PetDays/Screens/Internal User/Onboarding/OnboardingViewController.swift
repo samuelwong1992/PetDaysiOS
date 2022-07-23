@@ -38,7 +38,7 @@ class OnboardingViewController: UIViewController, ScreenComponent {
             case .AddPet :
                 vc.screen.interactor.createPet(name: vc.addPetView.nameInputField.text, image: nil, completion: completion)
             case .JoinDaycare :
-                vc.screen.interactor.requestDaycare(pet: vc.joinDaycareView.selectedPet!, daycare: vc.joinDaycareView.selectedDaycare!, completion: completion)
+                vc.screen.interactor.requestDaycare(pet: vc.joinDaycareView.modelView.selectedPet!, daycare: vc.joinDaycareView.modelView.selectedDaycare!, completion: completion)
             }
         }
     }
@@ -90,8 +90,12 @@ class OnboardingViewController: UIViewController, ScreenComponent {
     }()
     
     lazy var joinDaycareView: JoinDaycareView = {
-        let jdv = JoinDaycareView(frame: self.containerView.frame, daycareService: DaycareAPIService())
-        jdv.selectedPet = SessionManager.current.profile?.pets.first
+        let jdv = JoinDaycareView(
+            frame: self.containerView.frame,
+            modelView: JoinDaycareModelView(
+                selectedPet: SessionManager.current.profile?.pets.first,
+                daycareService: DaycareAPIService()
+            ))
         return jdv
     }()
     

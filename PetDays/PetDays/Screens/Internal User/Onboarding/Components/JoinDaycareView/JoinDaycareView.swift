@@ -10,44 +10,19 @@ import UIKit
 class JoinDaycareView: UIView {
     private static let kCellReuseIdentifier = "JoinDaycareViewCell"
     
-    var selectedDaycare: Daycare?
-    var selectedPet: Pet?
-    
-    var daycareService: DaycareService
-    
     @IBOutlet weak var searchView: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
-    var daycares: [Daycare] = [] {
-        didSet {
-            self.tableView.reloadData()
-        }
-    }
-    
-    var daycareData: [Daycare] {
-        get {
-            if let selectedDaycare = selectedDaycare {
-                if daycares.contains(where: { $0 == selectedDaycare }) {
-                    return daycares
-                } else {
-                    var toReturn = daycares
-                    toReturn.insert(selectedDaycare, at: 0)
-                    return toReturn
-                }
-            } else {
-                return daycares
-            }
-        }
-    }
+    var modelView: JoinDaycareModelView
     
     required init?(coder aDecoder: NSCoder) {
-        self.daycareService = DaycareAPIService()
+        self.modelView = JoinDaycareModelView(selectedPet: nil, daycareService: DaycareAPIService())
         super.init(coder: aDecoder)
         loadViewFromNib()
     }
     
-    init(frame: CGRect, daycareService: DaycareService) {
-        self.daycareService = daycareService
+    init(frame: CGRect, modelView: JoinDaycareModelView) {
+        self.modelView = modelView
         super.init(frame: frame)
         loadViewFromNib()
     }
@@ -67,52 +42,44 @@ extension JoinDaycareView {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: JoinDaycareView.kCellReuseIdentifier)
         tableView.delegate = self
         tableView.dataSource = self
+        
+        modelView.tableViewReloadCompletionBlock = {() -> Void in
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
     }
 }
 
 //MARK: Onboarding Component Conforming
 extension JoinDaycareView: OnboardingComponent {
     func onboardingComponentIsValid() -> Bool {
-        guard selectedPet != nil else { return false }
-        guard selectedDaycare != nil else { return false }
-        
-        return true
+        return modelView.onboardingComponentIsValid()
     }
 }
 
 //MARK: Search Bar Delegate
 extension JoinDaycareView: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        guard let text = searchBar.text else { self.daycares = []; return }
-        if text.count > 2 {
-            daycareService.search(desc: text) { daycares, error in
-                guard error == nil else { return }
-                
-                DispatchQueue.main.async {
-                    self.daycares = daycares
-                }
-            }
-        } else {
-            self.daycares = []
-        }
+        modelView.updateDataForSearchText(text: searchBar.text)
     }
 }
 
 //MARK: Table View Delegate and Data Source
 extension JoinDaycareView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.daycareData.count
+        return modelView.daycareData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: JoinDaycareView.kCellReuseIdentifier)!
         
-        let daycare = self.daycareData[indexPath.row]
+        let daycare = modelView.daycareData[indexPath.row]
         
         var config = cell.defaultContentConfiguration()
         config.text = daycare.name
         config.secondaryText = daycare.address
-        if let selectedDaycare = self.selectedDaycare {
+        if let selectedDaycare = modelView.selectedDaycare {
             config.image = daycare == selectedDaycare ? UIImage(systemName: "checkmark") : nil
         } else {
             config.image = nil
@@ -123,7 +90,6 @@ extension JoinDaycareView: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.selectedDaycare = self.daycareData[indexPath.row]
-        self.tableView.reloadData()
+        modelView.selectedDaycare = modelView.daycareData[indexPath.row]
     }
 }
