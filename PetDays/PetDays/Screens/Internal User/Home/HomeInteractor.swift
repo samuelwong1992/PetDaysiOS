@@ -10,6 +10,12 @@ import UIKit
 
 class HomeInteractor: ScreenComponent {
     var screen: HomeScreen!
+    
+    var postService: PostService
+    
+    internal init(postService: PostService) {
+        self.postService = postService
+    }
 }
 
 //MARK: Initialization {
@@ -42,7 +48,7 @@ extension HomeInteractor {
 //MARK: Utilities
 extension HomeInteractor {
     func getFeed() {
-        Post.getFeed { error in
+        postService.getFeed { error in
             guard error == nil else { UIAlertController.showAlertWithError(viewController: self.screen.viewController, error: error!); return }
         }
     }

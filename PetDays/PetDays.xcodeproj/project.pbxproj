@@ -66,6 +66,7 @@
 		461441A7288A5372008ED25C /* PetAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461441A6288A5372008ED25C /* PetAPIService.swift */; };
 		4636893C288BA18F00BB67D3 /* UserAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4636893B288BA18F00BB67D3 /* UserAPIService.swift */; };
 		4636893E288BA3A400BB67D3 /* DaycareAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4636893D288BA3A400BB67D3 /* DaycareAPIService.swift */; };
+		46368940288BA72D00BB67D3 /* PostAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4636893F288BA72D00BB67D3 /* PostAPIService.swift */; };
 		46CFBC05285F419000DAB3D6 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CFBC04285F419000DAB3D6 /* KeychainManager.swift */; };
 		46CFBC072860508A00DAB3D6 /* LandingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CFBC062860508A00DAB3D6 /* LandingTests.swift */; };
 		46CFBC0B286065BC00DAB3D6 /* UserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CFBC0A286065BC00DAB3D6 /* UserTests.swift */; };
@@ -187,6 +188,7 @@
 		461441A6288A5372008ED25C /* PetAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetAPIService.swift; sourceTree = "<group>"; };
 		4636893B288BA18F00BB67D3 /* UserAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPIService.swift; sourceTree = "<group>"; };
 		4636893D288BA3A400BB67D3 /* DaycareAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaycareAPIService.swift; sourceTree = "<group>"; };
+		4636893F288BA72D00BB67D3 /* PostAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostAPIService.swift; sourceTree = "<group>"; };
 		46CFBC04285F419000DAB3D6 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
 		46CFBC062860508A00DAB3D6 /* LandingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingTests.swift; sourceTree = "<group>"; };
 		46CFBC0A286065BC00DAB3D6 /* UserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTests.swift; sourceTree = "<group>"; };
@@ -765,6 +767,7 @@
 			children = (
 				46FB8DC52862C08700A36A5C /* Post.swift */,
 				46FB8DCC2862CFDB00A36A5C /* PostService.swift */,
+				4636893F288BA72D00BB67D3 /* PostAPIService.swift */,
 			);
 			path = Post;
 			sourceTree = "<group>";
@@ -1116,6 +1119,7 @@
 				46FB8DE12862E41C00A36A5C /* PostsPageViewController.swift in Sources */,
 				46CFBC132861F24200DAB3D6 /* DaycareAPI.swift in Sources */,
 				4613E4D5284F262000311889 /* SignUpView.swift in Sources */,
+				46368940288BA72D00BB67D3 /* PostAPIService.swift in Sources */,
 				4613E47E284DB4A900311889 /* NSError + Utilities.swift in Sources */,
 				4613E4ED2850780B00311889 /* APIConstants.swift in Sources */,
 				4613E4E5284F324300311889 /* NSLayoutConstraint + Utilities.swift in Sources */,

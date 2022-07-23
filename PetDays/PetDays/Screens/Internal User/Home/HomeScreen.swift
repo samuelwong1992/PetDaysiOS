@@ -15,7 +15,7 @@ class HomeScreen {
     init(router: InternalUserNavigationController) {
         self.router = router
         self.viewController = HomeViewController.viewController!
-        self.interactor = HomeInteractor()
+        self.interactor = HomeInteractor(postService: PostAPIService())
         
         viewController.setScreen(screen: self)
         interactor.setScreen(screen: self)
