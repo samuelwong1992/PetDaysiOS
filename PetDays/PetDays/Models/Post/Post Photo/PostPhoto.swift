@@ -7,7 +7,7 @@
 
 import Foundation
 
-class PostPhoto: APIObject {
+class PostPhoto: PDObject {
     var photoUrl: String
     
     required init(from decoder: Decoder) throws {

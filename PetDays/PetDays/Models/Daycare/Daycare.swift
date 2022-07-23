@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Daycare: APIObject {
+class Daycare: PDObject {
     var name: String
     var address: String
     var profilePictureUrl: String?

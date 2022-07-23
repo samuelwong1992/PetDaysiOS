@@ -1,5 +1,5 @@
 //
-//  APIObject.swift
+//  PDObject.swift
 //  PetDays
 //
 //  Created by Samuel Wong on 6/6/2022.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-class APIObject: Decodable {
+class PDObject: Decodable {
     var id: Int
     
     init(id: Int) {
@@ -15,8 +15,8 @@ class APIObject: Decodable {
     }
 }
 
-extension APIObject: Equatable {
-    static func ==(lhs: APIObject, rhs: APIObject) -> Bool {
+extension PDObject: Equatable {
+    static func ==(lhs: PDObject, rhs: PDObject) -> Bool {
         return lhs.id == rhs.id
     }
 }

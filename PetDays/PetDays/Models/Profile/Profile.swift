@@ -1,39 +1,34 @@
 //
-//  Employee.swift
+//  Profile.swift
 //  PetDays
 //
-//  Created by Samuel Wong on 22/6/2022.
+//  Created by Samuel Wong on 6/6/2022.
 //
 
 import Foundation
-class Employee: APIObject {
+
+class Profile: PDObject {
     var firstName: String
     var lastName: String
-    var daycare: Daycare
-    var profilePictureUrl: String?
+    var pets: [Pet]
+    var daycares: [Daycare]
     
-    var fullName: String {
-        return self.firstName + " " + self.lastName
-    }
-
     required init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         
         firstName = try values.decode(String.self, forKey: .firstName)
         lastName = try values.decode(String.self, forKey: .lastName)
-        daycare = try values.decode(Daycare.self, forKey: .daycare)
-        profilePictureUrl = try values.decode(String?.self, forKey: .profilePictureUrl)
-
+        pets = try values.decode([Pet].self, forKey: .pets)
+        daycares = try values.decode([Daycare].self, forKey: .daycares)
         
         try super.init(from: decoder)
     }
-
+    
     private enum CodingKeys: String, CodingKey {
         case id
         case firstName = "first_name"
         case lastName = "last_name"
-        case daycare = "daycare"
-        case profilePictureUrl = "profile_picture"
-    }
+        case pets
+        case daycares
+      }
 }
-

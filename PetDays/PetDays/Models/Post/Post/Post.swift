@@ -7,7 +7,7 @@
 
 import UIKit
 
-class Post: APIObject {
+class Post: PDObject {
     var employee: Employee
     var dateTimeCreated: Date?
     var text: String

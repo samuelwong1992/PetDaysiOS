@@ -22,7 +22,7 @@
 		460E5537284859A400B09607 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460E5536284859A400B09607 /* APIRequest.swift */; };
 		4613E47C284DB44400311889 /* String + Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4613E47B284DB44400311889 /* String + Utilities.swift */; };
 		4613E47E284DB4A900311889 /* NSError + Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4613E47D284DB4A900311889 /* NSError + Utilities.swift */; };
-		4613E481284DB5EE00311889 /* APIObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4613E480284DB5EE00311889 /* APIObject.swift */; };
+		4613E481284DB5EE00311889 /* PDObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4613E480284DB5EE00311889 /* PDObject.swift */; };
 		4613E483284DB60900311889 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4613E482284DB60900311889 /* User.swift */; };
 		4613E486284DB8C200311889 /* APIResponses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4613E485284DB8C200311889 /* APIResponses.swift */; };
 		4613E489284DBBDD00311889 /* LoginAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4613E488284DBBDD00311889 /* LoginAPI.swift */; };
@@ -146,7 +146,7 @@
 		460E5536284859A400B09607 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		4613E47B284DB44400311889 /* String + Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Utilities.swift"; sourceTree = "<group>"; };
 		4613E47D284DB4A900311889 /* NSError + Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSError + Utilities.swift"; sourceTree = "<group>"; };
-		4613E480284DB5EE00311889 /* APIObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIObject.swift; sourceTree = "<group>"; };
+		4613E480284DB5EE00311889 /* PDObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDObject.swift; sourceTree = "<group>"; };
 		4613E482284DB60900311889 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		4613E485284DB8C200311889 /* APIResponses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponses.swift; sourceTree = "<group>"; };
 		4613E488284DBBDD00311889 /* LoginAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAPI.swift; sourceTree = "<group>"; };
@@ -289,6 +289,7 @@
 			isa = PBXGroup;
 			children = (
 				460E553228483F7200B09607 /* Network */,
+				4613E47F284DB5DF00311889 /* Models */,
 				46DBE2742859AD670015D8F1 /* Session */,
 				4613E49A284EDF2900311889 /* Router */,
 				4613E498284EDEAF00311889 /* Screens */,
@@ -328,7 +329,7 @@
 		460E553228483F7200B09607 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				4613E47F284DB5DF00311889 /* Models */,
+				46368946288BC6FC00BB67D3 /* Services */,
 				4613E487284DBBBC00311889 /* Requests */,
 				4613E484284DB8A900311889 /* Responses */,
 				460E553328484FBE00B09607 /* Managers */,
@@ -422,7 +423,7 @@
 		4613E490284ED90E00311889 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				4613E480284DB5EE00311889 /* APIObject.swift */,
+				4613E480284DB5EE00311889 /* PDObject.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -432,7 +433,6 @@
 			children = (
 				4613E482284DB60900311889 /* User.swift */,
 				4613E492284ED93600311889 /* UserService.swift */,
-				4636893B288BA18F00BB67D3 /* UserAPIService.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -636,6 +636,17 @@
 			path = "Table View Cell";
 			sourceTree = "<group>";
 		};
+		46368946288BC6FC00BB67D3 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4636893F288BA72D00BB67D3 /* PostAPIService.swift */,
+				461441A6288A5372008ED25C /* PetAPIService.swift */,
+				4636893D288BA3A400BB67D3 /* DaycareAPIService.swift */,
+				4636893B288BA18F00BB67D3 /* UserAPIService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		46CFBC082860657500DAB3D6 /* APITests */ = {
 			isa = PBXGroup;
 			children = (
@@ -679,7 +690,6 @@
 			children = (
 				46DBE26C2851C0E00015D8F1 /* Pet.swift */,
 				46FB8DC028618D1800A36A5C /* PetService.swift */,
-				461441A6288A5372008ED25C /* PetAPIService.swift */,
 			);
 			path = Pet;
 			sourceTree = "<group>";
@@ -689,7 +699,6 @@
 			children = (
 				46DBE26F2851C19D0015D8F1 /* Daycare.swift */,
 				46CFBC142861F2EF00DAB3D6 /* DaycareService.swift */,
-				4636893D288BA3A400BB67D3 /* DaycareAPIService.swift */,
 			);
 			path = Daycare;
 			sourceTree = "<group>";
@@ -781,7 +790,6 @@
 			children = (
 				46FB8DC52862C08700A36A5C /* Post.swift */,
 				46FB8DCC2862CFDB00A36A5C /* PostService.swift */,
-				4636893F288BA72D00BB67D3 /* PostAPIService.swift */,
 			);
 			path = Post;
 			sourceTree = "<group>";
@@ -1103,7 +1111,7 @@
 				460E550028483EC800B09607 /* AppDelegate.swift in Sources */,
 				46FB8DCD2862CFDB00A36A5C /* PostService.swift in Sources */,
 				46FB8DD92862DB7A00A36A5C /* SemiTitleLabel.swift in Sources */,
-				4613E481284DB5EE00311889 /* APIObject.swift in Sources */,
+				4613E481284DB5EE00311889 /* PDObject.swift in Sources */,
 				4613E4C8284F1E0800311889 /* CGRect + Utilities.swift in Sources */,
 				46FB8DB5286173BD00A36A5C /* JoinDaycareView.swift in Sources */,
 				4613E4BE284F147F00311889 /* UIColor + Utilities.swift in Sources */,
