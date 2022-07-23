@@ -64,6 +64,7 @@
 		4613E4F52851855D00311889 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4613E4F42851855D00311889 /* HomeInteractor.swift */; };
 		4613E4F72851858A00311889 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4613E4F62851858A00311889 /* HomeViewController.swift */; };
 		4613E4F9285186A600311889 /* Internal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4613E4F8285186A600311889 /* Internal.storyboard */; };
+		461441A7288A5372008ED25C /* PetAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461441A6288A5372008ED25C /* PetAPIService.swift */; };
 		46CFBC05285F419000DAB3D6 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CFBC04285F419000DAB3D6 /* KeychainManager.swift */; };
 		46CFBC072860508A00DAB3D6 /* LandingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CFBC062860508A00DAB3D6 /* LandingTests.swift */; };
 		46CFBC0B286065BC00DAB3D6 /* UserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CFBC0A286065BC00DAB3D6 /* UserTests.swift */; };
@@ -183,6 +184,7 @@
 		4613E4F42851855D00311889 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		4613E4F62851858A00311889 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		4613E4F8285186A600311889 /* Internal.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Internal.storyboard; sourceTree = "<group>"; };
+		461441A6288A5372008ED25C /* PetAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetAPIService.swift; sourceTree = "<group>"; };
 		46CFBC04285F419000DAB3D6 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
 		46CFBC062860508A00DAB3D6 /* LandingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingTests.swift; sourceTree = "<group>"; };
 		46CFBC0A286065BC00DAB3D6 /* UserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTests.swift; sourceTree = "<group>"; };
@@ -661,6 +663,7 @@
 			children = (
 				46DBE26C2851C0E00015D8F1 /* Pet.swift */,
 				46FB8DC028618D1800A36A5C /* PetService.swift */,
+				461441A6288A5372008ED25C /* PetAPIService.swift */,
 			);
 			path = Pet;
 			sourceTree = "<group>";
@@ -1060,6 +1063,7 @@
 				46FB8DD32862D7DB00A36A5C /* PostTableViewCell.swift in Sources */,
 				46FB8DBB2861761E00A36A5C /* OnboardingInteractor.swift in Sources */,
 				4613E4B2284F081B00311889 /* LoginViewController.swift in Sources */,
+				461441A7288A5372008ED25C /* PetAPIService.swift in Sources */,
 				46FB8DBD2861762B00A36A5C /* OnboardingViewController.swift in Sources */,
 				460E5537284859A400B09607 /* APIRequest.swift in Sources */,
 				4613E4B4284F0A0900311889 /* LoginScreen.swift in Sources */,
