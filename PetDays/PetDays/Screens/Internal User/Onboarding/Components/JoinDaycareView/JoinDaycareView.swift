@@ -13,6 +13,8 @@ class JoinDaycareView: UIView {
     var selectedDaycare: Daycare?
     var selectedPet: Pet?
     
+    var daycareService: DaycareService
+    
     @IBOutlet weak var searchView: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
@@ -38,13 +40,15 @@ class JoinDaycareView: UIView {
         }
     }
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    required init?(coder aDecoder: NSCoder) {
+        self.daycareService = DaycareAPIService()
+        super.init(coder: aDecoder)
         loadViewFromNib()
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
+    init(frame: CGRect, daycareService: DaycareService) {
+        self.daycareService = daycareService
+        super.init(frame: frame)
         loadViewFromNib()
     }
     
@@ -81,7 +85,7 @@ extension JoinDaycareView: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         guard let text = searchBar.text else { self.daycares = []; return }
         if text.count > 2 {
-            Daycare.search(desc: text) { daycares, error in
+            daycareService.search(desc: text) { daycares, error in
                 guard error == nil else { return }
                 
                 DispatchQueue.main.async {

@@ -29,7 +29,6 @@
 		4613E48B284DBE2B00311889 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4613E48A284DBE2B00311889 /* Profile.swift */; };
 		4613E48F284DC13A00311889 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4613E48E284DC13A00311889 /* LoginResponse.swift */; };
 		4613E493284ED93600311889 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4613E492284ED93600311889 /* UserService.swift */; };
-		4613E496284EDCB700311889 /* ProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4613E495284EDCB700311889 /* ProfileService.swift */; };
 		4613E49C284EDF5900311889 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4613E49B284EDF5900311889 /* MainNavigationController.swift */; };
 		4613E4A2284EE64900311889 /* Landing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4613E4A1284EE64900311889 /* Landing.storyboard */; };
 		4613E4A4284EE69500311889 /* StoryboardConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4613E4A3284EE69500311889 /* StoryboardConstants.swift */; };
@@ -66,6 +65,7 @@
 		4613E4F9285186A600311889 /* Internal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4613E4F8285186A600311889 /* Internal.storyboard */; };
 		461441A7288A5372008ED25C /* PetAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461441A6288A5372008ED25C /* PetAPIService.swift */; };
 		4636893C288BA18F00BB67D3 /* UserAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4636893B288BA18F00BB67D3 /* UserAPIService.swift */; };
+		4636893E288BA3A400BB67D3 /* DaycareAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4636893D288BA3A400BB67D3 /* DaycareAPIService.swift */; };
 		46CFBC05285F419000DAB3D6 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CFBC04285F419000DAB3D6 /* KeychainManager.swift */; };
 		46CFBC072860508A00DAB3D6 /* LandingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CFBC062860508A00DAB3D6 /* LandingTests.swift */; };
 		46CFBC0B286065BC00DAB3D6 /* UserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CFBC0A286065BC00DAB3D6 /* UserTests.swift */; };
@@ -150,7 +150,6 @@
 		4613E48A284DBE2B00311889 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		4613E48E284DC13A00311889 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		4613E492284ED93600311889 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
-		4613E495284EDCB700311889 /* ProfileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileService.swift; sourceTree = "<group>"; };
 		4613E49B284EDF5900311889 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		4613E4A1284EE64900311889 /* Landing.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Landing.storyboard; sourceTree = "<group>"; };
 		4613E4A3284EE69500311889 /* StoryboardConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardConstants.swift; sourceTree = "<group>"; };
@@ -187,6 +186,7 @@
 		4613E4F8285186A600311889 /* Internal.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Internal.storyboard; sourceTree = "<group>"; };
 		461441A6288A5372008ED25C /* PetAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetAPIService.swift; sourceTree = "<group>"; };
 		4636893B288BA18F00BB67D3 /* UserAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPIService.swift; sourceTree = "<group>"; };
+		4636893D288BA3A400BB67D3 /* DaycareAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaycareAPIService.swift; sourceTree = "<group>"; };
 		46CFBC04285F419000DAB3D6 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
 		46CFBC062860508A00DAB3D6 /* LandingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingTests.swift; sourceTree = "<group>"; };
 		46CFBC0A286065BC00DAB3D6 /* UserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTests.swift; sourceTree = "<group>"; };
@@ -435,7 +435,6 @@
 			isa = PBXGroup;
 			children = (
 				4613E48A284DBE2B00311889 /* Profile.swift */,
-				4613E495284EDCB700311889 /* ProfileService.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -676,6 +675,7 @@
 			children = (
 				46DBE26F2851C19D0015D8F1 /* Daycare.swift */,
 				46CFBC142861F2EF00DAB3D6 /* DaycareService.swift */,
+				4636893D288BA3A400BB67D3 /* DaycareAPIService.swift */,
 			);
 			path = Daycare;
 			sourceTree = "<group>";
@@ -1054,7 +1054,6 @@
 				46FB8DB22861728800A36A5C /* FocusLabels.swift in Sources */,
 				46FB8DDF2862DF7500A36A5C /* PostPhoto.swift in Sources */,
 				46DBE26D2851C0E00015D8F1 /* Pet.swift in Sources */,
-				4613E496284EDCB700311889 /* ProfileService.swift in Sources */,
 				4613E47C284DB44400311889 /* String + Utilities.swift in Sources */,
 				46DBE2782859B81B0015D8F1 /* Localization.swift in Sources */,
 				46CFBC0F28609C7400DAB3D6 /* WelcomeView.swift in Sources */,
@@ -1107,6 +1106,7 @@
 				4613E4A8284EEAB800311889 /* LandingScreen.swift in Sources */,
 				4636893C288BA18F00BB67D3 /* UserAPIService.swift in Sources */,
 				4613E4F32851850100311889 /* HomeScreen.swift in Sources */,
+				4636893E288BA3A400BB67D3 /* DaycareAPIService.swift in Sources */,
 				46CFBC152861F2EF00DAB3D6 /* DaycareService.swift in Sources */,
 				4613E4CC284F1E9200311889 /* Separator.swift in Sources */,
 				46CFBC05285F419000DAB3D6 /* KeychainManager.swift in Sources */,

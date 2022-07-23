@@ -90,7 +90,7 @@ class OnboardingViewController: UIViewController, ScreenComponent {
     }()
     
     lazy var joinDaycareView: JoinDaycareView = {
-        let jdv = JoinDaycareView(frame: self.containerView.frame)
+        let jdv = JoinDaycareView(frame: self.containerView.frame, daycareService: DaycareAPIService())
         jdv.selectedPet = SessionManager.current.profile?.pets.first
         return jdv
     }()
