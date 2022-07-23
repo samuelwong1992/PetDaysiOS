@@ -7,14 +7,7 @@
 
 import Foundation
 
-fileprivate let _current = KeychainManager()
-
-final class KeychainManager {
-    fileprivate init() {}
-    static var current: KeychainManager {
-        return _current
-    }
-    
+final class KeychainManager: PersistanceManager {
     enum KeychainService {
         case APIAccessToken
         
@@ -41,7 +34,21 @@ final class KeychainManager {
 }
 
 extension KeychainManager {
-    func save(_ data: String, service: KeychainService) {
+    func getAPIToken() -> String? {
+        return self.read(service: .APIAccessToken)
+    }
+    
+    func saveAPIToken(token: String) {
+        self.save(token, service: .APIAccessToken)
+    }
+    
+    func clearAPIToken() {
+        self.delete(service: .APIAccessToken)
+    }
+}
+
+extension KeychainManager {
+    private func save(_ data: String, service: KeychainService) {
         let token = Data(data.utf8)
         
         let data: [CFString:Any] = [
@@ -58,7 +65,7 @@ extension KeychainManager {
         }
     }
 
-    func read(service: KeychainService) -> String? {
+    private func read(service: KeychainService) -> String? {
         let readAttributes = service.query.merging([kSecReturnData: true]) { (current, _) in current }
         
         var result: AnyObject?
@@ -71,7 +78,7 @@ extension KeychainManager {
         return nil
     }
 
-    func delete(service: KeychainService) {
+    private func delete(service: KeychainService) {
         SecItemDelete(service.query as CFDictionary)
     }
 }

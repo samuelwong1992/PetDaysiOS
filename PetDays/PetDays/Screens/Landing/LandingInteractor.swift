@@ -11,6 +11,9 @@ class LandingInteractor: ScreenComponent {
     var screen: LandingScreen!
     
     var userService: UserService
+    var persistanceManager: PersistanceManager {
+        return userService.persistanceManager
+    }
     
     internal init(userService: UserService) {
         self.userService = userService
@@ -19,11 +22,11 @@ class LandingInteractor: ScreenComponent {
 
 extension LandingInteractor {
     func viewDidLoad() {
-        if let token = KeychainManager.current.read(service: .APIAccessToken) {
+        if let token = self.persistanceManager.getAPIToken() {
             SessionManager.current.user = User(apiToken: token)
             userService.login(username: "", password: "") { error in
                 guard error == nil else {
-                    KeychainManager.current.delete(service: .APIAccessToken)
+                    self.persistanceManager.clearAPIToken()
                     return
                 }
                 self.screen.router.goToHomeScreen()

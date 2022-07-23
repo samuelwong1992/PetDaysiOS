@@ -81,6 +81,7 @@
 		46DBE2732851C6010015D8F1 /* InternalNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46DBE2722851C6010015D8F1 /* InternalNavBar.swift */; };
 		46DBE2762859AD7A0015D8F1 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46DBE2752859AD790015D8F1 /* SessionManager.swift */; };
 		46DBE2782859B81B0015D8F1 /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46DBE2772859B81B0015D8F1 /* Localization.swift */; };
+		46EC751C288BD028008E98F5 /* PersistanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EC751B288BD028008E98F5 /* PersistanceManager.swift */; };
 		46FB8DAE2861557700A36A5C /* AddPetView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46FB8DAD2861557700A36A5C /* AddPetView.xib */; };
 		46FB8DB02861558200A36A5C /* AddPetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FB8DAF2861558200A36A5C /* AddPetView.swift */; };
 		46FB8DB22861728800A36A5C /* FocusLabels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FB8DB12861728700A36A5C /* FocusLabels.swift */; };
@@ -205,6 +206,7 @@
 		46DBE2722851C6010015D8F1 /* InternalNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternalNavBar.swift; sourceTree = "<group>"; };
 		46DBE2752859AD790015D8F1 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		46DBE2772859B81B0015D8F1 /* Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
+		46EC751B288BD028008E98F5 /* PersistanceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistanceManager.swift; sourceTree = "<group>"; };
 		46FB8DAD2861557700A36A5C /* AddPetView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddPetView.xib; sourceTree = "<group>"; };
 		46FB8DAF2861558200A36A5C /* AddPetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPetView.swift; sourceTree = "<group>"; };
 		46FB8DB12861728700A36A5C /* FocusLabels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusLabels.swift; sourceTree = "<group>"; };
@@ -716,6 +718,7 @@
 			children = (
 				46DBE2752859AD790015D8F1 /* SessionManager.swift */,
 				46CFBC04285F419000DAB3D6 /* KeychainManager.swift */,
+				46EC751B288BD028008E98F5 /* PersistanceManager.swift */,
 			);
 			path = Session;
 			sourceTree = "<group>";
@@ -1088,6 +1091,7 @@
 				46FB8DCF2862CFE800A36A5C /* PostAPI.swift in Sources */,
 				4613E4B6284F0A1900311889 /* LoginInteractor.swift in Sources */,
 				46368942288BA95600BB67D3 /* JoinDaycareModelView.swift in Sources */,
+				46EC751C288BD028008E98F5 /* PersistanceManager.swift in Sources */,
 				46FB8DD32862D7DB00A36A5C /* PostTableViewCell.swift in Sources */,
 				46FB8DBB2861761E00A36A5C /* OnboardingInteractor.swift in Sources */,
 				4613E4B2284F081B00311889 /* LoginViewController.swift in Sources */,

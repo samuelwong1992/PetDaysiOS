@@ -14,7 +14,7 @@ class LandingScreen {
     
     init(router: MainNavigationController) {
         self.viewController = LandingViewController.viewController!
-        self.interactor = LandingInteractor(userService: UserAPIService())
+        self.interactor = LandingInteractor(userService: UserAPIService(persistanceManager: KeychainManager()))
         self.router = router
         
         viewController.setScreen(screen: self)
