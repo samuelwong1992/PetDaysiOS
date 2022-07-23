@@ -350,6 +350,7 @@
 		4613E479284DB42C00311889 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				46EC751D288BD80B008E98F5 /* Persistance */,
 				4613E47A284DB43600311889 /* Utilities */,
 			);
 			path = Helpers;
@@ -717,10 +718,17 @@
 			isa = PBXGroup;
 			children = (
 				46DBE2752859AD790015D8F1 /* SessionManager.swift */,
-				46CFBC04285F419000DAB3D6 /* KeychainManager.swift */,
 				46EC751B288BD028008E98F5 /* PersistanceManager.swift */,
 			);
 			path = Session;
+			sourceTree = "<group>";
+		};
+		46EC751D288BD80B008E98F5 /* Persistance */ = {
+			isa = PBXGroup;
+			children = (
+				46CFBC04285F419000DAB3D6 /* KeychainManager.swift */,
+			);
+			path = Persistance;
 			sourceTree = "<group>";
 		};
 		46FB8DAB2861515400A36A5C /* WelcomeView */ = {
