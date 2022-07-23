@@ -8,8 +8,6 @@
 import UIKit
 
 class JoinDaycareView: UIView {
-    private static let kCellReuseIdentifier = "JoinDaycareViewCell"
-    
     @IBOutlet weak var searchView: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
@@ -39,7 +37,7 @@ extension JoinDaycareView {
     func initialize() {
         searchView.delegate = self
         
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: JoinDaycareView.kCellReuseIdentifier)
+        tableView.register(DaycareSelectableTableViewCell.self, forCellReuseIdentifier: DaycareSelectableTableViewCell.kCellReuseIdentifier)
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -72,19 +70,15 @@ extension JoinDaycareView: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: JoinDaycareView.kCellReuseIdentifier)!
+        let cell = tableView.dequeueReusableCell(withIdentifier: DaycareSelectableTableViewCell.kCellReuseIdentifier) as! DaycareSelectableTableViewCell
         
         let daycare = modelView.daycareData[indexPath.row]
-        
-        var config = cell.defaultContentConfiguration()
-        config.text = daycare.name
-        config.secondaryText = daycare.address
+        cell.daycare = daycare
         if let selectedDaycare = modelView.selectedDaycare {
-            config.image = daycare == selectedDaycare ? UIImage(systemName: "checkmark") : nil
+            cell.isCurrentDaycare = daycare == selectedDaycare
         } else {
-            config.image = nil
+            cell.isCurrentDaycare = false
         }
-        cell.contentConfiguration = config
         
         return cell
     }

@@ -68,6 +68,7 @@
 		4636893E288BA3A400BB67D3 /* DaycareAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4636893D288BA3A400BB67D3 /* DaycareAPIService.swift */; };
 		46368940288BA72D00BB67D3 /* PostAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4636893F288BA72D00BB67D3 /* PostAPIService.swift */; };
 		46368942288BA95600BB67D3 /* JoinDaycareModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46368941288BA95600BB67D3 /* JoinDaycareModelView.swift */; };
+		46368945288BB28200BB67D3 /* DaycareSelectableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46368944288BB28200BB67D3 /* DaycareSelectableTableViewCell.swift */; };
 		46CFBC05285F419000DAB3D6 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CFBC04285F419000DAB3D6 /* KeychainManager.swift */; };
 		46CFBC072860508A00DAB3D6 /* LandingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CFBC062860508A00DAB3D6 /* LandingTests.swift */; };
 		46CFBC0B286065BC00DAB3D6 /* UserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CFBC0A286065BC00DAB3D6 /* UserTests.swift */; };
@@ -191,6 +192,7 @@
 		4636893D288BA3A400BB67D3 /* DaycareAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaycareAPIService.swift; sourceTree = "<group>"; };
 		4636893F288BA72D00BB67D3 /* PostAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostAPIService.swift; sourceTree = "<group>"; };
 		46368941288BA95600BB67D3 /* JoinDaycareModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinDaycareModelView.swift; sourceTree = "<group>"; };
+		46368944288BB28200BB67D3 /* DaycareSelectableTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaycareSelectableTableViewCell.swift; sourceTree = "<group>"; };
 		46CFBC04285F419000DAB3D6 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
 		46CFBC062860508A00DAB3D6 /* LandingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingTests.swift; sourceTree = "<group>"; };
 		46CFBC0A286065BC00DAB3D6 /* UserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTests.swift; sourceTree = "<group>"; };
@@ -626,6 +628,14 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		46368943288BB25900BB67D3 /* Table View Cell */ = {
+			isa = PBXGroup;
+			children = (
+				46368944288BB28200BB67D3 /* DaycareSelectableTableViewCell.swift */,
+			);
+			path = "Table View Cell";
+			sourceTree = "<group>";
+		};
 		46CFBC082860657500DAB3D6 /* APITests */ = {
 			isa = PBXGroup;
 			children = (
@@ -722,6 +732,7 @@
 		46FB8DB32861739700A36A5C /* JoinDaycareView */ = {
 			isa = PBXGroup;
 			children = (
+				46368943288BB25900BB67D3 /* Table View Cell */,
 				46FB8DB6286173C800A36A5C /* JoinDaycareView.xib */,
 				46FB8DB4286173BD00A36A5C /* JoinDaycareView.swift */,
 				46368941288BA95600BB67D3 /* JoinDaycareModelView.swift */,
@@ -1072,6 +1083,7 @@
 				46FB8DD32862D7DB00A36A5C /* PostTableViewCell.swift in Sources */,
 				46FB8DBB2861761E00A36A5C /* OnboardingInteractor.swift in Sources */,
 				4613E4B2284F081B00311889 /* LoginViewController.swift in Sources */,
+				46368945288BB28200BB67D3 /* DaycareSelectableTableViewCell.swift in Sources */,
 				461441A7288A5372008ED25C /* PetAPIService.swift in Sources */,
 				46FB8DBD2861762B00A36A5C /* OnboardingViewController.swift in Sources */,
 				460E5537284859A400B09607 /* APIRequest.swift in Sources */,
