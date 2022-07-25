@@ -22,7 +22,7 @@ class UserAPIService: UserService {
             
             self.persistanceManager.saveAPIToken(token: response.token)
             
-            SessionManager.current.user = User(apiToken: response.token)
+            SessionManager.current.user = User()
             SessionManager.current.profile = response.profile
             
             return completion(nil)
@@ -37,7 +37,7 @@ class UserAPIService: UserService {
             
             self.persistanceManager.saveAPIToken(token: response.token)
             
-            SessionManager.current.user = User(apiToken: response.token)
+            SessionManager.current.user = User()
             SessionManager.current.profile = response.profile
             
             return completion(nil)

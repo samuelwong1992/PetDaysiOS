@@ -13,9 +13,11 @@ private var _apiManager: APIManager!
 
 class APIManager {
     var baseURL: String
+    var persistanceManager: PersistanceManager
     
-    init(baseURL: String) {
+    init(baseURL: String, persistanceManager: PersistanceManager) {
         self.baseURL = baseURL
+        self.persistanceManager = persistanceManager
     }
     
     static var current: APIManager {
@@ -25,7 +27,7 @@ class APIManager {
         
         let path = "http://127.0.0.1:8000/"
         
-        _apiManager = APIManager(baseURL: path)
+        _apiManager = APIManager(baseURL: path, persistanceManager: KeychainManager())
         return _apiManager
     }
 }
@@ -47,7 +49,7 @@ extension APIManager {
         }
 
         do {
-            let urlRequest = try APIRequestBuilder.buildRequestFromAPIRequest(request: request)
+            let urlRequest = try APIRequestBuilder.buildRequestFromAPIRequest(request: request, persistanceManager: persistanceManager)
             
             AF.request(urlRequest)
                 .validate()

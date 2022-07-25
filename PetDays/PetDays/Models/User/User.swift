@@ -8,9 +8,5 @@
 import Foundation
 
 class User {
-    var apiToken: String
     
-    init(apiToken: String) {
-        self.apiToken = apiToken
-    }
 }

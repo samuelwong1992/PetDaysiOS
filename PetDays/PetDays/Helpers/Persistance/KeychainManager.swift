@@ -8,6 +8,19 @@
 import Foundation
 
 final class KeychainManager: PersistanceManager {
+    private var cachedAPIToken: String? {
+        get {
+            if let _cachedAPIToken = _cachedAPIToken {
+                return String.isNilOrEmpty(_cachedAPIToken) ? nil : _cachedAPIToken
+            }
+            return nil
+        }
+        set {
+            _cachedAPIToken = newValue
+        }
+    }
+    private var _cachedAPIToken: String?
+    
     enum KeychainService {
         case APIAccessToken
         
@@ -35,15 +48,22 @@ final class KeychainManager: PersistanceManager {
 
 extension KeychainManager {
     func getAPIToken() -> String? {
-        return self.read(service: .APIAccessToken)
+        if let cachedAPIToken = cachedAPIToken {
+            return cachedAPIToken
+        }
+        
+        self.cachedAPIToken = self.read(service: .APIAccessToken)
+        return cachedAPIToken
     }
     
     func saveAPIToken(token: String) {
         self.save(token, service: .APIAccessToken)
+        self.cachedAPIToken = token
     }
     
     func clearAPIToken() {
         self.delete(service: .APIAccessToken)
+        self.cachedAPIToken = nil
     }
 }
 

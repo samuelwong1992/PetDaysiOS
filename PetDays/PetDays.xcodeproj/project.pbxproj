@@ -64,6 +64,9 @@
 		4613E4F72851858A00311889 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4613E4F62851858A00311889 /* HomeViewController.swift */; };
 		4613E4F9285186A600311889 /* Internal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4613E4F8285186A600311889 /* Internal.storyboard */; };
 		461441A7288A5372008ED25C /* PetAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461441A6288A5372008ED25C /* PetAPIService.swift */; };
+		461441AA288E6B3C008ED25C /* TestPersistanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461441A9288E6B3C008ED25C /* TestPersistanceManager.swift */; };
+		461441AE288E6B95008ED25C /* UserTestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461441AD288E6B95008ED25C /* UserTestService.swift */; };
+		461441B0288E75BE008ED25C /* TestableAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461441AF288E75BE008ED25C /* TestableAPIManager.swift */; };
 		4636893C288BA18F00BB67D3 /* UserAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4636893B288BA18F00BB67D3 /* UserAPIService.swift */; };
 		4636893E288BA3A400BB67D3 /* DaycareAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4636893D288BA3A400BB67D3 /* DaycareAPIService.swift */; };
 		46368940288BA72D00BB67D3 /* PostAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4636893F288BA72D00BB67D3 /* PostAPIService.swift */; };
@@ -189,6 +192,9 @@
 		4613E4F62851858A00311889 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		4613E4F8285186A600311889 /* Internal.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Internal.storyboard; sourceTree = "<group>"; };
 		461441A6288A5372008ED25C /* PetAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetAPIService.swift; sourceTree = "<group>"; };
+		461441A9288E6B3C008ED25C /* TestPersistanceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPersistanceManager.swift; sourceTree = "<group>"; };
+		461441AD288E6B95008ED25C /* UserTestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTestService.swift; sourceTree = "<group>"; };
+		461441AF288E75BE008ED25C /* TestableAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestableAPIManager.swift; sourceTree = "<group>"; };
 		4636893B288BA18F00BB67D3 /* UserAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPIService.swift; sourceTree = "<group>"; };
 		4636893D288BA3A400BB67D3 /* DaycareAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaycareAPIService.swift; sourceTree = "<group>"; };
 		4636893F288BA72D00BB67D3 /* PostAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostAPIService.swift; sourceTree = "<group>"; };
@@ -313,6 +319,7 @@
 		460E551828483ECE00B09607 /* PetDaysTests */ = {
 			isa = PBXGroup;
 			children = (
+				461441AB288E6B76008ED25C /* Helpers */,
 				46CFBC092860658700DAB3D6 /* ScreenTests */,
 				46CFBC082860657500DAB3D6 /* APITests */,
 			);
@@ -631,6 +638,31 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		461441A8288E6B13008ED25C /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				461441A9288E6B3C008ED25C /* TestPersistanceManager.swift */,
+			);
+			path = Session;
+			sourceTree = "<group>";
+		};
+		461441AB288E6B76008ED25C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				461441AC288E6B84008ED25C /* Services */,
+				461441A8288E6B13008ED25C /* Session */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		461441AC288E6B84008ED25C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				461441AD288E6B95008ED25C /* UserTestService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		46368943288BB25900BB67D3 /* Table View Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -653,6 +685,7 @@
 		46CFBC082860657500DAB3D6 /* APITests */ = {
 			isa = PBXGroup;
 			children = (
+				461441AF288E75BE008ED25C /* TestableAPIManager.swift */,
 				46CFBC0A286065BC00DAB3D6 /* UserTests.swift */,
 			);
 			path = APITests;
@@ -1171,8 +1204,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				461441B0288E75BE008ED25C /* TestableAPIManager.swift in Sources */,
+				461441AE288E6B95008ED25C /* UserTestService.swift in Sources */,
 				46CFBC0B286065BC00DAB3D6 /* UserTests.swift in Sources */,
 				46CFBC072860508A00DAB3D6 /* LandingTests.swift in Sources */,
+				461441AA288E6B3C008ED25C /* TestPersistanceManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

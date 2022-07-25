@@ -22,8 +22,7 @@ class LandingInteractor: ScreenComponent {
 
 extension LandingInteractor {
     func viewDidLoad() {
-        if let token = self.persistanceManager.getAPIToken() {
-            SessionManager.current.user = User(apiToken: token)
+        if let _ = self.persistanceManager.getAPIToken() {
             userService.login(username: "", password: "") { error in
                 guard error == nil else {
                     self.persistanceManager.clearAPIToken()

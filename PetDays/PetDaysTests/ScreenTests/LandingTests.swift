@@ -9,8 +9,6 @@ import XCTest
 @testable import PetDays
 
 class LandingTests: XCTestCase {
-
-    private var authToken: String = "4eea98cd74fa92de2c9494a42b3e703c5d54c021"
     
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -55,55 +53,4 @@ class LandingTests: XCTestCase {
             XCTFail("Delay interrupted")
         }
     }
-}
-
-class TestPersistanceManager: PersistanceManager {
-    var withExistingToken: Bool
-    
-    internal init(withExistingToken: Bool) {
-        self.withExistingToken = withExistingToken
-    }
-    
-    
-    func getAPIToken() -> String? {
-        return self.withExistingToken ? "Some Token" : nil
-    }
-    
-    func saveAPIToken(token: String) {
-        self.withExistingToken = true
-    }
-    
-    func clearAPIToken() {
-        self.withExistingToken = false
-    }
-}
-
-class UserTestService: UserService {
-    var persistanceManager: PersistanceManager
-    var succeeds: Bool
-    
-    internal init(persistanceManager: PersistanceManager, succeeds: Bool) {
-        self.persistanceManager = persistanceManager
-        self.succeeds = succeeds
-    }
-    
-    func login(username: String, password: String, completion: @escaping (Error?) -> Void) {
-        if succeeds {
-            persistanceManager.saveAPIToken(token: "Some Token")
-            return completion(nil)
-        } else {
-            return completion(NSError.standardErrorWithString(errorString: "Some Error"))
-        }
-    }
-    
-    func register(username: String, password: String, password2: String, firstName: String, lastName: String, completion: @escaping (Error?) -> Void) {
-        if succeeds {
-            persistanceManager.saveAPIToken(token: "Some Token")
-            return completion(nil)
-        } else {
-            return completion(NSError.standardErrorWithString(errorString: "Some Error"))
-        }
-    }
-    
-    
 }

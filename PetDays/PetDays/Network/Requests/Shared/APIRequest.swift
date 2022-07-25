@@ -29,14 +29,14 @@ extension APIRequest {
 }
 
 struct APIRequestBuilder {
-    static func buildRequestFromAPIRequest(request: APIRequest) throws -> URLRequest {
+    static func buildRequestFromAPIRequest(request: APIRequest, persistanceManager: PersistanceManager) throws -> URLRequest {
         let endpoint = APIManager.current.baseURL + request.endpoint
         
         print(endpoint)
 
         var urlRequest = URLRequest(url: URL(string: endpoint)!)
         urlRequest.httpMethod = request.method.rawValue
-        if let accessToken = SessionManager.current.user?.apiToken {
+        if let accessToken = persistanceManager.getAPIToken() {
             urlRequest.addValue("Token \(accessToken)", forHTTPHeaderField: "Authorization")
         }
 
