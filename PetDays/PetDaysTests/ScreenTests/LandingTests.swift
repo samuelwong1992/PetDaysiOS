@@ -14,7 +14,6 @@ class LandingTests: XCTestCase {
     
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
-        KeychainManager.current.delete(service: .APIAccessToken)
     }
 
     override func tearDownWithError() throws {
@@ -22,7 +21,10 @@ class LandingTests: XCTestCase {
     }
 
     func test_canInitNoToken() throws {
-        let mnc = MainNavigationController.createMainNavigationController()
+        let mnc = MainNavigationController()
+        let landingScreen = LandingScreen(router: mnc, userService: UserTestService(persistanceManager: TestPersistanceManager(withExistingToken: false), succeeds: true))
+        mnc.setViewControllers([landingScreen.viewController], animated: false)
+
         let window = UIWindow(frame: UIScreen.main.bounds)
         window.makeKeyAndVisible()
         window.rootViewController = mnc
@@ -37,8 +39,10 @@ class LandingTests: XCTestCase {
     }
     
     func test_canInitWithToken() throws {
-        KeychainManager.current.save(authToken, service: .APIAccessToken)
-        let mnc = MainNavigationController.createMainNavigationController()
+        let mnc = MainNavigationController()
+        let landingScreen = LandingScreen(router: mnc, userService: UserTestService(persistanceManager: TestPersistanceManager(withExistingToken: true), succeeds: true))
+        mnc.setViewControllers([landingScreen.viewController], animated: false)
+        
         let window = UIWindow(frame: UIScreen.main.bounds)
         window.makeKeyAndVisible()
         window.rootViewController = mnc
@@ -51,4 +55,55 @@ class LandingTests: XCTestCase {
             XCTFail("Delay interrupted")
         }
     }
+}
+
+class TestPersistanceManager: PersistanceManager {
+    var withExistingToken: Bool
+    
+    internal init(withExistingToken: Bool) {
+        self.withExistingToken = withExistingToken
+    }
+    
+    
+    func getAPIToken() -> String? {
+        return self.withExistingToken ? "Some Token" : nil
+    }
+    
+    func saveAPIToken(token: String) {
+        self.withExistingToken = true
+    }
+    
+    func clearAPIToken() {
+        self.withExistingToken = false
+    }
+}
+
+class UserTestService: UserService {
+    var persistanceManager: PersistanceManager
+    var succeeds: Bool
+    
+    internal init(persistanceManager: PersistanceManager, succeeds: Bool) {
+        self.persistanceManager = persistanceManager
+        self.succeeds = succeeds
+    }
+    
+    func login(username: String, password: String, completion: @escaping (Error?) -> Void) {
+        if succeeds {
+            persistanceManager.saveAPIToken(token: "Some Token")
+            return completion(nil)
+        } else {
+            return completion(NSError.standardErrorWithString(errorString: "Some Error"))
+        }
+    }
+    
+    func register(username: String, password: String, password2: String, firstName: String, lastName: String, completion: @escaping (Error?) -> Void) {
+        if succeeds {
+            persistanceManager.saveAPIToken(token: "Some Token")
+            return completion(nil)
+        } else {
+            return completion(NSError.standardErrorWithString(errorString: "Some Error"))
+        }
+    }
+    
+    
 }

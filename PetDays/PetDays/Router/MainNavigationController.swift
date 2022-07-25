@@ -10,7 +10,7 @@ import UIKit
 class MainNavigationController: UINavigationController {
     static func createMainNavigationController() -> MainNavigationController {
         let mnc = MainNavigationController()
-        let landingScreen = LandingScreen(router: mnc)
+        let landingScreen = LandingScreen(router: mnc, userService: UserAPIService(persistanceManager: KeychainManager()))
         mnc.setViewControllers([landingScreen.viewController], animated: false)
         return mnc
     }
