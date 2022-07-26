@@ -9,22 +9,22 @@ import Foundation
 @testable import PetDays
 
 class TestPersistanceManager: PersistanceManager {
-    var withExistingToken: Bool
+    private var token: String?
     
     internal init(withExistingToken: Bool) {
-        self.withExistingToken = withExistingToken
+        self.token = withExistingToken ? "bc637faa6df2022e4d3ff2b7a0bd27f9f8f90863" : nil
     }
     
     
     func getAPIToken() -> String? {
-        return self.withExistingToken ? "bc637faa6df2022e4d3ff2b7a0bd27f9f8f90863" : nil
+        return self.token
     }
     
     func saveAPIToken(token: String) {
-        self.withExistingToken = true
+        self.token = token
     }
     
     func clearAPIToken() {
-        self.withExistingToken = false
+        self.token = nil
     }
 }

@@ -14,7 +14,7 @@ class LoginScreen {
     
     init(router: MainNavigationController) {
         self.viewController = LoginViewController.viewController!
-        self.interactor = LoginInteractor(userService: UserAPIService(persistanceManager: KeychainManager()))
+        self.interactor = LoginInteractor(userService: UserAPIService(persistanceManager: KeychainManager(), storageManager: CompositeStorageManager.current))
         self.router = router
         
         viewController.setScreen(screen: self)

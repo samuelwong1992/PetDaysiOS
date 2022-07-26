@@ -68,6 +68,10 @@
 		461441AE288E6B95008ED25C /* UserTestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461441AD288E6B95008ED25C /* UserTestService.swift */; };
 		461441B0288E75BE008ED25C /* TestableAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461441AF288E75BE008ED25C /* TestableAPIManager.swift */; };
 		461441B3288F7A84008ED25C /* NoAnimationUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461441B2288F7A84008ED25C /* NoAnimationUI.swift */; };
+		461441B7288F8AF8008ED25C /* UserMockAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461441B6288F8AF8008ED25C /* UserMockAPITests.swift */; };
+		461441BA288F90F5008ED25C /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461441B9288F90F5008ED25C /* StorageManager.swift */; };
+		461441BC288F923B008ED25C /* CompositeStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461441BB288F923B008ED25C /* CompositeStorageManager.swift */; };
+		461441BF288FA428008ED25C /* DontMatterStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461441BE288FA428008ED25C /* DontMatterStorageManager.swift */; };
 		4636893C288BA18F00BB67D3 /* UserAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4636893B288BA18F00BB67D3 /* UserAPIService.swift */; };
 		4636893E288BA3A400BB67D3 /* DaycareAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4636893D288BA3A400BB67D3 /* DaycareAPIService.swift */; };
 		46368940288BA72D00BB67D3 /* PostAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4636893F288BA72D00BB67D3 /* PostAPIService.swift */; };
@@ -197,6 +201,10 @@
 		461441AD288E6B95008ED25C /* UserTestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTestService.swift; sourceTree = "<group>"; };
 		461441AF288E75BE008ED25C /* TestableAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestableAPIManager.swift; sourceTree = "<group>"; };
 		461441B2288F7A84008ED25C /* NoAnimationUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoAnimationUI.swift; sourceTree = "<group>"; };
+		461441B6288F8AF8008ED25C /* UserMockAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMockAPITests.swift; sourceTree = "<group>"; };
+		461441B9288F90F5008ED25C /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		461441BB288F923B008ED25C /* CompositeStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositeStorageManager.swift; sourceTree = "<group>"; };
+		461441BE288FA428008ED25C /* DontMatterStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DontMatterStorageManager.swift; sourceTree = "<group>"; };
 		4636893B288BA18F00BB67D3 /* UserAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPIService.swift; sourceTree = "<group>"; };
 		4636893D288BA3A400BB67D3 /* DaycareAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaycareAPIService.swift; sourceTree = "<group>"; };
 		4636893F288BA72D00BB67D3 /* PostAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostAPIService.swift; sourceTree = "<group>"; };
@@ -298,6 +306,7 @@
 		460E54FE28483EC800B09607 /* PetDays */ = {
 			isa = PBXGroup;
 			children = (
+				461441B8288F90DF008ED25C /* Storage */,
 				460E553228483F7200B09607 /* Network */,
 				4613E47F284DB5DF00311889 /* Models */,
 				46DBE2742859AD670015D8F1 /* Session */,
@@ -651,6 +660,7 @@
 		461441AB288E6B76008ED25C /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				461441BD288FA41B008ED25C /* DontMatter */,
 				461441B1288F7A60008ED25C /* NoAnimationUI */,
 				461441AC288E6B84008ED25C /* Services */,
 				461441A8288E6B13008ED25C /* Session */,
@@ -672,6 +682,40 @@
 				461441B2288F7A84008ED25C /* NoAnimationUI.swift */,
 			);
 			path = NoAnimationUI;
+			sourceTree = "<group>";
+		};
+		461441B4288F8AC3008ED25C /* Real */ = {
+			isa = PBXGroup;
+			children = (
+				461441AF288E75BE008ED25C /* TestableAPIManager.swift */,
+				46CFBC0A286065BC00DAB3D6 /* UserAPITests.swift */,
+			);
+			path = Real;
+			sourceTree = "<group>";
+		};
+		461441B5288F8AC9008ED25C /* Mocked */ = {
+			isa = PBXGroup;
+			children = (
+				461441B6288F8AF8008ED25C /* UserMockAPITests.swift */,
+			);
+			path = Mocked;
+			sourceTree = "<group>";
+		};
+		461441B8288F90DF008ED25C /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				461441B9288F90F5008ED25C /* StorageManager.swift */,
+				461441BB288F923B008ED25C /* CompositeStorageManager.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		461441BD288FA41B008ED25C /* DontMatter */ = {
+			isa = PBXGroup;
+			children = (
+				461441BE288FA428008ED25C /* DontMatterStorageManager.swift */,
+			);
+			path = DontMatter;
 			sourceTree = "<group>";
 		};
 		46368943288BB25900BB67D3 /* Table View Cell */ = {
@@ -696,8 +740,8 @@
 		46CFBC082860657500DAB3D6 /* APITests */ = {
 			isa = PBXGroup;
 			children = (
-				461441AF288E75BE008ED25C /* TestableAPIManager.swift */,
-				46CFBC0A286065BC00DAB3D6 /* UserAPITests.swift */,
+				461441B5288F8AC9008ED25C /* Mocked */,
+				461441B4288F8AC3008ED25C /* Real */,
 			);
 			path = APITests;
 			sourceTree = "<group>";
@@ -1149,6 +1193,7 @@
 				4613E4B2284F081B00311889 /* LoginViewController.swift in Sources */,
 				46368945288BB28200BB67D3 /* DaycareSelectableTableViewCell.swift in Sources */,
 				461441A7288A5372008ED25C /* PetAPIService.swift in Sources */,
+				461441BA288F90F5008ED25C /* StorageManager.swift in Sources */,
 				46FB8DBD2861762B00A36A5C /* OnboardingViewController.swift in Sources */,
 				460E5537284859A400B09607 /* APIRequest.swift in Sources */,
 				4613E4B4284F0A0900311889 /* LoginScreen.swift in Sources */,
@@ -1208,6 +1253,7 @@
 				4613E4E3284F31AA00311889 /* TitledTextField.swift in Sources */,
 				4613E483284DB60900311889 /* User.swift in Sources */,
 				460E550228483EC800B09607 /* SceneDelegate.swift in Sources */,
+				461441BC288F923B008ED25C /* CompositeStorageManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1218,9 +1264,11 @@
 				461441B0288E75BE008ED25C /* TestableAPIManager.swift in Sources */,
 				461441AE288E6B95008ED25C /* UserTestService.swift in Sources */,
 				46CFBC0B286065BC00DAB3D6 /* UserAPITests.swift in Sources */,
+				461441BF288FA428008ED25C /* DontMatterStorageManager.swift in Sources */,
 				46CFBC072860508A00DAB3D6 /* LandingTests.swift in Sources */,
 				461441AA288E6B3C008ED25C /* TestPersistanceManager.swift in Sources */,
 				461441B3288F7A84008ED25C /* NoAnimationUI.swift in Sources */,
+				461441B7288F8AF8008ED25C /* UserMockAPITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

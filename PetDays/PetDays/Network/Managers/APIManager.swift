@@ -11,7 +11,7 @@ import SwiftyJSON
 
 private var _apiManager: APIManager!
 
-class APIManager {
+class APIManager: StorageManager {
     var baseURL: String
     var persistanceManager: PersistanceManager
     
@@ -34,7 +34,7 @@ class APIManager {
 
 //MARK: Request Handler
 extension APIManager {
-    func performRequest<T: Decodable>(request: APIRequest, shouldShowLoading: Bool = true, completion: @escaping (_ model: T?, _ error: Error?) -> Void) {
+    func performRequest<T: Decodable>(request: APIRequest, shouldShowLoading: Bool, completion: @escaping (_ model: T?, _ error: Error?) -> Void) {
         if shouldShowLoading {
 //            LoadingHUD.show()
         }

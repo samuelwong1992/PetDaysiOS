@@ -9,11 +9,13 @@ import Foundation
 @testable import PetDays
 
 class UserTestService: UserService {
+    var storageManager: StorageManager
     var persistanceManager: PersistanceManager
     var succeeds: Bool
     
-    internal init(persistanceManager: PersistanceManager, succeeds: Bool) {
+    internal init(persistanceManager: PersistanceManager, storageManager: StorageManager = DontMatterStorageManager(), succeeds: Bool) {
         self.persistanceManager = persistanceManager
+        self.storageManager = storageManager
         self.succeeds = succeeds
     }
     

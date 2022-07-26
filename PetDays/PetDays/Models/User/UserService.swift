@@ -9,6 +9,7 @@ import Foundation
 
 protocol UserService {
     var persistanceManager: PersistanceManager { get set }
+    var storageManager: StorageManager { get set }
     
     func login(username: String, password: String, completion: @escaping(_ error: Error?) -> Void)
     func register(username: String, password: String, password2: String, firstName: String, lastName: String, completion: @escaping(_ error: Error?) -> Void)

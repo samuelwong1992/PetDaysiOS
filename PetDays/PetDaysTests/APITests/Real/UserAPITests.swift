@@ -23,7 +23,7 @@ class UserAPITests: XCTestCase {
         let expectation = self.expectation(description: "login")
         
         let request = LoginAPI.login(username: "sam", password: "password")
-        apiManager.performRequest(request: request) { (response: LoginResponse?, error) in
+        apiManager.performRequest(request: request, shouldShowLoading: false) { (response: LoginResponse?, error) in
             XCTAssertNil(error)
             
             XCTAssertNotNil(response)
@@ -43,7 +43,7 @@ class UserAPITests: XCTestCase {
         let expectation = self.expectation(description: "login")
         
         let request = LoginAPI.login(username: "", password: "")
-        apiManager.performRequest(request: request) { (response: LoginResponse?, error) in
+        apiManager.performRequest(request: request, shouldShowLoading: false) { (response: LoginResponse?, error) in
             XCTAssertNil(error)
             
             XCTAssertNotNil(response)
