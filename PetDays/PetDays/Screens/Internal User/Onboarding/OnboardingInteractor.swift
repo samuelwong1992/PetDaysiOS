@@ -8,8 +8,8 @@
 import Foundation
 import UIKit
 
-class OnboardingInteractor: ScreenComponent {
-    var screen: OnboardingScreen!
+class OnboardingInteractor: Presenterable {
+    var presenter: OnboardingScreen!
     
     var petService: PetService
     
@@ -22,7 +22,7 @@ class OnboardingInteractor: ScreenComponent {
 extension OnboardingInteractor {
     func createPet(name: String, image: UIImage?, completion: @escaping((Bool) -> Void)) {
         petService.create(withName: name, profilePicture: image) { error in
-            guard error == nil else { UIAlertController.showAlertWithError(viewController: self.screen.viewController, error: error!); return completion(false) }
+            guard error == nil else { UIAlertController.showAlertWithError(viewController: self.presenter.viewController, error: error!); return completion(false) }
             
             return completion(true)
         }
@@ -30,7 +30,7 @@ extension OnboardingInteractor {
     
     func requestDaycare(pet: Pet, daycare: Daycare, completion: @escaping((Bool) -> Void)) {
         petService.requestDaycare(forPet: pet, daycare: daycare) { error in
-            guard error == nil else { UIAlertController.showAlertWithError(viewController: self.screen.viewController, error: error!); return completion(false) }
+            guard error == nil else { UIAlertController.showAlertWithError(viewController: self.presenter.viewController, error: error!); return completion(false) }
             
             return completion(true)
         }

@@ -7,9 +7,9 @@
 
 import UIKit
 
-class OnboardingViewController: UIViewController, ScreenComponent {
+class OnboardingViewController: UIViewController, Presenterable {
 
-    var screen: OnboardingScreen!
+    var presenter: OnboardingScreen!
     
     static var viewController: OnboardingViewController? {
         return StoryboardConstants.Storyboards.Internal.storyboard.instantiateViewController(withIdentifier: StoryboardConstants.ViewControllers.OnboardingViewController.identifier) as? OnboardingViewController
@@ -36,9 +36,9 @@ class OnboardingViewController: UIViewController, ScreenComponent {
             case .Welcome :
                 return completion(true)
             case .AddPet :
-                vc.screen.interactor.createPet(name: vc.addPetView.nameInputField.text, image: nil, completion: completion)
+                vc.presenter.interactor.createPet(name: vc.addPetView.nameInputField.text, image: nil, completion: completion)
             case .JoinDaycare :
-                vc.screen.interactor.requestDaycare(pet: vc.joinDaycareView.modelView.selectedPet!, daycare: vc.joinDaycareView.modelView.selectedDaycare!, completion: completion)
+                vc.presenter.interactor.requestDaycare(pet: vc.joinDaycareView.modelView.selectedPet!, daycare: vc.joinDaycareView.modelView.selectedDaycare!, completion: completion)
             }
         }
     }

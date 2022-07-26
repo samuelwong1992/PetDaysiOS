@@ -7,8 +7,8 @@
 
 import UIKit
 
-class HomeViewController: UIViewController, ScreenComponent {
-    var screen: HomeScreen!
+class HomeViewController: UIViewController, Presenterable {
+    var presenter: HomeScreen!
     
     static var viewController: HomeViewController? {
         return StoryboardConstants.Storyboards.Internal.storyboard.instantiateViewController(withIdentifier: StoryboardConstants.ViewControllers.HomeViewController.identifier) as? HomeViewController
@@ -20,7 +20,7 @@ class HomeViewController: UIViewController, ScreenComponent {
         super.viewDidLoad()
 
         initialize()
-        screen.interactor.viewDidLoad()
+        presenter.interactor.viewDidLoad()
     }
 }
 

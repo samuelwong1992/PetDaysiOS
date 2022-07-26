@@ -17,8 +17,8 @@ class OnboardingScreen {
         self.interactor = OnboardingInteractor(petService: PetAPIService())
         self.router = router
         
-        viewController.setScreen(screen: self)
-        interactor.setScreen(screen: self)
+        viewController.setPresenter(presenter: self)
+        interactor.setPresenter(presenter: self)
     }
 
 }

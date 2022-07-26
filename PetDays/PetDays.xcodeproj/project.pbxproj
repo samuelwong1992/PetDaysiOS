@@ -35,7 +35,7 @@
 		4613E4A6284EE6D300311889 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4613E4A5284EE6D300311889 /* LandingViewController.swift */; };
 		4613E4A8284EEAB800311889 /* LandingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4613E4A7284EEAB800311889 /* LandingScreen.swift */; };
 		4613E4AA284EEAC500311889 /* LandingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4613E4A9284EEAC500311889 /* LandingInteractor.swift */; };
-		4613E4AD284EFD4900311889 /* ScreenComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4613E4AC284EFD4900311889 /* ScreenComponent.swift */; };
+		4613E4AD284EFD4900311889 /* Presenterable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4613E4AC284EFD4900311889 /* Presenterable.swift */; };
 		4613E4B0284F07B400311889 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4613E4AF284F07B400311889 /* Login.storyboard */; };
 		4613E4B2284F081B00311889 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4613E4B1284F081B00311889 /* LoginViewController.swift */; };
 		4613E4B4284F0A0900311889 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4613E4B3284F0A0900311889 /* LoginScreen.swift */; };
@@ -72,6 +72,7 @@
 		461441BA288F90F5008ED25C /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461441B9288F90F5008ED25C /* StorageManager.swift */; };
 		461441BC288F923B008ED25C /* CompositeStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461441BB288F923B008ED25C /* CompositeStorageManager.swift */; };
 		461441BF288FA428008ED25C /* DontMatterStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461441BE288FA428008ED25C /* DontMatterStorageManager.swift */; };
+		461441C1288FB11F008ED25C /* LandingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461441C0288FB11F008ED25C /* LandingPresenter.swift */; };
 		4636893C288BA18F00BB67D3 /* UserAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4636893B288BA18F00BB67D3 /* UserAPIService.swift */; };
 		4636893E288BA3A400BB67D3 /* DaycareAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4636893D288BA3A400BB67D3 /* DaycareAPIService.swift */; };
 		46368940288BA72D00BB67D3 /* PostAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4636893F288BA72D00BB67D3 /* PostAPIService.swift */; };
@@ -168,7 +169,7 @@
 		4613E4A5284EE6D300311889 /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
 		4613E4A7284EEAB800311889 /* LandingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingScreen.swift; sourceTree = "<group>"; };
 		4613E4A9284EEAC500311889 /* LandingInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingInteractor.swift; sourceTree = "<group>"; };
-		4613E4AC284EFD4900311889 /* ScreenComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenComponent.swift; sourceTree = "<group>"; };
+		4613E4AC284EFD4900311889 /* Presenterable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenterable.swift; sourceTree = "<group>"; };
 		4613E4AF284F07B400311889 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		4613E4B1284F081B00311889 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4613E4B3284F0A0900311889 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
@@ -205,6 +206,7 @@
 		461441B9288F90F5008ED25C /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		461441BB288F923B008ED25C /* CompositeStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositeStorageManager.swift; sourceTree = "<group>"; };
 		461441BE288FA428008ED25C /* DontMatterStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DontMatterStorageManager.swift; sourceTree = "<group>"; };
+		461441C0288FB11F008ED25C /* LandingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPresenter.swift; sourceTree = "<group>"; };
 		4636893B288BA18F00BB67D3 /* UserAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPIService.swift; sourceTree = "<group>"; };
 		4636893D288BA3A400BB67D3 /* DaycareAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaycareAPIService.swift; sourceTree = "<group>"; };
 		4636893F288BA72D00BB67D3 /* PostAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostAPIService.swift; sourceTree = "<group>"; };
@@ -511,6 +513,7 @@
 				4613E4A7284EEAB800311889 /* LandingScreen.swift */,
 				4613E4A5284EE6D300311889 /* LandingViewController.swift */,
 				4613E4A9284EEAC500311889 /* LandingInteractor.swift */,
+				461441C0288FB11F008ED25C /* LandingPresenter.swift */,
 			);
 			path = Landing;
 			sourceTree = "<group>";
@@ -530,7 +533,7 @@
 		4613E4AB284EFD3D00311889 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				4613E4AC284EFD4900311889 /* ScreenComponent.swift */,
+				4613E4AC284EFD4900311889 /* Presenterable.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -1229,7 +1232,7 @@
 				4613E4B9284F134900311889 /* PrimaryButton.swift in Sources */,
 				4613E4E2284F31AA00311889 /* TitledTextView.swift in Sources */,
 				46FB8DC82862C25400A36A5C /* Date + Utilities.swift in Sources */,
-				4613E4AD284EFD4900311889 /* ScreenComponent.swift in Sources */,
+				4613E4AD284EFD4900311889 /* Presenterable.swift in Sources */,
 				460E550A28483EC800B09607 /* PetDays.xcdatamodeld in Sources */,
 				4613E4A8284EEAB800311889 /* LandingScreen.swift in Sources */,
 				4636893C288BA18F00BB67D3 /* UserAPIService.swift in Sources */,
@@ -1253,6 +1256,7 @@
 				4613E4E3284F31AA00311889 /* TitledTextField.swift in Sources */,
 				4613E483284DB60900311889 /* User.swift in Sources */,
 				460E550228483EC800B09607 /* SceneDelegate.swift in Sources */,
+				461441C1288FB11F008ED25C /* LandingPresenter.swift in Sources */,
 				461441BC288F923B008ED25C /* CompositeStorageManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

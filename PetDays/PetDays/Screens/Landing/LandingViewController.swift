@@ -7,8 +7,8 @@
 
 import UIKit
 
-class LandingViewController: UIViewController, ScreenComponent {
-    var screen: LandingScreen!
+class LandingViewController: UIViewController, Presenterable {
+    var presenter: LandingScreen!
     
     static var viewController: LandingViewController? {
         return StoryboardConstants.Storyboards.Landing.storyboard.instantiateViewController(withIdentifier: StoryboardConstants.ViewControllers.LandingViewController.identifier) as? LandingViewController
@@ -18,7 +18,7 @@ class LandingViewController: UIViewController, ScreenComponent {
         super.viewDidLoad()
 
         initialize()
-        screen.interactor.viewDidLoad()
+        presenter.interactor.viewDidLoad()
     }
 }
 

@@ -7,8 +7,8 @@
 
 import UIKit
 
-class LoginViewController: UIViewController, ScreenComponent {
-    var screen: LoginScreen!
+class LoginViewController: UIViewController, Presenterable {
+    var presenter: LoginScreen!
 
     static var viewController: LoginViewController? {
         return StoryboardConstants.Storyboards.Login.storyboard.instantiateViewController(withIdentifier: StoryboardConstants.ViewControllers.LoginViewController.identifier) as? LoginViewController
@@ -102,14 +102,14 @@ extension LoginViewController {
     func loginButton_didPress() {
         guard currentViewMode == .login else { currentViewMode = .login; return }
         guard loginView.validate() else { return }
-        screen.interactor.login(username: loginView.usernameField.text,
+        presenter.interactor.login(username: loginView.usernameField.text,
                                 password: loginView.passwordField.text)
     }
     
     func signUpButton_didPress() {
         guard currentViewMode == .signUp else { currentViewMode = .signUp; return }
         guard signUpView.validate() else { return }
-        screen.interactor.register(username: signUpView.usernameField.text,
+        presenter.interactor.register(username: signUpView.usernameField.text,
                                    password: signUpView.passwordField.text,
                                    password2: signUpView.password2Field.text,
                                    firstName: signUpView.firstNameField.text,

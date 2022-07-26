@@ -17,7 +17,7 @@ class LandingScreen {
         self.interactor = LandingInteractor(userService: userService)
         self.router = router
         
-        viewController.setScreen(screen: self)
-        interactor.setScreen(screen: self)
+        viewController.setPresenter(presenter: self)
+        interactor.setPresenter(presenter: self)
     }
 }

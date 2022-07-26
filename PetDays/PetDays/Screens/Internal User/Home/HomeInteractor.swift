@@ -8,8 +8,8 @@
 import Foundation
 import UIKit
 
-class HomeInteractor: ScreenComponent {
-    var screen: HomeScreen!
+class HomeInteractor: Presenterable {
+    var presenter: HomeScreen!
     
     var postService: PostService
     
@@ -24,7 +24,7 @@ extension HomeInteractor {
         setupBindings()
         
         if SessionManager.current.profile?.pets.count == 0 || SessionManager.current.profile?.daycares.count == 0 {
-            screen.router.goToOnboarding()
+            presenter.router.goToOnboarding()
         } else {
             getFeed()
         }
@@ -32,7 +32,7 @@ extension HomeInteractor {
     
     func setupBindings() {
         SessionManager.current.subscribe(toObserserve: .posts) {
-            self.screen.viewController.reloadData()
+            self.presenter.viewController.reloadData()
         }
         
         SessionManager.current.subscribe(toObserserve: .daycare) { [weak self] in
@@ -49,7 +49,7 @@ extension HomeInteractor {
 extension HomeInteractor {
     func getFeed() {
         postService.getFeed { error in
-            guard error == nil else { UIAlertController.showAlertWithError(viewController: self.screen.viewController, error: error!); return }
+            guard error == nil else { UIAlertController.showAlertWithError(viewController: self.presenter.viewController, error: error!); return }
         }
     }
 }

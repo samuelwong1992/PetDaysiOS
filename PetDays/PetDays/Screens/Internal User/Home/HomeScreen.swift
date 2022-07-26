@@ -17,7 +17,7 @@ class HomeScreen {
         self.viewController = HomeViewController.viewController!
         self.interactor = HomeInteractor(postService: PostAPIService())
         
-        viewController.setScreen(screen: self)
-        interactor.setScreen(screen: self)
+        viewController.setPresenter(presenter: self)
+        interactor.setPresenter(presenter: self)
     }
 }
