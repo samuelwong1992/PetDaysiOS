@@ -19,7 +19,7 @@ class LandingTests: XCTestCase {
     }
 
     func test_canInitNoToken() throws {
-        let mnc = MainNavigationController()
+        let mnc = NoAnimationMainNavigationController()
         let landingScreen = LandingScreen(router: mnc, userService: UserTestService(persistanceManager: TestPersistanceManager(withExistingToken: false), succeeds: true))
         mnc.setViewControllers([landingScreen.viewController], animated: false)
 
@@ -27,30 +27,23 @@ class LandingTests: XCTestCase {
         window.makeKeyAndVisible()
         window.rootViewController = mnc
         
-        let _ = try XCTUnwrap(mnc.topViewController as? LandingViewController)
-        let result = XCTWaiter.wait(for: [expectation(description: "Wait For UI Update")], timeout: 0.5)
-        if result == XCTWaiter.Result.timedOut {
-            let _ = try XCTUnwrap(mnc.presentedViewController as? LoginViewController)
-        } else {
-            XCTFail("Delay interrupted")
-        }
+        let lvc = try XCTUnwrap(mnc.topViewController as? LandingViewController)
+        let _  = lvc.view // Triggers View Did Load
+        let _ = try XCTUnwrap(mnc.presentedViewController as? LoginViewController)
     }
     
     func test_canInitWithToken() throws {
-        let mnc = MainNavigationController()
+        let mnc = NoAnimationMainNavigationController()
         let landingScreen = LandingScreen(router: mnc, userService: UserTestService(persistanceManager: TestPersistanceManager(withExistingToken: true), succeeds: true))
         mnc.setViewControllers([landingScreen.viewController], animated: false)
         
         let window = UIWindow(frame: UIScreen.main.bounds)
         window.makeKeyAndVisible()
         window.rootViewController = mnc
-        let _ = try XCTUnwrap(mnc.topViewController as? LandingViewController)
-        let result = XCTWaiter.wait(for: [expectation(description: "Wait For UI Update")], timeout: 0.5)
-        if result == XCTWaiter.Result.timedOut {
-            let iunc = try XCTUnwrap(mnc.presentedViewController as? InternalUserNavigationController)
-            let _ = try XCTUnwrap(iunc.topViewController as? HomeViewController)
-        } else {
-            XCTFail("Delay interrupted")
-        }
+        
+        let lvc = try XCTUnwrap(mnc.topViewController as? LandingViewController)
+        let _  = lvc.view // Triggers View Did Load
+        let iunc = try XCTUnwrap(mnc.presentedViewController as? InternalUserNavigationController)
+        let _ = try XCTUnwrap(iunc.topViewController as? HomeViewController)
     }
 }
