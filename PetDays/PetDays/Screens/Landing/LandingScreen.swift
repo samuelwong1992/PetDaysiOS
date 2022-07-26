@@ -10,14 +10,13 @@ import UIKit
 class LandingScreen {
     var viewController: LandingViewController
     var interactor: LandingInteractor
+    var presenter: LandingPresenter
     var router: MainNavigationController
     
     init(router: MainNavigationController, userService: UserService) {
         self.viewController = LandingViewController.viewController!
         self.interactor = LandingInteractor(userService: userService)
         self.router = router
-        
-        viewController.setPresenter(presenter: self)
-        interactor.setPresenter(presenter: self)
+        self.presenter = LandingPresenter(viewController: self.viewController, interactor: self.interactor, router: router)
     }
 }

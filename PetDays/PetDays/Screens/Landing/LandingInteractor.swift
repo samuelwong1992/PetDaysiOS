@@ -8,7 +8,7 @@
 import Foundation
 
 class LandingInteractor: Presenterable {
-    var presenter: LandingScreen!
+    var presenter: LandingPresenter!
     
     var userService: UserService
     var persistanceManager: PersistanceManager {
@@ -28,10 +28,10 @@ extension LandingInteractor {
                     self.persistanceManager.clearAPIToken()
                     return
                 }
-                self.presenter.router.goToHomeScreen()
+                self.presenter.goToHomeScreen()
             }
         } else {
-            self.presenter.router.goToLoginScreen()
+            self.presenter.goToLoginScreen()
         }
     }
 }
