@@ -1,5 +1,5 @@
 //
-//  APITests.swift
+//  UserAPITests.swift
 //  PetDaysTests
 //
 //  Created by Samuel Wong on 20/6/2022.
@@ -8,7 +8,7 @@
 import XCTest
 @testable import PetDays
 
-class UserTests: XCTestCase {
+class UserAPITests: XCTestCase {
 
     override func setUpWithError() throws {
         TestableAPIManager.resetManager()

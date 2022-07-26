@@ -74,7 +74,7 @@
 		46368945288BB28200BB67D3 /* DaycareSelectableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46368944288BB28200BB67D3 /* DaycareSelectableTableViewCell.swift */; };
 		46CFBC05285F419000DAB3D6 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CFBC04285F419000DAB3D6 /* KeychainManager.swift */; };
 		46CFBC072860508A00DAB3D6 /* LandingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CFBC062860508A00DAB3D6 /* LandingTests.swift */; };
-		46CFBC0B286065BC00DAB3D6 /* UserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CFBC0A286065BC00DAB3D6 /* UserTests.swift */; };
+		46CFBC0B286065BC00DAB3D6 /* UserAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CFBC0A286065BC00DAB3D6 /* UserAPITests.swift */; };
 		46CFBC0F28609C7400DAB3D6 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CFBC0E28609C7400DAB3D6 /* WelcomeView.swift */; };
 		46CFBC1128609D3000DAB3D6 /* WelcomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46CFBC1028609D3000DAB3D6 /* WelcomeView.xib */; };
 		46CFBC132861F24200DAB3D6 /* DaycareAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CFBC122861F24200DAB3D6 /* DaycareAPI.swift */; };
@@ -202,7 +202,7 @@
 		46368944288BB28200BB67D3 /* DaycareSelectableTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaycareSelectableTableViewCell.swift; sourceTree = "<group>"; };
 		46CFBC04285F419000DAB3D6 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
 		46CFBC062860508A00DAB3D6 /* LandingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingTests.swift; sourceTree = "<group>"; };
-		46CFBC0A286065BC00DAB3D6 /* UserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTests.swift; sourceTree = "<group>"; };
+		46CFBC0A286065BC00DAB3D6 /* UserAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPITests.swift; sourceTree = "<group>"; };
 		46CFBC0E28609C7400DAB3D6 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		46CFBC1028609D3000DAB3D6 /* WelcomeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeView.xib; sourceTree = "<group>"; };
 		46CFBC122861F24200DAB3D6 /* DaycareAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaycareAPI.swift; sourceTree = "<group>"; };
@@ -686,7 +686,7 @@
 			isa = PBXGroup;
 			children = (
 				461441AF288E75BE008ED25C /* TestableAPIManager.swift */,
-				46CFBC0A286065BC00DAB3D6 /* UserTests.swift */,
+				46CFBC0A286065BC00DAB3D6 /* UserAPITests.swift */,
 			);
 			path = APITests;
 			sourceTree = "<group>";
@@ -1206,7 +1206,7 @@
 			files = (
 				461441B0288E75BE008ED25C /* TestableAPIManager.swift in Sources */,
 				461441AE288E6B95008ED25C /* UserTestService.swift in Sources */,
-				46CFBC0B286065BC00DAB3D6 /* UserTests.swift in Sources */,
+				46CFBC0B286065BC00DAB3D6 /* UserAPITests.swift in Sources */,
 				46CFBC072860508A00DAB3D6 /* LandingTests.swift in Sources */,
 				461441AA288E6B3C008ED25C /* TestPersistanceManager.swift in Sources */,
 			);
