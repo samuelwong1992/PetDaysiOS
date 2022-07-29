@@ -5,19 +5,16 @@
 //  Created by Samuel Wong on 7/6/2022.
 //
 
-import Foundation
+import UIKit
 
 class LoginScreen {
-    var viewController: LoginViewController
-    var interactor: LoginInteractor
-    var router: LoginRouter
+    private init(router: LoginRouter) {}
     
-    init(router: LoginRouter) {
-        self.viewController = LoginViewController.viewController!
-        self.interactor = LoginInteractor(userService: UserAPIService(persistanceManager: KeychainManager(), storageManager: CompositeStorageManager.current))
-        self.router = router
-        
-        viewController.setPresenter(presenter: self)
-        interactor.setPresenter(presenter: self)
+    static func buildModule(navigationController: UINavigationController) -> LoginPresenter {
+        return LoginPresenter(
+            viewController: LoginViewController.viewController!,
+            interactor: LoginInteractor(userService: UserAPIService(persistanceManager: KeychainManager(), storageManager: CompositeStorageManager.current)),
+            router: LoginRouter(navigationController: navigationController)
+        )
     }
 }

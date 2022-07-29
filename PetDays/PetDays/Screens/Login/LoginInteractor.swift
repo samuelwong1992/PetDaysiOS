@@ -8,7 +8,7 @@
 import Foundation
 
 class LoginInteractor: Presenterable {
-    var presenter: LoginScreen!
+    var presenter: LoginPresenter!
     
     var userService: UserService
     
@@ -22,7 +22,7 @@ extension LoginInteractor {
         userService.login(username: username, password: password) { error in
             guard error == nil else { self.presenter.viewController.showError(error: error!); return }
             
-            self.presenter.router.goToHomeScreen()
+            self.presenter.successfullyLoggedIn()
         }
     }
     
@@ -30,7 +30,7 @@ extension LoginInteractor {
         userService.register(username: username, password: password, password2: password2, firstName: firstName, lastName: lastName) { error in
             guard error == nil else { self.presenter.viewController.showError(error: error!); return }
             
-            self.presenter.router.goToHomeScreen()
+            self.presenter.successfullyLoggedIn()
         }
     }
 }

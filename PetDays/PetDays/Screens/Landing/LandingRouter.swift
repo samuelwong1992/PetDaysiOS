@@ -16,7 +16,7 @@ class LandingRouter: GoToHomeRouter {
     }
     
     func goToLoginScreen() {
-        let loginScreen = LoginScreen(router: LoginRouter(navigationController: navigationController))
+        let loginScreen = LoginScreen.buildModule(navigationController: navigationController)
         loginScreen.viewController.modalPresentationStyle = .overFullScreen
         navigationController.present(loginScreen.viewController, animated: true)
     }
