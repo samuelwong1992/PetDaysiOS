@@ -20,7 +20,7 @@ class LandingTests: XCTestCase {
 
     func test_canInitNoToken() throws {
         let mnc = NoAnimationMainNavigationController()
-        let landingScreen = LandingScreen(router: mnc, userService: UserTestService(persistanceManager: TestPersistanceManager(withExistingToken: false), succeeds: true))
+        let landingScreen = LandingScreen.buildModule(navigationController: mnc, userService: UserTestService(persistanceManager: TestPersistanceManager(withExistingToken: false), succeeds: true))
         mnc.setViewControllers([landingScreen.viewController], animated: false)
 
         let window = UIWindow(frame: UIScreen.main.bounds)
@@ -34,7 +34,7 @@ class LandingTests: XCTestCase {
     
     func test_canInitWithToken() throws {
         let mnc = NoAnimationMainNavigationController()
-        let landingScreen = LandingScreen(router: mnc, userService: UserTestService(persistanceManager: TestPersistanceManager(withExistingToken: true), succeeds: true))
+        let landingScreen = LandingScreen.buildModule(navigationController: mnc, userService: UserTestService(persistanceManager: TestPersistanceManager(withExistingToken: true), succeeds: true))
         mnc.setViewControllers([landingScreen.viewController], animated: false)
         
         let window = UIWindow(frame: UIScreen.main.bounds)

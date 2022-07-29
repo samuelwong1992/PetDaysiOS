@@ -8,15 +8,13 @@
 import UIKit
 
 class LandingScreen {
-    var viewController: LandingViewController
-    var interactor: LandingInteractor
-    var presenter: LandingPresenter
-    var router: MainNavigationController
+    private init() {}
     
-    init(router: MainNavigationController, userService: UserService) {
-        self.viewController = LandingViewController.viewController!
-        self.interactor = LandingInteractor(userService: userService)
-        self.router = router
-        self.presenter = LandingPresenter(viewController: self.viewController, interactor: self.interactor, router: router)
+    static func buildModule(navigationController: UINavigationController, userService: UserService) -> LandingPresenter {
+        return LandingPresenter(
+            viewController: LandingViewController.viewController!,
+            interactor: LandingInteractor(userService: userService),
+            router: LandingRouter(navigationController: navigationController)
+        )
     }
 }

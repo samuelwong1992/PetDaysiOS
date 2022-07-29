@@ -10,9 +10,9 @@ import Foundation
 class LoginScreen {
     var viewController: LoginViewController
     var interactor: LoginInteractor
-    var router: MainNavigationController
+    var router: LoginRouter
     
-    init(router: MainNavigationController) {
+    init(router: LoginRouter) {
         self.viewController = LoginViewController.viewController!
         self.interactor = LoginInteractor(userService: UserAPIService(persistanceManager: KeychainManager(), storageManager: CompositeStorageManager.current))
         self.router = router

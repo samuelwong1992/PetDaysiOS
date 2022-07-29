@@ -31,12 +31,4 @@ class Presenter<vcType: Presenterable, interactorType: Presenterable> {
         viewController.setPresenter(presenter: self as! vcType.T)
         interactor.setPresenter(presenter: self as! interactorType.T)
     }
-
-    private func getViewController() -> vcType {
-        return viewController
-    }
-
-    private func getInteractor() -> interactorType {
-        return interactor
-    }
 }

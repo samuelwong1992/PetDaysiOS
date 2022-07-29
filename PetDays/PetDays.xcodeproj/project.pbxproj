@@ -73,6 +73,9 @@
 		461441BC288F923B008ED25C /* CompositeStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461441BB288F923B008ED25C /* CompositeStorageManager.swift */; };
 		461441BF288FA428008ED25C /* DontMatterStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461441BE288FA428008ED25C /* DontMatterStorageManager.swift */; };
 		461441C1288FB11F008ED25C /* LandingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461441C0288FB11F008ED25C /* LandingPresenter.swift */; };
+		461441C3289395F6008ED25C /* LandingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461441C2289395F6008ED25C /* LandingRouter.swift */; };
+		461441C528939734008ED25C /* GoToHomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461441C428939734008ED25C /* GoToHomeRouter.swift */; };
+		461441CA2893989A008ED25C /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461441C92893989A008ED25C /* LoginRouter.swift */; };
 		4636893C288BA18F00BB67D3 /* UserAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4636893B288BA18F00BB67D3 /* UserAPIService.swift */; };
 		4636893E288BA3A400BB67D3 /* DaycareAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4636893D288BA3A400BB67D3 /* DaycareAPIService.swift */; };
 		46368940288BA72D00BB67D3 /* PostAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4636893F288BA72D00BB67D3 /* PostAPIService.swift */; };
@@ -207,6 +210,9 @@
 		461441BB288F923B008ED25C /* CompositeStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositeStorageManager.swift; sourceTree = "<group>"; };
 		461441BE288FA428008ED25C /* DontMatterStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DontMatterStorageManager.swift; sourceTree = "<group>"; };
 		461441C0288FB11F008ED25C /* LandingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPresenter.swift; sourceTree = "<group>"; };
+		461441C2289395F6008ED25C /* LandingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingRouter.swift; sourceTree = "<group>"; };
+		461441C428939734008ED25C /* GoToHomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoToHomeRouter.swift; sourceTree = "<group>"; };
+		461441C92893989A008ED25C /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		4636893B288BA18F00BB67D3 /* UserAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPIService.swift; sourceTree = "<group>"; };
 		4636893D288BA3A400BB67D3 /* DaycareAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaycareAPIService.swift; sourceTree = "<group>"; };
 		4636893F288BA72D00BB67D3 /* PostAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostAPIService.swift; sourceTree = "<group>"; };
@@ -494,6 +500,7 @@
 				4613E4B3284F0A0900311889 /* LoginScreen.swift */,
 				4613E4B1284F081B00311889 /* LoginViewController.swift */,
 				4613E4B5284F0A1900311889 /* LoginInteractor.swift */,
+				461441C92893989A008ED25C /* LoginRouter.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -503,6 +510,7 @@
 			children = (
 				4613E49B284EDF5900311889 /* MainNavigationController.swift */,
 				4613E4EE285183FE00311889 /* InternalUserNavigationController.swift */,
+				461441C62893973A008ED25C /* Shared */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -514,6 +522,7 @@
 				4613E4A5284EE6D300311889 /* LandingViewController.swift */,
 				4613E4A9284EEAC500311889 /* LandingInteractor.swift */,
 				461441C0288FB11F008ED25C /* LandingPresenter.swift */,
+				461441C2289395F6008ED25C /* LandingRouter.swift */,
 			);
 			path = Landing;
 			sourceTree = "<group>";
@@ -719,6 +728,14 @@
 				461441BE288FA428008ED25C /* DontMatterStorageManager.swift */,
 			);
 			path = DontMatter;
+			sourceTree = "<group>";
+		};
+		461441C62893973A008ED25C /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				461441C428939734008ED25C /* GoToHomeRouter.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 		46368943288BB25900BB67D3 /* Table View Cell */ = {
@@ -1185,6 +1202,7 @@
 				46DBE2782859B81B0015D8F1 /* Localization.swift in Sources */,
 				46CFBC0F28609C7400DAB3D6 /* WelcomeView.swift in Sources */,
 				46FB8DC128618D1800A36A5C /* PetService.swift in Sources */,
+				461441C528939734008ED25C /* GoToHomeRouter.swift in Sources */,
 				4613E4F72851858A00311889 /* HomeViewController.swift in Sources */,
 				46FB8DC62862C08700A36A5C /* Post.swift in Sources */,
 				46FB8DCF2862CFE800A36A5C /* PostAPI.swift in Sources */,
@@ -1203,6 +1221,7 @@
 				4613E48B284DBE2B00311889 /* Profile.swift in Sources */,
 				4613E4D2284F260E00311889 /* LoginView.swift in Sources */,
 				4613E4AA284EEAC500311889 /* LandingInteractor.swift in Sources */,
+				461441C3289395F6008ED25C /* LandingRouter.swift in Sources */,
 				4613E486284DB8C200311889 /* APIResponses.swift in Sources */,
 				4613E4C0284F1B9B00311889 /* SecondaryButton.swift in Sources */,
 				4613E489284DBBDD00311889 /* LoginAPI.swift in Sources */,
@@ -1223,6 +1242,7 @@
 				460E55352848560600B09607 /* APIManager.swift in Sources */,
 				4613E4F52851855D00311889 /* HomeInteractor.swift in Sources */,
 				4613E4D9284F26AB00311889 /* UIView + Utilities.swift in Sources */,
+				461441CA2893989A008ED25C /* LoginRouter.swift in Sources */,
 				4613E4A6284EE6D300311889 /* LandingViewController.swift in Sources */,
 				46FB8DC328618D3200A36A5C /* PetAPI.swift in Sources */,
 				4613E4A4284EE69500311889 /* StoryboardConstants.swift in Sources */,

@@ -8,9 +8,9 @@
 import Foundation
 
 class LandingPresenter: Presenter<LandingViewController, LandingInteractor> {
-    private var router: MainNavigationController!
+    private var router: LandingRouter!
     
-    init(viewController: LandingViewController, interactor: LandingInteractor, router: MainNavigationController) {
+    init(viewController: LandingViewController, interactor: LandingInteractor, router: LandingRouter) {
         super.init(viewController: viewController, interactor: interactor)
         
         self.router = router
