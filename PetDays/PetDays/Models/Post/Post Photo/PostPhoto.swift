@@ -7,7 +7,11 @@
 
 import Foundation
 
-class PostPhoto: PDObject {
+protocol PostPhoto: PDObject {
+    var photoUrl: String { get set }
+}
+
+class PostPhotoDecodable: PDDecodableObject, PostPhoto {
     var photoUrl: String
     
     required init(from decoder: Decoder) throws {

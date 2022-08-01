@@ -7,7 +7,13 @@
 
 import Foundation
 
-class Daycare: PDObject {
+protocol Daycare: PDObject {
+    var name: String { get set }
+    var address: String { get set }
+    var profilePictureUrl: String? { get set }
+}
+
+class DaycareDecodable: PDDecodableObject, Daycare {
     var name: String
     var address: String
     var profilePictureUrl: String?
@@ -37,4 +43,5 @@ class Daycare: PDObject {
         case address
         case profilePictureUrl = "profile_picture"
       }
+
 }

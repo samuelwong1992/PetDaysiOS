@@ -7,7 +7,13 @@
 
 import Foundation
 
-class Pet: PDObject {
+protocol Pet: PDObject {
+    var name: String { get set }
+    var profilePictureUrl: String? { get set }
+    var daycares: [Daycare] { get set }
+}
+
+class PetDecodable: PDDecodableObject, Pet {
     var name: String
     var profilePictureUrl: String?
     var daycares: [Daycare]
@@ -21,7 +27,7 @@ class Pet: PDObject {
             name = ""
         }
         do {
-            daycares = try values.decode([Daycare].self, forKey: .daycares)
+            daycares = try values.decode([DaycareDecodable].self, forKey: .daycares)
         } catch {
             daycares = []
         }

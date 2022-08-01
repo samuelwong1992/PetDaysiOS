@@ -10,7 +10,7 @@ import Foundation
 class PostAPIService: PostService {
     func getFeed(completion: @escaping (_ error: Error?) -> Void) {
         let request = PostAPI.getFeed(daycare: SessionManager.current.daycare, pet: SessionManager.current.pet)
-        APIManager.current.performRequest(request: request, shouldShowLoading: false) { (model: [Post]?, error) in
+        APIManager.current.performRequest(request: request, shouldShowLoading: false) { (model: [PostDecodable]?, error) in
             guard error == nil else { return completion(error) }
             guard let posts = model else { return completion(NSError.standardNoDataError()) }
             

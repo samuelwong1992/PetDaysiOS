@@ -6,7 +6,23 @@
 //
 
 import Foundation
-class Employee: PDObject {
+
+protocol Employee: PDObject {
+    var firstName: String { get set }
+    var lastName: String { get set }
+    var daycare: Daycare { get set }
+    var profilePictureUrl: String? { get set }
+    
+    
+}
+
+extension Employee {
+    var fullName: String {
+        return self.firstName + " " + self.lastName
+    }
+}
+
+class EmployeeDecodable: PDDecodableObject, Employee {
     var firstName: String
     var lastName: String
     var daycare: Daycare
@@ -21,7 +37,7 @@ class Employee: PDObject {
         
         firstName = try values.decode(String.self, forKey: .firstName)
         lastName = try values.decode(String.self, forKey: .lastName)
-        daycare = try values.decode(Daycare.self, forKey: .daycare)
+        daycare = try values.decode(DaycareDecodable.self, forKey: .daycare)
         profilePictureUrl = try values.decode(String?.self, forKey: .profilePictureUrl)
 
         

@@ -31,7 +31,7 @@ class JoinDaycareModelView {
     var daycareData: [Daycare] {
         get {
             if let selectedDaycare = selectedDaycare {
-                if daycares.contains(where: { $0 == selectedDaycare }) {
+                if daycares.contains(where: { $0.id == selectedDaycare.id }) {
                     return daycares
                 } else {
                     var toReturn = daycares

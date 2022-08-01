@@ -7,7 +7,14 @@
 
 import Foundation
 
-class Profile: PDObject {
+protocol Profile {
+    var firstName: String { get set }
+    var lastName: String { get set }
+    var pets: [Pet] { get set }
+    var daycares: [Daycare] { get set }
+}
+
+class ProfileDecodable: PDDecodableObject, Profile {
     var firstName: String
     var lastName: String
     var pets: [Pet]
@@ -18,8 +25,8 @@ class Profile: PDObject {
         
         firstName = try values.decode(String.self, forKey: .firstName)
         lastName = try values.decode(String.self, forKey: .lastName)
-        pets = try values.decode([Pet].self, forKey: .pets)
-        daycares = try values.decode([Daycare].self, forKey: .daycares)
+        pets = try values.decode([PetDecodable].self, forKey: .pets)
+        daycares = try values.decode([DaycareDecodable].self, forKey: .daycares)
         
         try super.init(from: decoder)
     }

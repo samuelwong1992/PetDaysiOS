@@ -75,7 +75,7 @@ extension JoinDaycareView: UITableViewDelegate, UITableViewDataSource {
         let daycare = modelView.daycareData[indexPath.row]
         cell.daycare = daycare
         if let selectedDaycare = modelView.selectedDaycare {
-            cell.isCurrentDaycare = daycare == selectedDaycare
+            cell.isCurrentDaycare = daycare.id == selectedDaycare.id
         } else {
             cell.isCurrentDaycare = false
         }

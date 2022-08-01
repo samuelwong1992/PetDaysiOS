@@ -5,7 +5,7 @@
 //  Created by Samuel Wong on 6/6/2022.
 //
 
-class LoginResponse: Decodable {
-    var token: String
-    var profile: Profile
+protocol LoginResponse: Decodable {
+    var token: String { get set }
+    var profile: ProfileDecodable { get set }
 }

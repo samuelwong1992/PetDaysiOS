@@ -7,7 +7,14 @@
 
 import UIKit
 
-class Post: PDObject {
+protocol Post: PDObject {
+    var employee: Employee { get set }
+    var dateTimeCreated: Date? { get set }
+    var text: String { get set }
+    var postPhotos: [PostPhoto] { get set }
+}
+
+class PostDecodable: PDDecodableObject, Post {
     var employee: Employee
     var dateTimeCreated: Date?
     var text: String
@@ -17,7 +24,7 @@ class Post: PDObject {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         
         text = try values.decode(String.self, forKey: .text)
-        employee = try values.decode(Employee.self, forKey: .employee)
+        employee = try values.decode(EmployeeDecodable.self, forKey: .employee)
         
         do {
             let dateTimeCreatedString = try values.decode(String.self, forKey: .dateTimeCreated)
@@ -27,7 +34,7 @@ class Post: PDObject {
         }
         
         do {
-            postPhotos = try values.decode([PostPhoto].self, forKey: .postPhotos)
+            postPhotos = try values.decode([PostPhotoDecodable].self, forKey: .postPhotos)
         } catch {
             postPhotos = []
         }

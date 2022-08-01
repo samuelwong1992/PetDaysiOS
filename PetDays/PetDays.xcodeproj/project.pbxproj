@@ -77,6 +77,7 @@
 		461441C528939734008ED25C /* GoToHomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461441C428939734008ED25C /* GoToHomeRouter.swift */; };
 		461441CA2893989A008ED25C /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461441C92893989A008ED25C /* LoginRouter.swift */; };
 		461441CC2893A5C1008ED25C /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461441CB2893A5C1008ED25C /* LoginPresenter.swift */; };
+		461441D12893AFE4008ED25C /* LoginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461441D02893AFE4008ED25C /* LoginTests.swift */; };
 		4636893C288BA18F00BB67D3 /* UserAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4636893B288BA18F00BB67D3 /* UserAPIService.swift */; };
 		4636893E288BA3A400BB67D3 /* DaycareAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4636893D288BA3A400BB67D3 /* DaycareAPIService.swift */; };
 		46368940288BA72D00BB67D3 /* PostAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4636893F288BA72D00BB67D3 /* PostAPIService.swift */; };
@@ -215,6 +216,7 @@
 		461441C428939734008ED25C /* GoToHomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoToHomeRouter.swift; sourceTree = "<group>"; };
 		461441C92893989A008ED25C /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		461441CB2893A5C1008ED25C /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		461441D02893AFE4008ED25C /* LoginTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTests.swift; sourceTree = "<group>"; };
 		4636893B288BA18F00BB67D3 /* UserAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPIService.swift; sourceTree = "<group>"; };
 		4636893D288BA3A400BB67D3 /* DaycareAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaycareAPIService.swift; sourceTree = "<group>"; };
 		4636893F288BA72D00BB67D3 /* PostAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostAPIService.swift; sourceTree = "<group>"; };
@@ -773,6 +775,7 @@
 			isa = PBXGroup;
 			children = (
 				46CFBC062860508A00DAB3D6 /* LandingTests.swift */,
+				461441D02893AFE4008ED25C /* LoginTests.swift */,
 			);
 			path = ScreenTests;
 			sourceTree = "<group>";
@@ -1292,6 +1295,7 @@
 				461441B0288E75BE008ED25C /* TestableAPIManager.swift in Sources */,
 				461441AE288E6B95008ED25C /* UserTestService.swift in Sources */,
 				46CFBC0B286065BC00DAB3D6 /* UserAPITests.swift in Sources */,
+				461441D12893AFE4008ED25C /* LoginTests.swift in Sources */,
 				461441BF288FA428008ED25C /* DontMatterStorageManager.swift in Sources */,
 				46CFBC072860508A00DAB3D6 /* LandingTests.swift in Sources */,
 				461441AA288E6B3C008ED25C /* TestPersistanceManager.swift in Sources */,

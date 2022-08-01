@@ -16,6 +16,10 @@ class UserAPIService: UserService {
         self.storageManager = storageManager
     }
     
+    static func createAppInstance() -> UserAPIService {
+        return UserAPIService(persistanceManager: KeychainManager(), storageManager: CompositeStorageManager.current)
+    }
+    
     func login(username: String, password: String, completion: @escaping(_ error: Error?) -> Void) {
         let request = LoginAPI.login(username: username, password: password)
         storageManager.performRequest(request: request, shouldShowLoading: true) { (response: LoginResponse?, error) in

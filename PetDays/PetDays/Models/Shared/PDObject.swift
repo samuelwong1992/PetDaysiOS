@@ -7,17 +7,20 @@
 
 import Foundation
 
-class PDObject: Decodable {
+protocol PDObject {
+    var id: Int { get set }
+}
+
+class PDDecodableObject: PDObject, Decodable {
     var id: Int
     
-    init(id: Int) {
-        self.id = id
-    }
+//    required init(from decoder: Decoder) throws {
+//        let values = try decoder.container(keyedBy: CodingKeys.self)
+//        id = try values.decode(Int.self, forKey: .id)
+//        try super.init(from: decoder)
+//    }
+    
+    private enum CodingKeys: String, CodingKey {
+        case id
+      }
 }
-
-extension PDObject: Equatable {
-    static func ==(lhs: PDObject, rhs: PDObject) -> Bool {
-        return lhs.id == rhs.id
-    }
-}
-
