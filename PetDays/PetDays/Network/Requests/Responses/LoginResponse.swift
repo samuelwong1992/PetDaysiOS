@@ -5,15 +5,9 @@
 //  Created by Samuel Wong on 6/6/2022.
 //
 
-protocol LoginResponse {
-    var token: String { get set }
-    var profile: Profile { get set }
-}
-
-class LoginDecodableResponse: LoginResponse, Decodable {
+class LoginResponse: Decodable {
     var token: String
-    
-    var profile: Profile
+    var profile: ProfileDecodable
     
     required init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
