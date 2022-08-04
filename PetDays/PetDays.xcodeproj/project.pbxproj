@@ -96,6 +96,9 @@
 		46DBE2762859AD7A0015D8F1 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46DBE2752859AD790015D8F1 /* SessionManager.swift */; };
 		46DBE2782859B81B0015D8F1 /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46DBE2772859B81B0015D8F1 /* Localization.swift */; };
 		46EC751C288BD028008E98F5 /* PersistanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EC751B288BD028008E98F5 /* PersistanceManager.swift */; };
+		46EC751F289B99F8008E98F5 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EC751E289B99F8008E98F5 /* Profile.swift */; };
+		46EC7522289B9A77008E98F5 /* MockedJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EC7521289B9A76008E98F5 /* MockedJSON.swift */; };
+		46EC7525289B9C0B008E98F5 /* TestableLoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EC7524289B9C0B008E98F5 /* TestableLoginResponse.swift */; };
 		46FB8DAE2861557700A36A5C /* AddPetView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46FB8DAD2861557700A36A5C /* AddPetView.xib */; };
 		46FB8DB02861558200A36A5C /* AddPetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FB8DAF2861558200A36A5C /* AddPetView.swift */; };
 		46FB8DB22861728800A36A5C /* FocusLabels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FB8DB12861728700A36A5C /* FocusLabels.swift */; };
@@ -235,6 +238,9 @@
 		46DBE2752859AD790015D8F1 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		46DBE2772859B81B0015D8F1 /* Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
 		46EC751B288BD028008E98F5 /* PersistanceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistanceManager.swift; sourceTree = "<group>"; };
+		46EC751E289B99F8008E98F5 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		46EC7521289B9A76008E98F5 /* MockedJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedJSON.swift; sourceTree = "<group>"; };
+		46EC7524289B9C0B008E98F5 /* TestableLoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestableLoginResponse.swift; sourceTree = "<group>"; };
 		46FB8DAD2861557700A36A5C /* AddPetView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddPetView.xib; sourceTree = "<group>"; };
 		46FB8DAF2861558200A36A5C /* AddPetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPetView.swift; sourceTree = "<group>"; };
 		46FB8DB12861728700A36A5C /* FocusLabels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusLabels.swift; sourceTree = "<group>"; };
@@ -713,6 +719,8 @@
 		461441B5288F8AC9008ED25C /* Mocked */ = {
 			isa = PBXGroup;
 			children = (
+				46EC7523289B9BAD008E98F5 /* Response Classes */,
+				46EC7520289B9A0F008E98F5 /* Response JSON */,
 				461441B6288F8AF8008ED25C /* UserMockAPITests.swift */,
 			);
 			path = Mocked;
@@ -843,6 +851,23 @@
 				46CFBC04285F419000DAB3D6 /* KeychainManager.swift */,
 			);
 			path = Persistance;
+			sourceTree = "<group>";
+		};
+		46EC7520289B9A0F008E98F5 /* Response JSON */ = {
+			isa = PBXGroup;
+			children = (
+				46EC7521289B9A76008E98F5 /* MockedJSON.swift */,
+				46EC751E289B99F8008E98F5 /* Profile.swift */,
+			);
+			path = "Response JSON";
+			sourceTree = "<group>";
+		};
+		46EC7523289B9BAD008E98F5 /* Response Classes */ = {
+			isa = PBXGroup;
+			children = (
+				46EC7524289B9C0B008E98F5 /* TestableLoginResponse.swift */,
+			);
+			path = "Response Classes";
 			sourceTree = "<group>";
 		};
 		46FB8DAB2861515400A36A5C /* WelcomeView */ = {
@@ -1292,13 +1317,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46EC7522289B9A77008E98F5 /* MockedJSON.swift in Sources */,
 				461441B0288E75BE008ED25C /* TestableAPIManager.swift in Sources */,
+				46EC7525289B9C0B008E98F5 /* TestableLoginResponse.swift in Sources */,
 				461441AE288E6B95008ED25C /* UserTestService.swift in Sources */,
 				46CFBC0B286065BC00DAB3D6 /* UserAPITests.swift in Sources */,
 				461441D12893AFE4008ED25C /* LoginTests.swift in Sources */,
 				461441BF288FA428008ED25C /* DontMatterStorageManager.swift in Sources */,
 				46CFBC072860508A00DAB3D6 /* LandingTests.swift in Sources */,
 				461441AA288E6B3C008ED25C /* TestPersistanceManager.swift in Sources */,
+				46EC751F289B99F8008E98F5 /* Profile.swift in Sources */,
 				461441B3288F7A84008ED25C /* NoAnimationUI.swift in Sources */,
 				461441B7288F8AF8008ED25C /* UserMockAPITests.swift in Sources */,
 			);
