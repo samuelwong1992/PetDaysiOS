@@ -105,4 +105,20 @@ class LoginTests: XCTestCase {
         XCTAssertEqual(sut.viewController.signUpView.alpha, 0)
         XCTAssertEqual(sut.viewController.loginView.alpha, 0)
     }
+    
+    func test_validateLogin() throws {
+        let sut = LoginView()
+        
+        XCTAssertFalse(sut.validate())
+        sut.usernameField.text = "some data"
+        sut.passwordField.text = ""
+        XCTAssertFalse(sut.validate())
+        sut.usernameField.text = ""
+        sut.passwordField.text = "some data"
+        XCTAssertFalse(sut.validate())
+        sut.usernameField.text = "some data"
+        sut.passwordField.text = "some data"
+        XCTAssertTrue(sut.validate())
+        
+    }
 }
