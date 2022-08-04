@@ -186,7 +186,6 @@ extension UIView {
         UIView.animate(withDuration: 0.4) {
             self.alpha = hidden ? 0 : 1
         } completion: { finished in
-            print("finsihed : \(finished)")
             if(finished) {
                 if(hidden) {
                     self.isHidden = true
