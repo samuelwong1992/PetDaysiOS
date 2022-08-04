@@ -157,4 +157,22 @@ class LoginTests: XCTestCase {
             }
         }
     }
+    
+    func test_validateSignUpView_MismatchedPasswords() throws {
+        let sut = SignUpView(frame: CGRect(x: 0, y: 0, width: 500, height: 1000))
+        
+        sut.usernameField.text = "some data"
+        sut.firstNameField.text = "some data"
+        sut.lastNameField.text = "some data"
+        
+        sut.passwordField.text = "matching data"
+        sut.password2Field.text = "matching data"
+        
+        XCTAssertTrue(sut.validate())
+        
+        sut.passwordField.text = "mismatching data 1"
+        sut.password2Field.text = "mismatched data 2"
+        
+        XCTAssertFalse(sut.validate())
+    }
 }
